@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 
 import HeroSection from "../components/homepage/Horo";
-// import SDKsSection from '../components/homepage/SDKsSection';
+import SDKsSection from "../components/homepage/SDKs";
 // import APIReferenceSection from '../components/homepage/APIReferenceSection';
 // import CommunitySection from '../components/homepage/CommunitySection';
 // import HomeFooter from '../components/homepage/HomeFooter';
@@ -21,7 +21,7 @@ export default function Homepage() {
         <link rel="prefetch" href="/css/elements.min.css" />
       </Head>
       <HeroSection />
-      {/*   <SDKsSection /> */}
+      <SDKsSection />
 
       {/* <div className="relative">
         <APIReferenceSection />
