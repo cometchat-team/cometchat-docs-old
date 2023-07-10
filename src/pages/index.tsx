@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "@theme/Layout";
 
-import HeroSection from "../components/homepage/Horo";
+import HeroSection from "../components/homepage/Hero";
 import SDKsSection from "../components/homepage/SDKs";
 import APIReferenceSection from "../components/homepage/APIReference";
-// import CommunitySection from '../components/homepage/CommunitySection';
-// import HomeFooter from '../components/homepage/HomeFooter';
+import CommunitySection from "../components/homepage/Community";
+import HomeFooter from "../components/homepage/Footer";
 import ResourcesSection from "../components/homepage/Resources";
-// import HelpSection from '../components/homepage/HelpSection';
+import HelpSection from "../components/homepage/Help";
 const metadata = require("../data/metadata.json");
 import Head from "@docusaurus/Head";
 
@@ -31,12 +31,12 @@ export default function Homepage() {
 
       <div className="z-0 bg-secondary-800 dark:bg-secondary-900">
         <ResourcesSection />
-        {/* <HelpSection className="-mb-48" /> */}
+        <HelpSection className="-mb-48" />
       </div>
 
-      {/* <CommunitySection />
+      <CommunitySection />
 
-      <HomeFooter /> */}
+      <HomeFooter />
     </Layout>
   );
 }
