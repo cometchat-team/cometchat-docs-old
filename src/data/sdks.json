@@ -111,7 +111,8 @@
       "description": "Third Pill Description",
       "link": "Third Pill Link",
       "whiteImg": "/homepage/plugin-sdk-light.png",
-      "blackImg": "/homepage/plugin-sdk-dark.png"
+      "blackImg": "/homepage/plugin-sdk-dark.png",
+      "linkText": "link text"
     }
   ],
   "contact": {

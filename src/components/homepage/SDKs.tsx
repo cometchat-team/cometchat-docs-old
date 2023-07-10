@@ -51,6 +51,43 @@ function SectionPart({ title, index, id, description, parts }) {
   );
 }
 
+function SectionSimple({
+  title,
+  linkText,
+  description,
+  id,
+  link,
+  whiteImg,
+  blackImg,
+}) {
+  return (
+    <div
+      className="sdk-section mb-16 flex flex-col rounded-3xl bg-secondary-900 lg:flex-row"
+      data-section={id}
+      id={id}>
+      <div className="flex flex-1 flex-col justify-center p-6 text-center lg:pl-16 lg:text-left">
+        <h3 className="text-4xl font-semibold">{title}</h3>
+        <p className="text-sm leading-relaxed text-text-400 lg:max-w-sm">
+          {description}
+        </p>
+        <Link className="text-sm" href={link}>
+          {linkText}
+        </Link>
+      </div>
+      <div className="flex flex-[3] items-center justify-center rounded-3xl p-6 px-8 lg:justify-end">
+        <ThemedImage
+          sources={{
+            light: whiteImg,
+            dark: blackImg,
+          }}
+          alt="Alt"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function SDKsSection() {
   const [visibleSection, setVisibleSection] = useState(sdksData.pills[0].id);
 
@@ -128,111 +165,10 @@ export default function SDKsSection() {
             id={pill.id}
             description={pill.description}
             parts={pill.parts}
+            index={index}
           />
         ))}
-        {/* 
-        
-
-        <div
-          className="sdk-section mb-16 flex flex-col rounded-3xl bg-secondary-900 lg:flex-row"
-          data-section="mobile"
-          id="mobile"
-        >
-          <div className="flex flex-[2] flex-col justify-center p-6 text-center lg:pl-16 lg:text-left">
-            <h3 className="text-4xl font-semibold">Mobile</h3>
-            <p className="text-sm leading-relaxed text-text-400 lg:max-w-sm">
-              Plan to build a video/voice solution for Android, React Native,
-              iOS, or Flutter, check the docs here to understand how Dyte can
-              help you deliver best-in-class real-time communication experience
-              for your mobile applications.
-            </p>
-            
-          </div>
-          <div className="flex flex-1 flex-col bg-secondary-800 p-6 px-8 lg:rounded-l-3xl">
-            <h4>Prebuilt SDK</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              Integrate video and voice calls to your app or website in minutes
-              using Dyte&apos;s prebuilt design library of UI components.
-            </p>
-            <ul className="flex list-none flex-col gap-2 pl-0">
-              <li>
-                <SDKLink href="android" Icon={KotlinIcon} label="Android" />
-              </li>
-              <li>
-                <SDKLink href="ios" Icon={SwiftIcon} label="iOS" />
-              </li>
-              <li>
-                <SDKLink
-                  href="react-native"
-                  Icon={ReactIcon}
-                  label="React Native"
-                />
-              </li>
-              <li>
-                <SDKLink href="flutter" Icon={FlutterIcon} label="Flutter" />
-              </li>
-            </ul>
-           
-          </div>
-          <div className="flex-1 rounded-b-3xl bg-secondary-800 p-6 px-8 lg:rounded-r-3xl lg:rounded-bl-none">
-            <h4>Core SDK</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              Build high-quality custom video and voice calls with real-time
-              communication using fully customizable and easy to integrate Core
-              SDKs.
-            </p>
-            <ul className="flex list-none flex-col gap-2 pl-0">
-              <li>
-                <SDKLink
-                  href="android-core"
-                  Icon={KotlinIcon}
-                  label="Android"
-                />
-              </li>
-              <li>
-                <SDKLink
-                  Icon={FlutterIcon}
-                  label="Flutter"
-                  href="flutter-core"
-                />
-              </li>
-              <li>
-                <SDKLink href="rn-core" Icon={ReactIcon} label="React Native" />
-              </li>
-              <li>
-                <SDKLink href="ios-core" Icon={SwiftIcon} label="iOS" />
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          className="sdk-section mb-16 flex flex-col rounded-3xl bg-secondary-900 lg:flex-row"
-          data-section="plugin"
-          id="plugin"
-        >
-          <div className="flex flex-1 flex-col justify-center p-6 text-center lg:pl-16 lg:text-left">
-            <h3 className="text-4xl font-semibold">Plugin SDK</h3>
-            <p className="text-sm leading-relaxed text-text-400 lg:max-w-sm">
-              Add the most immersive, collaborative, and more human interaction
-              right in your video and voice calls using Dyte&apos;s
-              out-of-the-box plugins. Dive into the resources here to get
-              started with building your own plugins for your applications.
-            </p>
-            <Link className="text-sm" href="/plugin-sdk">
-              Learn More &rarr;
-            </Link>
-          </div>
-          <div className="flex flex-[3] items-center justify-center rounded-3xl p-6 px-8 lg:justify-end">
-            <ThemedImage
-              sources={{
-                light: '/static/landing-page/plugin-sdk-light.png',
-                dark: '/static/landing-page/plugin-sdk-dark.png',
-              }}
-              alt="Plugin SDK Usage Preview"
-              loading="lazy"
-            />
-          </div>
-        </div> */}
+        <SectionSimple {...sdksData.pills[2]} />
       </div>
       <div className="text-center text-text-400">
         <p>
