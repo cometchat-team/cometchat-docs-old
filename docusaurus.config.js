@@ -1,59 +1,124 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const code_themes = {
+  light: require("prism-react-renderer/themes/github"),
+  dark: require("prism-react-renderer/themes/vsDark"),
+};
+
+const { webpackPlugin } = require("./plugins/webpack-plugin.cjs");
+const tailwindPlugin = require("./plugins/tailwind-plugin.cjs");
+
+// TODO: update this infos
+/** @type {import('@docusaurus/types').Config} */
+const metadata = {
+  title: "My Website Title",
+  tagline: "My tagline 🚀",
+  url: "https://ahmedbargady.me",
+  baseUrl: "/",
+  favicon: "/favicon.ico",
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
+  onBrokenLinks: "ignore",
+};
+
+/** @type {import('@docusaurus/plugin-content-docs').Options[]} */
+const docs = [
+  {
+    id: "cli",
+    path: "docs/cli",
+    routeBasePath: "/cli",
+  },
+  {
+    id: "plugin-sdk",
+    path: "docs/plugin-sdk",
+    routeBasePath: "/plugin-sdk",
+    versions: {
+      current: {
+        label: "1.x.x",
+      },
+    },
+  },
+  {
+    id: "ui-kit",
+    path: "docs/ui-kit",
+    routeBasePath: "/ui-kit",
+    versions: {
+      current: {
+        label: "1.x.x",
+      },
+    },
+  },
+];
+
+// TODO: update this infos
+/** @type {import('@docusaurus/plugin-content-docs').Options} */
+const defaultSettings = {
+  breadcrumbs: false,
+  editUrl: "https://ahmedbargady.me",
+  showLastUpdateTime: true,
+  remarkPlugins: [
+    [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
+  ],
+  sidebarPath: require.resolve("./sidebars-default.js"),
+};
+
+/**
+ * Create a section
+ * @param {import('@docusaurus/plugin-content-docs').Options} options
+ */
+function create_doc_plugin({
+  sidebarPath = require.resolve("./sidebars-default.js"),
+  ...options
+}) {
+  return [
+    "@docusaurus/plugin-content-docs",
+    /** @type {import('@docusaurus/plugin-content-docs').Options} */
+    ({
+      ...defaultSettings,
+      sidebarPath,
+      ...options,
+    }),
+  ];
+}
+
+const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
+
+const plugins = [tailwindPlugin, ...docs_plugins, webpackPlugin];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  ...metadata,
+  plugins,
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  trailingSlash: false,
+  themes: ["@docusaurus/theme-live-codeblock"],
+  clientModules: [require.resolve("./src/client/define-ui-kit.js")],
 
   presets: [
     [
-      'classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          path: "docs/guides",
+          id: "guides",
+          routeBasePath: "/guides",
+          ...defaultSettings,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve("./src/css/custom.css")],
         },
+        sitemap: {
+          ignorePatterns: ["/tags/**"],
+        },
+        // TODO: add your own google analytics id
+        // googleTagManager: {
+        //   containerId: '',
+        // },
       }),
     ],
   ],
@@ -61,79 +126,117 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+      colorMode: {
+        defaultMode: "dark",
       },
-      footer: {
-        style: 'dark',
-        links: [
+      image: "img/docusaurus-social-card.jpg",
+      navbar: {
+        logo: {
+          href: "/",
+          src: "/img/logo.svg",
+          srcDark: "/img/logo.svg",
+          alt: "Logo",
+          height: "40px",
+          width: "40px",
+        },
+
+        items: [
+          // TODO: add the dropdown
+          // {
+          //   label: 'SDKs',
+          //   type: 'dropdown',
+          //   className: 'dyte-dropdown',
+          //   items: [
+          //     {
+          //       type: 'html',
+          //       value: sdksHTML,
+          //       className: 'dyte-dropdown',
+          //     },
+          //   ],
+          // },
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
+            label: "Guides",
+            to: "guides",
+            position: "left",
+            className: "new-badge",
+          },
+          // TODO: change this links
+          {
+            label: "Support",
+            to: "https://dyte.io/contact",
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
+            type: "search",
+            position: "right",
           },
+          // TODO: change this links
+
           {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
+            label: "Book a demo",
+            href: "https://dyte.io/schedule-demo",
+            position: "right",
+            className: "navbar-book-demo",
+          },
+          // TODO: change this links
+
+          {
+            label: "Sign Up",
+            href: "https://dev.dyte.io/register",
+            position: "right",
+            className: "dev-portal-signup dev-portal-link",
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: code_themes.light,
+        darkTheme: code_themes.dark,
+        additionalLanguages: [
+          "dart",
+          "ruby",
+          "groovy",
+          "kotlin",
+          "java",
+          "swift",
+          "objectivec",
+        ],
+        magicComments: [
+          {
+            className: "theme-code-block-highlighted-line",
+            line: "highlight-next-line",
+            block: { start: "highlight-start", end: "highlight-end" },
+          },
+          {
+            className: "code-block-error-line",
+            line: "highlight-next-line-error",
+          },
+        ],
+      },
+      // TODO: add your own credintials for algolia
+      // algolia: {
+      //   appId: '',
+      //   apiKey: '',
+      //   indexName: 'docs',
+      //   contextualSearch: true,
+      //   searchParameters: {},
+      // },
+    }),
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve("swc-loader"),
+      options: {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+            tsx: true,
+          },
+          target: "es2017",
+        },
+        module: {
+          type: isServer ? "commonjs" : "es6",
+        },
       },
     }),
+  },
 };
 
 module.exports = config;
