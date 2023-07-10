@@ -6,7 +6,7 @@ import SDKsSection from "../components/homepage/SDKs";
 import APIReferenceSection from "../components/homepage/APIReference";
 // import CommunitySection from '../components/homepage/CommunitySection';
 // import HomeFooter from '../components/homepage/HomeFooter';
-// import ResourcesSection from '../components/homepage/ResourcesSection';
+import ResourcesSection from "../components/homepage/Resources";
 // import HelpSection from '../components/homepage/HelpSection';
 const metadata = require("../data/metadata.json");
 import Head from "@docusaurus/Head";
@@ -29,10 +29,10 @@ export default function Homepage() {
         <div className="absolute bottom-1/2 top-0 -z-10 w-full bg-secondary-1000"></div>
       </div>
 
-      {/* <div className="z-0 bg-secondary-800 dark:bg-secondary-900">
+      <div className="z-0 bg-secondary-800 dark:bg-secondary-900">
         <ResourcesSection />
-        <HelpSection className="-mb-48" />
-      </div> */}
+        {/* <HelpSection className="-mb-48" /> */}
+      </div>
 
       {/* <CommunitySection />
 
