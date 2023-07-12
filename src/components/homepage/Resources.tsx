@@ -7,7 +7,7 @@ export default function ResourcesSection() {
   return (
     <section className="my-20 px-6">
       <div className="mx-auto max-w-5xl">
-        <span className="dyte-badge">{resData.title}</span>
+        <span className="minecustom-badge">{resData.title}</span>
         <h2 className="lg:text-3xl">{resData.comment}</h2>
         <p className="text-text-400">
           {resData.description} <br />

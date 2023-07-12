@@ -1,4 +1,5 @@
-// @ts-check
+// @ts-nocheck
+// @ts-ignore
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const code_themes = {
@@ -14,7 +15,7 @@ const tailwindPlugin = require("./plugins/tailwind-plugin.cjs");
 const metadata = {
   title: "My Website Title",
   tagline: "My tagline 🚀",
-  url: "https://ahmedbargady.me",
+  url: "https://google.com",
   baseUrl: "/",
   favicon: "/favicon.ico",
   i18n: {
@@ -57,7 +58,7 @@ const docs = [
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: false,
-  editUrl: "https://ahmedbargady.me",
+  editUrl: "https://google.com",
   showLastUpdateTime: true,
   remarkPlugins: [
     [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
@@ -115,10 +116,6 @@ const config = {
         sitemap: {
           ignorePatterns: ["/tags/**"],
         },
-        // TODO: add your own google analytics id
-        // googleTagManager: {
-        //   containerId: '',
-        // },
       }),
     ],
   ],
@@ -129,7 +126,6 @@ const config = {
       colorMode: {
         defaultMode: "dark",
       },
-      image: "img/docusaurus-social-card.jpg",
       navbar: {
         logo: {
           href: "/",
@@ -141,47 +137,31 @@ const config = {
         },
 
         items: [
-          // TODO: add the dropdown
-          // {
-          //   label: 'SDKs',
-          //   type: 'dropdown',
-          //   className: 'dyte-dropdown',
-          //   items: [
-          //     {
-          //       type: 'html',
-          //       value: sdksHTML,
-          //       className: 'dyte-dropdown',
-          //     },
-          //   ],
-          // },
           {
             label: "Guides",
             to: "guides",
             position: "left",
             className: "new-badge",
           },
-          // TODO: change this links
           {
             label: "Support",
-            to: "https://dyte.io/contact",
+            to: "https://google.com",
           },
           {
             type: "search",
             position: "right",
           },
-          // TODO: change this links
 
           {
             label: "Book a demo",
-            href: "https://dyte.io/schedule-demo",
+            href: "https://google.com",
             position: "right",
             className: "navbar-book-demo",
           },
-          // TODO: change this links
 
           {
             label: "Sign Up",
-            href: "https://dev.dyte.io/register",
+            href: "https://google.com",
             position: "right",
             className: "dev-portal-signup dev-portal-link",
           },
@@ -211,14 +191,13 @@ const config = {
           },
         ],
       },
-      // TODO: add your own credintials for algolia
-      // algolia: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: 'docs',
-      //   contextualSearch: true,
-      //   searchParameters: {},
-      // },
+      algolia: {
+        appId: "fff",
+        apiKey: "ffff",
+        indexName: "docs",
+        contextualSearch: true,
+        searchParameters: {},
+      },
     }),
   webpack: {
     jsLoader: (isServer) => ({

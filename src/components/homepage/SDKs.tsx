@@ -142,7 +142,7 @@ export default function SDKsSection() {
         <link rel="prefetch" href={sdksData.pills[2].blackImg} />
       </Head>
       <div className="mx-auto max-w-7xl">
-        <div className="dyte-badge">{sdksData.title}</div>
+        <div className="minecustom-badge">{sdksData.title}</div>
 
         <div className="sticky top-14 z-20 -mt-4 flex flex-col items-center gap-6 bg-secondary-1000 py-6 lg:flex-row lg:justify-between lg:py-0">
           <h2 className="my-0 text-center font-jakarta lg:text-3xl">
