@@ -17,7 +17,7 @@ const metadata = {
   tagline: "My tagline 🚀",
   url: "https://google.com",
   baseUrl: "/",
-  favicon: "/favicon.ico",
+  favicon: "/homepage/logo.png",
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
