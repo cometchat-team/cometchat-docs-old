@@ -85,6 +85,10 @@ function create_doc_plugin({
   ];
 }
 
+// RESOURCES AND SDKS
+const fs = require("fs");
+const resourcesHTML = fs.readFileSync("./src/snippets/resources.html", "utf-8");
+
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
 const plugins = [tailwindPlugin, ...docs_plugins, webpackPlugin];
@@ -151,8 +155,20 @@ const config = {
             to: "https://google.com",
           },
           {
-            label: "REST API",
+            label: "API Reference",
             to: "/api/",
+          },
+          {
+            label: "Resources",
+            type: "dropdown",
+            className: "minecustom-dropdown resources-dropdown",
+            items: [
+              {
+                type: "html",
+                value: resourcesHTML,
+                className: "minecustom-dropdown",
+              },
+            ],
           },
           {
             type: "search",
