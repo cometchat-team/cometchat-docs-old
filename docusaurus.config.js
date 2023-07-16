@@ -134,6 +134,11 @@ const config = {
       colorMode: {
         defaultMode: "dark",
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
         logo: {
           href: "/",
