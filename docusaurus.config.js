@@ -111,7 +111,10 @@ const config = {
         },
         blog: false,
         theme: {
-          customCss: [require.resolve("./src/css/custom.css")],
+          customCss: [
+            require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/api-reference.css"),
+          ],
         },
         sitemap: {
           ignorePatterns: ["/tags/**"],
@@ -146,6 +149,10 @@ const config = {
           {
             label: "Support",
             to: "https://google.com",
+          },
+          {
+            label: "REST API",
+            to: "/api/",
           },
           {
             type: "search",
