@@ -49,7 +49,7 @@ export default function Home() {
   const location = router.location;
 
   const url = new URL(
-    `https://docs.my_website${location.pathname}${location.search}`
+    `https://fiv-1.vercel.app${location.pathname}${location.search}`
   );
 
   const currentVersion = url.searchParams.get("v") || "v2";

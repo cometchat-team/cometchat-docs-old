@@ -2,13 +2,12 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  important: true,
   corePlugins: {
     preflight: false,
     container: false,
   },
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{jsx,html,tsx,js,ts}"],
+  content: ["./src/**/*.{jsx,tsx,html}"],
   theme: {
     extend: {
       fontFamily: {
@@ -16,7 +15,6 @@ module.exports = {
         jakarta: ['"Plus Jakarta Sans"', ...fontFamily.sans],
         mono: ['"Fira Code"', ...fontFamily.mono],
       },
-
       borderRadius: {
         sm: "4px",
       },

@@ -88,6 +88,7 @@ function create_doc_plugin({
 // RESOURCES AND SDKS
 const fs = require("fs");
 const resourcesHTML = fs.readFileSync("./src/snippets/resources.html", "utf-8");
+const sdksHTML = fs.readFileSync("./src/snippets/sdks.html", "utf-8");
 
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
@@ -145,6 +146,18 @@ const config = {
 
         items: [
           {
+            label: "SDKs",
+            type: "dropdown",
+            className: "dyte-dropdown",
+            items: [
+              {
+                type: "html",
+                value: sdksHTML,
+                className: "dyte-dropdown",
+              },
+            ],
+          },
+          {
             label: "Guides",
             to: "guides",
             position: "left",
@@ -161,12 +174,12 @@ const config = {
           {
             label: "Resources",
             type: "dropdown",
-            className: "minecustom-dropdown resources-dropdown",
+            className: "dyte-dropdown resources-dropdown",
             items: [
               {
                 type: "html",
                 value: resourcesHTML,
-                className: "minecustom-dropdown",
+                className: "dyte-dropdown",
               },
             ],
           },
