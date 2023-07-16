@@ -149,7 +149,7 @@ export default function FAQPage() {
   }
 
   return (
-    <Layout wrapperClassName="faq-page bg-secondary-1000" noFooter>
+    <Layout title="FAQ" wrapperClassName="faq-page bg-secondary-1000" noFooter>
       {/* Hero? */}
       <section className="noise-bg px-6 py-24">
         <div className="mx-auto flex max-w-7xl flex-col place-items-center justify-center">

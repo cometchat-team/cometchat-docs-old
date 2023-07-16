@@ -189,6 +189,10 @@ const config = {
             ],
           },
           {
+            label: "Feedback",
+            to: "/feedback/",
+          },
+          {
             type: "search",
             position: "right",
           },
