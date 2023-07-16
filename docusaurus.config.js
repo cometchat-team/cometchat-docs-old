@@ -153,12 +153,12 @@ const config = {
           {
             label: "SDKs",
             type: "dropdown",
-            className: "dyte-dropdown",
+            className: "my-website-dropdown",
             items: [
               {
                 type: "html",
                 value: sdksHTML,
-                className: "dyte-dropdown",
+                className: "my-website-dropdown",
               },
             ],
           },
@@ -179,12 +179,12 @@ const config = {
           {
             label: "Resources",
             type: "dropdown",
-            className: "dyte-dropdown resources-dropdown",
+            className: "my-website-dropdown resources-dropdown",
             items: [
               {
                 type: "html",
                 value: resourcesHTML,
-                className: "dyte-dropdown",
+                className: "my-website-dropdown",
               },
             ],
           },
