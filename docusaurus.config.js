@@ -57,7 +57,7 @@ const docs = [
 // TODO: update this infos
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
-  breadcrumbs: false,
+  breadcrumbs: true,
   editUrl: "https://google.com",
   showLastUpdateTime: true,
   remarkPlugins: [
