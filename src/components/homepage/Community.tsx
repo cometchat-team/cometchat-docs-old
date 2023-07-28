@@ -14,9 +14,9 @@ export default function CommunitySection() {
         </h2>
         <p className="mb-10 text-zinc-500">{communityData.description}</p>
         <div className="mx-auto mb-16 flex flex-wrap -space-x-1.5">
-          {communityData.githubUsernames.map((username) => (
+          {communityData.githubUsernames.map((username, indx) => (
             <img
-              key={username}
+              key={indx}
               src={`https://github.com/${username}.png?size=60`}
               alt={`User ${username}`}
               loading="lazy"
