@@ -44,38 +44,38 @@ const SECTIONS: Section[] = [
   },
 
   // Web SDKs
-  // - web-ui-kit
+  // - first-group-section
   {
-    name: "Web Components",
-    docId: "ui-kit",
+    name: "1 1st Category",
+    docId: "first-first-category",
     icon: HTMLIcon,
-    section: "web-ui-kit",
+    section: "first-group-section",
   },
   {
-    name: "React UI Kit",
-    docId: "react-ui-kit",
-    icon: ReactIcon,
-    section: "web-ui-kit",
+    name: "1 2nd Category",
+    docId: "first-second-category",
+    icon: HTMLIcon,
+    section: "first-group-section",
   },
   {
-    name: "Angular UI Kit",
-    docId: "angular-ui-kit",
-    icon: AngularIcon,
-    section: "web-ui-kit",
+    name: "1 3rd Category",
+    docId: "first-third-category",
+    icon: HTMLIcon,
+    section: "first-group-section",
   },
 
-  // - web-core-sdk
+  // - second-group-section
   {
-    name: "JavaScript",
-    docId: "web-core",
+    name: "2 1st Category",
+    docId: "second-first-category",
     icon: JSIcon,
-    section: "web-core-sdk",
+    section: "second-group-section",
   },
   {
-    name: "React",
-    docId: "react-web-core",
-    icon: ReactIcon,
-    section: "web-core-sdk",
+    name: "2 2nd Category",
+    docId: "second-second-category",
+    icon: JSIcon,
+    section: "second-group-section",
   },
   // Mobile SDKs
   {
@@ -147,15 +147,14 @@ const SECTION_GROUPS: SectionsGroup[][] = [
   ],
   [
     {
-      name: "UI Kit",
-      section: "web-ui-kit",
-      description:
-        "Use our pre-built UI components as a base to build on top of.",
+      name: "First Group Name",
+      section: "first-group-section",
+      description: "First Group Section Description",
     },
     {
-      name: "Core SDK",
-      section: "web-core-sdk",
-      description: "Build your own UI from scratch, use our low level APIs.",
+      name: "Second Group Name",
+      section: "second-group-section",
+      description: "Second Group Section Description",
     },
   ],
   [

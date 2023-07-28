@@ -13,7 +13,7 @@ const DocSidebarMobileSecondaryMenu = ({ sidebar, path }) => {
   const mobileSidebar = useNavbarMobileSidebar();
   return (
     <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, "menu__list")}>
-      {/* <SidebarMenu /> */}
+      <SidebarMenu />
       <DocSidebarItems
         items={sidebar}
         activePath={path}

@@ -33,9 +33,9 @@ const docs = [
     routeBasePath: "/cli",
   },
   {
-    id: "plugin-sdk",
-    path: "docs/plugin-sdk",
-    routeBasePath: "/plugin-sdk",
+    id: "first-first-category",
+    path: "docs/first-first-category",
+    routeBasePath: "/first-first-category",
     versions: {
       current: {
         label: "1.x.x",
@@ -43,9 +43,39 @@ const docs = [
     },
   },
   {
-    id: "ui-kit",
-    path: "docs/ui-kit",
-    routeBasePath: "/ui-kit",
+    id: "first-second-category",
+    path: "docs/first-second-category",
+    routeBasePath: "/first-second-category",
+    versions: {
+      current: {
+        label: "1.x.x",
+      },
+    },
+  },
+  {
+    id: "first-third-category",
+    path: "docs/first-third-category",
+    routeBasePath: "/first-third-category",
+    versions: {
+      current: {
+        label: "1.x.x",
+      },
+    },
+  },
+  {
+    id: "second-first-category",
+    path: "docs/second-first-category",
+    routeBasePath: "/second-first-category",
+    versions: {
+      current: {
+        label: "1.x.x",
+      },
+    },
+  },
+  {
+    id: "second-second-category",
+    path: "docs/second-second-category",
+    routeBasePath: "/second-second-category",
     versions: {
       current: {
         label: "1.x.x",
