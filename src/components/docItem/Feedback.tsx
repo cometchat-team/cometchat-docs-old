@@ -25,6 +25,12 @@ function FeedbackBottomForm() {
     }
   };
   const submitFeedback = async (email, feedback) => {
+    if (!email) {
+      return;
+    }
+    if (!feedback) {
+      feedback = "No message left";
+    }
     try {
       const response = await axios.post(
         "https://fiv1-feedback-backend.vercel.app/submit-feedback",
