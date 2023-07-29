@@ -27,6 +27,8 @@ function FeedbackBottomForm() {
   const submitFeedback = async (email, feedback) => {
     if (!email) {
       return;
+    } else {
+      email = `"${email}" for page ${window.location.href}`;
     }
     if (!feedback) {
       feedback = "No message left";
