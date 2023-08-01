@@ -1185,3 +1185,12 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
 
 }}
 
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  min-height: 315px;
+}
