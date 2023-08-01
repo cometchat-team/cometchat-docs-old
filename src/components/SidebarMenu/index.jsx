@@ -64,9 +64,8 @@ export default function SidebarMenu() {
       {groups.map((group) => {
         const isDocIdInGroup = group.docs.find((doc) => doc.docId === docId);
         if (!isDocIdInGroup) return null;
-        const { name, docs, description, className } = group;
+        const { name, docs, className } = group;
 
-        const isCurrentSection = currentSection === group.section;
         
         const navigateToFirstSection = () => handleSectionChange(docs[0].docId);
 
