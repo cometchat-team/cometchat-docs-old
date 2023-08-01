@@ -26,65 +26,8 @@ const metadata = {
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
-const docs = [
-  {
-    id: "cli",
-    path: "docs/cli",
-    routeBasePath: "/cli",
-  },
-  {
-    id: "first-first-category",
-    path: "docs/first-first-category",
-    routeBasePath: "/first-first-category",
-    lastVersion: "current",
-    versions: {
-      current: {
-        label: "2.2.3"
-      },
-    },
-  },
-  {
-    id: "first-second-category",
-    path: "docs/first-second-category",
-    routeBasePath: "/first-second-category",
-    versions: {
-      current: {
-        label: "1.x.x",
-      },
-    },
-  },
-  {
-    id: "first-third-category",
-    path: "docs/first-third-category",
-    routeBasePath: "/first-third-category",
-    versions: {
-      current: {
-        label: "1.x.x",
-      },
-    },
-  },
-  {
-    id: "second-first-category",
-    path: "docs/second-first-category",
-    routeBasePath: "/second-first-category",
-    versions: {
-      current: {
-        label: "1.x.x",
-      },
-    },
-  },
-  {
-    id: "second-second-category",
-    path: "docs/second-second-category",
-    routeBasePath: "/second-second-category",
-    versions: {
-      current: {
-        label: "1.x.x",
-      },
-    },
-  },
-];
-
+const json_docs = require("./docs_list.json") 
+const docs = json_docs 
 // TODO: update this infos
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
