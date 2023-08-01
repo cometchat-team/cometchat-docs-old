@@ -1177,3 +1177,11 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   z-index: -1 !important;
 }
 
+@media (max-width: 996px) {
+.row_src-components-SidebarMenu-styles-module .dropdown--hoverable, .row_KvCx .dropdown--hoverable {
+  display: flex !important;
+  margin-left: 24px !important;
+  margin-right: 18px !important;
+
+}}
+
