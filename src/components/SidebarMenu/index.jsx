@@ -12,6 +12,7 @@ function getPrettyPath(path) {
   return path.slice(-1) === "/" ? path.slice(0, -1) : path;
 }
 
+
 export default function SidebarMenu() {
   const router = useHistory();
   const data = useSectionMenu();
@@ -61,17 +62,19 @@ export default function SidebarMenu() {
   return (
     <div className={clsx("sidebar-menu", styles.multiSectionContainer)}>
       {groups.map((group) => {
+        const isDocIdInGroup = group.docs.find((doc) => doc.docId === docId);
+        if (!isDocIdInGroup) return null;
         const { name, docs, description, className } = group;
 
         const isCurrentSection = currentSection === group.section;
-
+        
         const navigateToFirstSection = () => handleSectionChange(docs[0].docId);
 
         return (
           <div
             className={clsx(
               styles.section,
-              isCurrentSection && styles.sectionActive
+              styles.sectionActive
             )}
             onClick={navigateToFirstSection}
             onKeyDown={(e) => {
@@ -83,10 +86,9 @@ export default function SidebarMenu() {
             key={group.name}>
             <div className={clsx(styles.label, className)}>{name}</div>
             <div>
-              {isCurrentSection ? (
                 <div className={styles.row}>
                   <SectionsMenu
-                    defaultValue={isCurrentSection ? docId : docs[0].id}
+                    defaultValue={docId}
                     values={docs}
                     onValueChange={handleSectionChange}
                     triggerClassName={styles.sectionsMenu}
@@ -97,9 +99,7 @@ export default function SidebarMenu() {
                     dropdownItemsAfter={[]}
                   />
                 </div>
-              ) : (
-                <p className={styles.description}>{description}</p>
-              )}
+               {/* <p className={styles.description}>{description}</p> */}
             </div>
           </div>
         );

@@ -41,6 +41,8 @@ export default function DocsVersionDropdownNavbarItem({
     ...dropdownItemsBefore,
     ...versionLinks,
     ...dropdownItemsAfter,
+   // {to: `${versionLinks[0].to.split("/").includes("versions") ? versionLinks[0].to : 
+    // versionLinks[0].to + "versions"}`, label: "All Versions"}
   ];
   const dropdownVersion = useDocsVersionCandidates(docsPluginId)[0];
   // Mobile dropdown is handled a bit differently
@@ -60,7 +62,7 @@ export default function DocsVersionDropdownNavbarItem({
   // We don't want to render a version dropdown with 0 or 1 item. If we build
   // the site with a single docs version (onlyIncludeVersions: ['1.0.0']),
   // We'd rather render a button instead of a dropdown
-  if (items.length <= 1) {
+  if (items.length <= 2) {
     return (
       <DefaultNavbarItem
         {...props}
@@ -76,7 +78,6 @@ export default function DocsVersionDropdownNavbarItem({
       {...props}
       style={{
         zIndex: 100,
-
       }}
       mobile={mobile}
       label={dropdownLabel}
