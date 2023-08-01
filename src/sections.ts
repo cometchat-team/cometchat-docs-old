@@ -1,7 +1,6 @@
 import type { ComponentProps, ReactNode } from "react";
 import {
   ReactIcon,
-  AngularIcon,
   AndroidIcon,
   AppleIcon,
   FlutterIcon,

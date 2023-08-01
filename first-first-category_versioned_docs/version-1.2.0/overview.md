@@ -3,6 +3,7 @@ sidebar_position: 1
 slug: /
 ---
 
+
 ## First First Category
 
-LAST VERSION
+VERSION 1.2.0

@@ -5,4 +5,4 @@ slug: /
 
 ## First First Category
 
-LAST VERSION
+VERSION 1.0.0

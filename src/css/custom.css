@@ -1173,3 +1173,7 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   @apply ml-6 mr-2 rounded-md border-secondary-700;
   border-width: 1px;
 }
+.breadcrumbs__link svg {
+  z-index: -1 !important;
+}
+

@@ -36,9 +36,10 @@ const docs = [
     id: "first-first-category",
     path: "docs/first-first-category",
     routeBasePath: "/first-first-category",
+    lastVersion: "current",
     versions: {
       current: {
-        label: "1.x.x",
+        label: "2.2.3"
       },
     },
   },
