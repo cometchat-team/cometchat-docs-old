@@ -26,8 +26,8 @@ const metadata = {
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
-const json_docs = require("./docs_list.json") 
-const docs = json_docs 
+const json_docs = require("./docs_list.json");
+const docs = json_docs;
 // TODO: update this infos
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
@@ -108,6 +108,7 @@ const config = {
       colorMode: {
         defaultMode: "dark",
       },
+
       docs: {
         sidebar: {
           hideable: true,
