@@ -1,41 +1,67 @@
-# Website
+## Navbar content
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+### SDKs
 
-### Installation
+![](./assets/Screenshot%20from%202023-08-02%2016-04-31.png)
 
-```
-$ yarn
-```
+you can find the SDKs content in the `./src/snippets/sdks.html`. This file is divided into 2 parts, SECTIONS and SUB SECTIONS as below:
 
-### Local Development
+![](./assets/navbar_sdks.png)
 
-```
-$ yarn start
-```
+### Resources
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Guides, Support ...
 
-### Build
+The other items behavior in the navbar is editable from the navbar object in the `docusaurus.config.js` file. You can find it in the line `116`
 
-```
-$ yarn build
-```
+### Search
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+You can replace **ALGOLIA** credentials in the line `213` in the `docusaurus.config.js` file.
 
-### Deployment
+## Homepage content
 
-Using SSH:
+### Hero
 
-```
-$ USE_SSH=true yarn deploy
-```
+[Hero Json File](./src/data/hero.json)
 
-Not using SSH:
+### Pills
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+[SDKs Section Json File](./src/data/sdks.json)
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### API Reference
+
+[API Reference Json File](./src/data/api-reference.json)
+
+### Resources
+
+[Resources Json File](./src/data/resources.json)
+
+### Cards _(Help Section)_
+
+[Cards Json File](./src/data/help.json)
+
+### Last Component _(Community Section)_
+
+[Community Json File](./src/data/community.json)
+
+### Footer
+
+[Footer Json File](./src/data/footer.json)
+
+## API Reference
+
+### Postman Button
+
+Replace the postmanUrl with your own Postman Run in Postman button URL in the `./src/components/RunInPostmanButton.tsx` file.
+
+### Stoplight yaml files
+
+Place your yaml files from stoplight in the `./static/api` folder.
+
+## Versioning
+
+[Docusaurus Documentation](https://docusaurus.io/docs/versioning)
+
+## FAQ
+
+Change the questions and answers in the `./src/faq.yaml` file.

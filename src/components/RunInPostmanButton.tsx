@@ -1,6 +1,5 @@
 import React from "react";
 
-// TODO: Replace this with your own Postman Run in Postman button URL
 const postmanUrl = "https://google.com";
 
 export default function RunInPostmanButton() {

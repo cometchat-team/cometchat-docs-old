@@ -22,22 +22,22 @@ export default function HeroSection() {
           </p>
           <div className="mt-8 flex flex-col gap-4 lg:flex-row">
             <a
-              href="#start-building"
+              href={heroData.buttons[0].link}
               className="rounded-sm bg-primary px-12 py-2.5 text-center font-semibold text-white hover:text-white">
-              Start building
+              {heroData.buttons[0].text}
             </a>
             <Link
-              href="/getting-started"
+              href={heroData.buttons[1].link}
               className="rounded-sm border border-solid border-primary bg-primary/10 px-12 py-2.5 text-center font-semibold text-primary hover:text-primary dark:border-primary-100 dark:text-primary-100">
-              Getting started
+              {heroData.buttons[1].text}
             </Link>
           </div>
         </div>
         <div className="mt-6 flex-1 lg:mt-0 xl:flex-none">
           <ThemedImage
             sources={{
-              light: "/homepage/hero-light.png",
-              dark: "/homepage/hero-dark.png",
+              light: heroData.image.light,
+              dark: heroData.image.dark,
             }}
             alt="Hero Picture"
             className="max-w-[420px] lg:max-w-[560px]"

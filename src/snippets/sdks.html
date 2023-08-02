@@ -8,7 +8,9 @@
 </script>
 <div class="sdks-dropdown flex max-w-lg flex-col rounded-2xl lg:min-w-[768px]">
   <div class="flex flex-col bg-secondary-800 p-4 lg:min-h-[300px] lg:flex-row">
+    <!-- SECTIONS -->
     <div class="flex flex-1 flex-col gap-8 rounded-xl bg-secondary-1000 p-6">
+      <!-- SECTION 1 -->
       <a
         data-dropdown-sdks-menu="web"
         onfocus="document.body.setAttribute('data-sdk-menu', 'web')"
@@ -29,6 +31,7 @@
           </p>
         </div>
       </a>
+      <!-- SECTION 2 -->
       <a
         data-dropdown-sdks-menu="mobile"
         onfocus="document.body.setAttribute('data-sdk-menu', 'mobile')"
@@ -49,12 +52,14 @@
           </p>
         </div>
       </a>
-
     </div>
+    <!-- SUB SECTIONS -->
     <div class="flex-1 p-6">
+      <!-- SECTION 1 / SUB SECTIONS -->
       <div class="flex flex-col gap-2" data-dropdown-sdks="web">
+      <!-- SECTION 1 / SUB SECTION 1 -->
         <div class="flex flex-1 flex-col">
-          <h3 class="!mb-0.5">Sub section 1</h3>
+          <h3 class="!mb-0.5">SECTION 1 / Sub section 1</h3>
           <span class="none hidden text-sm font-normal lg:block"
             >Something</span
           >
@@ -73,8 +78,10 @@
             </li>
           </ul>
         </div>
+      <!-- SECTION 1 / SUB SECTION 2 -->
+
         <div class="mt-6 flex flex-1 flex-col">
-          <h3 class="!mb-0.5">Sub section 2</h3>
+          <h3 class="!mb-0.5">SECTION 1 / Sub section 2</h3>
           <span class="hidden text-sm font-normal lg:block"
             >Something</span
           >
@@ -100,12 +107,11 @@
           </ul>
         </div>
       </div>
-
-
-
+      <!-- SECTION 2 / SUB SECTIONS -->
       <div class="flex flex-col gap-2" data-dropdown-sdks="mobile">
+      <!-- SECTION 2 / SUB SECTION 1 -->
         <div class="flex flex-1 flex-col">
-          <h3 class="!mb-0.5">Subsection 1</h3>
+          <h3 class="!mb-0.5">SECTION 2 / Sub section 1</h3>
           <span class="none hidden text-sm font-normal lg:block"
             >Something</span
           >
@@ -136,8 +142,9 @@
             </li>
           </ul>
         </div>
+      <!-- SECTION 2 / SUB SECTION 2 -->
         <div class="mt-6 flex flex-1 flex-col">
-          <h3 class="!mb-0.5">Subsection 2</h3>
+          <h3 class="!mb-0.5">SECTION 2 / Sub section 2</h3>
           <span class="hidden text-sm font-normal lg:block"
             >Something </span
           >
@@ -171,6 +178,4 @@
       </div>
     </div>
   </div>
-
-
 </div>
