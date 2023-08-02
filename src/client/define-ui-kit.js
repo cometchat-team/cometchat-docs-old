@@ -1,6 +1,20 @@
-// add a loader to prevent Page not found before it's rendered
-import react from "react";
+import { defineCustomElements } from "@dytesdk/ui-kit/loader";
 
-export default function Loader() {
-  return react.createElement("div", null, "Loading...");
+defineCustomElements();
+
+function onLoad() {
+  if (typeof window === "undefined") return;
+
+  const play = window.HTMLAudioElement.prototype.play;
+
+  // override play() to avoid autoplay modal
+  window.HTMLAudioElement.prototype.play = function () {
+    try {
+      play.call(this);
+    } catch (err) {
+      // pass
+    }
+  };
 }
+
+onLoad();
