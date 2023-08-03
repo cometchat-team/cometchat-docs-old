@@ -63,7 +63,6 @@ function create_doc_plugin({
 const fs = require("fs");
 const resourcesHTML = fs.readFileSync("./src/snippets/resources.html", "utf-8");
 const sdksHTML = fs.readFileSync("./src/snippets/sdks.html", "utf-8");
-
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
 const plugins = [tailwindPlugin, ...docs_plugins, webpackPlugin];
@@ -72,7 +71,6 @@ const plugins = [tailwindPlugin, ...docs_plugins, webpackPlugin];
 const config = {
   ...metadata,
   plugins,
-
   trailingSlash: false,
   themes: ["@docusaurus/theme-live-codeblock"],
   clientModules: [require.resolve("./src/client/define-ui-kit.js")],
@@ -228,6 +226,7 @@ const config = {
             syntax: "typescript",
             tsx: true,
           },
+
           target: "es2017",
         },
         module: {
