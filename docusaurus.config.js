@@ -72,6 +72,7 @@ const config = {
   ...metadata,
   plugins,
   trailingSlash: false,
+
   themes: ["@docusaurus/theme-live-codeblock"],
   clientModules: [require.resolve("./src/client/define-ui-kit.js")],
 
