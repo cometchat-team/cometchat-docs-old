@@ -6,7 +6,6 @@ export default function Root({ children }) {
   const history = useHistory();
   function openLinkUsingDocusaurusRouter(link) {
     history.push(link);
-    console.log("-------->", link);
   }
   useEffect(() => {
     window.openLinkUsingDocusaurusRouter = openLinkUsingDocusaurusRouter;
