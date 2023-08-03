@@ -1,5 +1,5 @@
 import { useHistory } from "@docusaurus/router";
-import React from "react";
+import React, { useEffect } from "react";
 
 // Default implementation, that you can customize
 export default function Root({ children }) {
@@ -8,6 +8,9 @@ export default function Root({ children }) {
     history.push(link);
     console.log("-------->", link);
   }
-  window.openLinkUsingDocusaurusRouter = openLinkUsingDocusaurusRouter;
+  useEffect(() => {
+    window.openLinkUsingDocusaurusRouter = openLinkUsingDocusaurusRouter;
+  }, []);
+
   return <>{children}</>;
 }
