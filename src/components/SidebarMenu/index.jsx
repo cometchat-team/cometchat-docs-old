@@ -12,7 +12,6 @@ function getPrettyPath(path) {
   return path.slice(-1) === "/" ? path.slice(0, -1) : path;
 }
 
-
 export default function SidebarMenu() {
   const router = useHistory();
   const data = useSectionMenu();
@@ -66,39 +65,29 @@ export default function SidebarMenu() {
         if (!isDocIdInGroup) return null;
         const { name, docs, className } = group;
 
-        
         const navigateToFirstSection = () => handleSectionChange(docs[0].docId);
 
         return (
           <div
-            className={clsx(
-              styles.section,
-              styles.sectionActive
-            )}
-            onClick={navigateToFirstSection}
-            onKeyDown={(e) => {
-              if (e.code === "Space" || e.code == "Enter") {
-                navigateToFirstSection();
-              }
-            }}
+            className={clsx(styles.section, styles.sectionActive)}
             tabIndex={0}
             key={group.name}>
             <div className={clsx(styles.label, className)}>{name}</div>
             <div>
-                <div className={styles.row}>
-                  <SectionsMenu
-                    defaultValue={docId}
-                    values={docs}
-                    onValueChange={handleSectionChange}
-                    triggerClassName={styles.sectionsMenu}
-                  />
-                  <VersionDropdown
-                    docsPluginId={docId}
-                    dropdownItemsBefore={[]}
-                    dropdownItemsAfter={[]}
-                  />
-                </div>
-               {/* <p className={styles.description}>{description}</p> */}
+              <div className={styles.row}>
+                <SectionsMenu
+                  defaultValue={docId}
+                  values={docs}
+                  onValueChange={handleSectionChange}
+                  triggerClassName={styles.sectionsMenu}
+                />
+                <VersionDropdown
+                  docsPluginId={docId}
+                  dropdownItemsBefore={[]}
+                  dropdownItemsAfter={[]}
+                />
+              </div>
+              {/* <p className={styles.description}>{description}</p> */}
             </div>
           </div>
         );
