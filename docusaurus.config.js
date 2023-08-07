@@ -10,7 +10,6 @@ const code_themes = {
 const { webpackPlugin } = require("./plugins/webpack-plugin.cjs");
 const tailwindPlugin = require("./plugins/tailwind-plugin.cjs");
 
-// TODO: update this infos
 /** @type {import('@docusaurus/types').Config} */
 const metadata = {
   title: "My Website Title",
@@ -26,9 +25,8 @@ const metadata = {
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
-const json_docs = require("./docs_list.json");
-const docs = json_docs;
-// TODO: update this infos
+const docs = require("./docs_with_sidebar_list.json");
+
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: true,
@@ -37,7 +35,7 @@ const defaultSettings = {
   remarkPlugins: [
     [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
   ],
-  sidebarPath: require.resolve("./sidebars-default.js"),
+  
 };
 
 /**
@@ -85,6 +83,7 @@ const config = {
           path: "docs/guides",
           id: "guides",
           routeBasePath: "/guides",
+          sidebarPath: require.resolve("./guides_sidebar.js"),
           ...defaultSettings,
         },
         blog: false,
@@ -170,14 +169,12 @@ const config = {
             type: "search",
             position: "right",
           },
-
           {
             label: "Book a demo",
             href: "https://google.com",
             position: "right",
             className: "navbar-book-demo",
           },
-
           {
             label: "Sign Up",
             href: "https://google.com",

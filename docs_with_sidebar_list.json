@@ -1,0 +1,24 @@
+[
+  {
+    "id": "react",
+    "path": "docs/chat/sdks/react",
+    "routeBasePath": "chat/sdks/react",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "1.0.0"
+      }
+    }
+  },
+  {
+    "id": "next-js",
+    "path": "docs/chat/sdks/next-js",
+    "routeBasePath": "/chat/sdks/next-js",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "1.0.0"
+      }
+    }
+  }
+]
