@@ -1,10 +1,5 @@
 [
   {
-    "id": "cli",
-    "path": "docs/cli",
-    "routeBasePath": "/cli"
-  },
-  {
     "id": "first-first-category",
     "path": "docs/first-first-category",
     "routeBasePath": "/first-first-category",
@@ -52,6 +47,17 @@
     "versions": {
       "current": {
         "label": "1.x.x"
+      }
+    }
+  },
+  {
+    "id": "react",
+    "path": "docs/guides/chat/sdks/react",
+    "routeBasePath": "/guides/chat/sdks/react",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "1.0.0"
       }
     }
   }

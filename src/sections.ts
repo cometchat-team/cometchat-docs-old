@@ -1,23 +1,25 @@
 import type { ComponentProps, ReactNode } from "react";
 import {
-  ReactIcon,
   AndroidIcon,
   AppleIcon,
   FlutterIcon,
   HTMLIcon,
   JSIcon,
+  ReactIcon,
 } from "./icons";
 
-export type Section = { docId: string } & (
-  | {
+export type Section =
+  & { docId: string }
+  & (
+    | {
       section: false;
     }
-  | {
+    | {
       section: string;
       icon: (props: ComponentProps<"svg">) => ReactNode;
       name: string;
     }
-);
+  );
 
 const SECTIONS: Section[] = [
   {
@@ -61,6 +63,26 @@ const SECTIONS: Section[] = [
     docId: "first-third-category",
     icon: HTMLIcon,
     section: "first-group-section",
+  },
+
+  // - Chat / SDKs
+  {
+    name: "React",
+    docId: "react",
+    icon: HTMLIcon,
+    section: "chat-sdks",
+  },
+  {
+    name: "Tailwind CSS",
+    docId: "tailwind-css",
+    icon: HTMLIcon,
+    section: "chat-sdks",
+  },
+  {
+    name: "NextJS",
+    docId: "next-js",
+    icon: HTMLIcon,
+    section: "chat-sdks",
   },
 
   // - second-group-section
@@ -146,6 +168,13 @@ const SECTION_GROUPS: SectionsGroup[][] = [
   ],
   [
     {
+      name: "Chat SDKs",
+      section: "chat-sdks",
+      description: "Description for Chat SDKs",
+    },
+  ],
+  [
+    {
       name: "First Group Name",
       section: "first-group-section",
       description: "First Group Section Description",
@@ -177,4 +206,4 @@ const SECTION_GROUPS: SectionsGroup[][] = [
   ],
 ];
 
-export { SECTIONS, SECTION_GROUPS };
+export { SECTION_GROUPS, SECTIONS };
