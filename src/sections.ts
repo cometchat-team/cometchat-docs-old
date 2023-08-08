@@ -1,5 +1,5 @@
 import type { ComponentProps, ReactNode } from "react";
-import { ReactIcon } from "./icons";
+import { JSIcon,IonicIcon, ReactIcon, AndroidIcon, AppleIcon, FlutterIcon } from "./icons";
 
 export type SectionsGroup = {
   name: string;
@@ -22,27 +22,72 @@ export type Section =
   );
 
 const SECTIONS: Section[] = [
-  // - Chat / SDKs
+  // - Chat / SDK
   {
-    name: "React",
-    docId: "react",
-    icon: ReactIcon,
-    section: "chat-sdks",
+    name: "JavaScript",
+    docId: "javascript",
+    icon: JSIcon,
+    section: "chat-sdk",
   },
   {
-    name: "NextJS",
-    docId: "next-js",
+    name: "Android",
+    docId: "android",
+    icon: AndroidIcon,
+    section: "chat-sdk",
+  },
+  {
+    name: "IOS",
+    docId: "ios",
+    icon: AppleIcon,
+    section: "chat-sdk",
+  },
+  {
+    name: "Flutter",
+    docId: "flutter",
+    icon: FlutterIcon,
+    section: "chat-sdk",
+  },
+  {
+    name: "React Native",
+    docId: "react-native",
     icon: ReactIcon,
-    section: "chat-sdks",
+    section: "chat-sdk",
+  },
+  {
+    name: "Ionic",
+    docId: "ionic",
+    icon: IonicIcon,
+    section: "chat-sdk",
   },
 ];
 
 const SECTION_GROUPS: SectionsGroup[][] = [
   [
     {
-      name: "Chat SDKs",
-      section: "chat-sdks",
+      name: "Chat SDK",
+      section: "chat-sdk",
       description: "Description for Chat SDKs",
+    },
+  ],
+  [
+    {
+      name: "Chat Wdigets",
+      section: "chat-widgets",
+      description: "Description for Chat Widgets",
+    },
+  ],
+  [
+    {
+      name: "Call SDK",
+      section: "call-sdk",
+      description: "Description for Call SDKs",
+    },
+  ],
+  [
+    {
+      name: "UI Kits",
+      section: "ui-kits",
+      description: "Description for UI Kits",
     },
   ],
 ];

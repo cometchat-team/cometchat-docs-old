@@ -35,7 +35,6 @@ const defaultSettings = {
   remarkPlugins: [
     [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
   ],
-  
 };
 
 /**

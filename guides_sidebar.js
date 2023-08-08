@@ -9,12 +9,18 @@ const guides_sidebars = {
   }, {
     type: "category",
     label: "Chat",
+    link: {
+        type: "generated-index"
+      },
+    collapsible: true,
     items: [
       {
         type: "doc",
         label: "SDKs",
         id: "chat/sdks",
       },
+      { type: "doc", label: "Tools", id: "chat/tools" },
+      { type: "doc", label: "Introduction", id: "chat/intro"}
     ],
   }],
 };

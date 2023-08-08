@@ -1,23 +1,67 @@
 [
   {
-    "id": "react",
-    "path": "docs/chat/sdks/react",
-    "routeBasePath": "chat/sdks/react",
+    "id": "javascript",
+    "path": "docs/chat/sdks/javascript",
+    "routeBasePath": "/chat/sdks/javascript",
     "lastVersion": "current",
     "versions": {
       "current": {
-        "label": "1.0.0"
+        "label": "3.0.0"
       }
     }
   },
   {
-    "id": "next-js",
-    "path": "docs/chat/sdks/next-js",
-    "routeBasePath": "/chat/sdks/next-js",
+    "id": "android",
+    "path": "docs/chat/sdks/android",
+    "routeBasePath": "/chat/sdks/android",
     "lastVersion": "current",
     "versions": {
       "current": {
-        "label": "1.0.0"
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "ios",
+    "path": "docs/chat/sdks/ios",
+    "routeBasePath": "/chat/sdks/ios",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "flutter",
+    "path": "docs/chat/sdks/flutter",
+    "routeBasePath": "/chat/sdks/flutter",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "react-native",
+    "path": "docs/chat/sdks/react-native",
+    "routeBasePath": "/chat/sdks/react-native",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "ionic",
+    "path": "docs/chat/sdks/ionic",
+    "routeBasePath": "/chat/sdks/ionic",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
       }
     }
   }
