@@ -10,13 +10,13 @@
   <div class="flex flex-col bg-secondary-800 p-4 lg:min-h-[300px] lg:flex-row">
     <!-- SECTIONS -->
     <div class="flex flex-1 flex-col gap-8 rounded-xl bg-secondary-1000 p-6">
-      <!-- SECTION 1 -->
+      <!-- Chat -->
       <a
         data-dropdown-sdks-menu="web"
         onfocus="document.body.setAttribute('data-sdk-menu', 'web')"
         onmouseover="document.body.setAttribute('data-sdk-menu', 'web')"
         class="flex cursor-pointer items-start justify-start gap-2 border-none bg-transparent text-black dark:text-white"
-        onclick="window.openLinkUsingDocusaurusRouter('/chat/')"
+        onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk')"
       >
         <div class="flex-shrink-0">
           <img
@@ -25,13 +25,13 @@
           />
         </div>
         <div class="flex flex-col items-start justify-start gap-1">
-          <div class="text-base font-semibold">Section 1</div>
+          <div class="text-base font-semibold">Chat</div>
           <p class="mb-0 text-left text-sm text-text-400">
-            Description for Section 1
+            
           </p>
         </div>
       </a>
-      <!-- SECTION 2 -->
+      <!-- Call -->
       <a
         data-dropdown-sdks-menu="mobile"
         onfocus="document.body.setAttribute('data-sdk-menu', 'mobile')"
@@ -46,136 +46,254 @@
           />
         </div>
         <div class="flex flex-col items-start justify-start gap-1">
-          <div class="text-base font-semibold">Section 2</div>
+          <div class="text-base font-semibold">Call</div>
           <p class="mb-0 text-left text-sm text-text-400">
-            Description for Section 2
+           
           </p>
         </div>
       </a>
+      <!-- Widgets -->
+      <!-- <a
+        data-dropdown-sdks-menu="desktop"
+        onfocus="document.body.setAttribute('data-sdk-menu', 'desktop')"
+        onmouseover="document.body.setAttribute('data-sdk-menu', 'desktop')"
+        class="flex cursor-pointer items-start justify-start gap-2 border-none bg-transparent text-black dark:text-white"
+        onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')"
+      >
+        <div class="flex-shrink-0">
+          <img
+            src="/homepage/logo.png"
+            class="h-6 w-6"
+          />
+        </div>
+        <div class="flex flex-col items-start justify-start gap-1">
+          <div class="text-base font-semibold">Widgets</div>
+          <p class="mb-0 text-left text-sm text-text-400">
+           
+          </p>
+        </div>
+      </a> -->
+
     </div>
     <!-- SUB SECTIONS -->
     <div class="flex-1 p-6">
-      <!-- SECTION 1 / SUB SECTIONS -->
+      <!-- Chat -->
       <div class="flex flex-col gap-2" data-dropdown-sdks="web">
-      <!-- SECTION 1 / SUB SECTION 1 -->
+        <!-- chat/sdk -->
         <div class="flex flex-1 flex-col">
-          <h3 class="!mb-0.5">SECTION 1 / Sub section 1</h3>
+          <h3 class="!mb-0.5">SDK</h3>
           <span class="none hidden text-sm font-normal lg:block"
-            >Something</span
+            ></span
           >
           <ul class="sdk-ul">
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk/javascript')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 1
+              Javascript
               </a>
             </li>
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk/android')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 2
+                Android
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk/ios')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                IOS
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk/flutter')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                Flutter
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk/react-native')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                React Native
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/sdk/ionic')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                Ionic
               </a>
             </li>
           </ul>
         </div>
-      <!-- SECTION 1 / SUB SECTION 2 -->
-
+        <!-- chat/ui kits -->
         <div class="mt-6 flex flex-1 flex-col">
-          <h3 class="!mb-0.5">SECTION 1 / Sub section 2</h3>
+          <h3 class="!mb-0.5">UI Kits</h3>
           <span class="hidden text-sm font-normal lg:block"
-            >Something</span
+            ></span
           >
           <ul class="sdk-ul">
             <li>
               <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 1
+              React
               </a>
             </li>
             <li>
               <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 2
+                Angular
               </a>
             </li>
             <li>
               <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 3
+                Vue
               </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                Android
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                IOS
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                React Native
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/first-first-category')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+                Flutter
+              </a>
+              
             </li>
           </ul>
         </div>
       </div>
-      <!-- SECTION 2 / SUB SECTIONS -->
+      <!-- Call -->
       <div class="flex flex-col gap-2" data-dropdown-sdks="mobile">
-      <!-- SECTION 2 / SUB SECTION 1 -->
+      <!-- Call / SDK -->
         <div class="flex flex-1 flex-col">
-          <h3 class="!mb-0.5">SECTION 2 / Sub section 1</h3>
+          <h3 class="!mb-0.5">SDK</h3>
           <span class="none hidden text-sm font-normal lg:block"
-            >Something</span
+            ></span
           >
           <ul class="sdk-ul">
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/call/sdk/javascript')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 1
+              Javascript
               </a>
             </li>
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/call/sdk/android')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 2
+                Android
               </a>
             </li>
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/call/sdk/ios')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 3
+                IOS
               </a>
             </li>
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/call/sdk/flutter')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 4
-              </a>
-            </li>
-          </ul>
-        </div>
-      <!-- SECTION 2 / SUB SECTION 2 -->
-        <div class="mt-6 flex flex-1 flex-col">
-          <h3 class="!mb-0.5">SECTION 2 / Sub section 2</h3>
-          <span class="hidden text-sm font-normal lg:block"
-            >Something </span
-          >
-          <ul class="sdk-ul">
-            <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
-                <img src="/homepage/logo.png" />
-                Something 1
+                Flutter
               </a>
             </li>
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/call/sdk/react-native')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 2
+                React Native
               </a>
             </li>
             <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+              <a onclick="window.openLinkUsingDocusaurusRouter('/call/sdk/ionic')" class="sdk-link">
                 <img src="/homepage/logo.png" />
-                Something 3
-              </a>
-            </li>
-            <li>
-              <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
-                <img src="/homepage/logo.png" />
-                Something 4
+                Ionic
               </a>
             </li>
           </ul>
         </div>
       </div>
+      <!-- Widgets
+      <!-- <div class="flex flex-col gap-2" data-dropdown-sdks="desktop">
+        <!-- Chat Widgets 
+          <div class="flex flex-1 flex-col">
+            <h3 class="!mb-0.5">Chat Widgets</h3>
+            <span class="none hidden text-sm font-normal lg:block"
+              ></span
+            >
+            <ul class="sdk-ul">
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 1
+                </a>
+              </li>
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 2
+                </a>
+              </li>
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 3
+                </a>
+              </li>
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 4
+                </a>
+              </li>
+            </ul>
+          </div>
+        <!-- Call / SUB Call 
+          <div class="mt-6 flex flex-1 flex-col">
+            <h3 class="!mb-0.5">Call / Sub Call</h3>
+            <span class="hidden text-sm font-normal lg:block"
+              >Something </span
+            >
+            <ul class="sdk-ul">
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 1
+                </a>
+              </li>
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 2
+                </a>
+              </li>
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 3
+                </a>
+              </li>
+              <li>
+                <a onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')" class="sdk-link">
+                  <img src="/homepage/logo.png" />
+                  Something 4
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
     </div>
   </div>
 </div>

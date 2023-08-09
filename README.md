@@ -139,6 +139,6 @@ Change the questions and answers in the `./src/faq.yaml` file.
 
    I guess the **Chat**, **SDKs** and **React**, each one gonna has its own versions list, so it's required that each one has its own folder with the versioned docs and versioned sidebars. Means each one with its own path.
 
-6. https://fiv-1.vercel.app/chat/sdks/react (and not https://fiv-1.vercel.app/react-chat-sdk)
+6. https://fiv-1.vercel.app/chat/sdk/react (and not https://fiv-1.vercel.app/react-chat-sdk)
 
    - Gonna required too much work, while we can't use the default docusaurus navigation behavior,
