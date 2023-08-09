@@ -64,6 +64,50 @@ const SECTIONS: Section[] = [
     icon: IonicIcon,
     section: "chat-sdk",
   },
+  // - Chat / UI Kits
+  {
+    name: "Android",
+    docId: "chat-ui-kits-android",
+    icon: AndroidIcon,
+    section: "chat-ui-kits",
+  },
+  {
+    name: "IOS",
+    docId: "chat-ui-kits-ios",
+    icon: AppleIcon,
+    section: "chat-ui-kits",
+  },
+  {
+    name: "Flutter",
+    docId: "chat-ui-kits-flutter",
+    icon: FlutterIcon,
+    section: "chat-ui-kits",
+  },
+  {
+    name: "React Native",
+    docId: "chat-ui-kits-react-native",
+    icon: ReactIcon,
+    section: "chat-ui-kits",
+  },
+  {
+    name: "Angular",
+    docId: "chat-ui-kits-angular",
+    icon: IonicIcon,
+    section: "chat-ui-kits",
+  },
+  {
+    name: "React",
+    docId: "chat-ui-kits-react",
+    icon: ReactIcon,
+    section: "chat-ui-kits",
+  },
+  {
+    name: "Vue",
+    docId: "chat-ui-kits-vue",
+    icon: JSIcon,
+    section: "chat-ui-kits",
+  },
+
   // - Call / SDK
   {
     name: "JavaScript",
@@ -108,6 +152,13 @@ const SECTION_GROUPS: SectionsGroup[][] = [
     {
       name: "Chat SDK",
       section: "chat-sdk",
+      description: "Description for Chat SDKs",
+    },
+  ],
+  [
+    {
+      name: "UI Kits",
+      section: "chat-ui-kits",
       description: "Description for Chat SDKs",
     },
   ],

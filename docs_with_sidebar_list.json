@@ -65,6 +65,85 @@
       }
     }
   },
+
+  {
+    "id": "chat-ui-kits-android",
+    "path": "docs/chat/ui-kits/android",
+    "routeBasePath": "/chat/ui-kits/android",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-ui-kits-ios",
+    "path": "docs/chat/ui-kits/ios",
+    "routeBasePath": "/chat/ui-kits/ios",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-ui-kits-angular",
+    "path": "docs/chat/ui-kits/angular",
+    "routeBasePath": "/chat/ui-kits/angular",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-ui-kits-react",
+    "path": "docs/chat/ui-kits/react",
+    "routeBasePath": "/chat/ui-kits/react",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-ui-kits-vue",
+    "path": "docs/chat/ui-kits/vue",
+    "routeBasePath": "/chat/ui-kits/vue",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-ui-kits-flutter",
+    "path": "docs/chat/ui-kits/flutter",
+    "routeBasePath": "/chat/ui-kits/flutter",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-ui-kits-react-native",
+    "path": "docs/chat/ui-kits/react-native",
+    "routeBasePath": "/chat/ui-kits/react-native",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "4.0.0"
+      }
+    }
+  },
+
   {
     "id": "call-sdks-javascript",
     "path": "docs/call/sdk/javascript",

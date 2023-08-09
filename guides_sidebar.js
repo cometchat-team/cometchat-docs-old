@@ -19,6 +19,11 @@ const guides_sidebars = {
           label: "SDKs",
           id: "chat/sdks",
         },
+        {
+          type: "doc",
+          label: "UI Kits",
+          id: "chat/ui-kits",
+        },
       ],
     },
     {
