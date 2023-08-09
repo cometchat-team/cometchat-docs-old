@@ -62,7 +62,7 @@ export default function DocsVersionDropdownNavbarItem({
   // We don't want to render a version dropdown with 0 or 1 item. If we build
   // the site with a single docs version (onlyIncludeVersions: ['1.0.0']),
   // We'd rather render a button instead of a dropdown
-  if (items.length <= 2) {
+  if (items.length <= 1) {
     return (
       <DefaultNavbarItem
         {...props}
