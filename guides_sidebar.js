@@ -8,24 +8,7 @@ const guides_sidebars = {
       label: "Introduction",
       id: "intro",
     },
-    {
-      type: "category",
-      label: "Chat",
-      collapsible: true,
-      items: [
-        { type: "doc", label: "Introduction", id: "chat/intro" },
-        {
-          type: "doc",
-          label: "SDKs",
-          id: "chat/sdks",
-        },
-        {
-          type: "doc",
-          label: "UI Kits",
-          id: "chat/ui-kits",
-        },
-      ],
-    },
+
     {
       type: "category",
       label: "Call",

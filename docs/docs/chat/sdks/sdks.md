@@ -1,6 +1,6 @@
 ---
 title: SDKs
-slug: /chat/sdks
+slug: /sdks
 sidebar_position: 3
 ---
 

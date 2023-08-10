@@ -145,6 +145,18 @@ const SECTIONS: Section[] = [
     icon: IonicIcon,
     section: "call-sdk",
   },
+  {
+    name: "Web",
+    docId: "chat-widgets-web",
+    icon: IonicIcon,
+    section: "chat-widgets",
+  },
+  {
+    name: "Wordpress",
+    docId: "chat-widgets-wordpress",
+    icon: IonicIcon,
+    section: "chat-widgets",
+  },
 ];
 
 const SECTION_GROUPS: SectionsGroup[][] = [
@@ -159,6 +171,13 @@ const SECTION_GROUPS: SectionsGroup[][] = [
     {
       name: "UI Kits",
       section: "chat-ui-kits",
+      description: "Description for Chat SDKs",
+    },
+  ],
+  [
+    {
+      name: "Widgets",
+      section: "chat-widgets",
       description: "Description for Chat SDKs",
     },
   ],

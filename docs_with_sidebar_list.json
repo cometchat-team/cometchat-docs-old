@@ -1,5 +1,16 @@
 [
   {
+    "id": "chat",
+    "path": "docs/docs/chat/sdks",
+    "routeBasePath": "/chat/sdks",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
     "id": "chat-sdks-javascript",
     "path": "docs/chat/sdk/javascript",
     "routeBasePath": "/chat/sdk/javascript",
@@ -203,6 +214,28 @@
     "id": "call-sdks-ionic",
     "path": "docs/call/sdk/ionic",
     "routeBasePath": "/call/sdk/ionic",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-widgets-web",
+    "path": "docs/chat/widgets/web",
+    "routeBasePath": "/chat/widgets/web",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "chat-widgets-wordpress",
+    "path": "docs/chat/widgets/wordpress",
+    "routeBasePath": "/chat/widgets/wordpress",
     "lastVersion": "current",
     "versions": {
       "current": {

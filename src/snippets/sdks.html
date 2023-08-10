@@ -16,7 +16,7 @@
         onfocus="document.body.setAttribute('data-sdk-menu', 'web')"
         onmouseover="document.body.setAttribute('data-sdk-menu', 'web')"
         class="flex cursor-pointer items-start justify-start gap-2 border-none bg-transparent text-black dark:text-white"
-        onclick="window.openLinkUsingDocusaurusRouter('/guides/chat')"
+        onclick="window.openLinkUsingDocusaurusRouter('/chat/sdks')"
       >
         <div class="flex-shrink-0">
           <img
@@ -52,27 +52,6 @@
           </p>
         </div>
       </a>
-      <!-- Widgets -->
-      <!-- <a
-        data-dropdown-sdks-menu="desktop"
-        onfocus="document.body.setAttribute('data-sdk-menu', 'desktop')"
-        onmouseover="document.body.setAttribute('data-sdk-menu', 'desktop')"
-        class="flex cursor-pointer items-start justify-start gap-2 border-none bg-transparent text-black dark:text-white"
-        onclick="window.openLinkUsingDocusaurusRouter('/second-first-category')"
-      >
-        <div class="flex-shrink-0">
-          <img
-            src="/homepage/logo.png"
-            class="h-6 w-6"
-          />
-        </div>
-        <div class="flex flex-col items-start justify-start gap-1">
-          <div class="text-base font-semibold">Widgets</div>
-          <p class="mb-0 text-left text-sm text-text-400">
-           
-          </p>
-        </div>
-      </a> -->
 
     </div>
     <!-- SUB SECTIONS -->
@@ -174,6 +153,28 @@
               </a>
               
             </li>
+          </ul>
+        </div>
+         <!-- chat/widgets -->
+         <div class="mt-6 flex flex-1 flex-col">
+          <h3 class="!mb-0.5">Widgets</h3>
+          <span class="hidden text-sm font-normal lg:block"
+            ></span
+          >
+          <ul class="sdk-ul">
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/widgets/web')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+              Web
+              </a>
+            </li>
+            <li>
+              <a onclick="window.openLinkUsingDocusaurusRouter('/chat/widgets/wordpress')" class="sdk-link">
+                <img src="/homepage/logo.png" />
+              WordPress
+              </a>
+            </li>
+           
           </ul>
         </div>
       </div>

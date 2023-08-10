@@ -1,6 +1,6 @@
 ---
 title: UI Kits
-slug: /chat/ui-kits
+slug: /ui-kits
 sidebar_position: 4
 ---
 
