@@ -1,0 +1,38 @@
+---
+id: usage-metrics
+title: "Usage Metrics"
+description: "Usage metrics of an app."
+sidebar_label: "Usage Metrics"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["Metrics"],"description":"Usage metrics of an app.","operationId":"usage-metrics","parameters":[{"name":"fromDate","in":"query","description":"Unix timestamp from which usage has to be fetched.","required":true,"schema":{"type":"integer"}},{"name":"toDate","in":"query","description":"Unix timestamp till which usage has to be fetched.","required":true,"schema":{"type":"integer"}}],"responses":{"200":{"description":"Usage metrics of an app.","content":{"application/json":{"schema":{"properties":{"data":{"properties":{"":{"description":"Response data","properties":{"metrics":{"properties":{"audio_minutes":{"type":"integer"},"video_minutes":{"type":"integer"},"recorded_minutes":{"type":"integer"},"active_users":{"type":"integer"},"concurrent_users":{"type":"integer"}},"type":"object"},"time_range":{"properties":{"fromDate":{"type":"integer"},"toDate":{"type":"integer"}},"type":"object"}},"type":"object","title":"usageMetricsSchema"}},"type":"object"}},"type":"object"},"example":{"data":{"metrics":{"audio_minutes":0,"video_minutes":0,"recorded_minutes":0,"active_users":0,"concurrent_users":0},"time_range":{"fromDate":1630164253000,"toDate":1632842653000}}}}}}},"security":[{"apiKey":[]}],"method":"get","path":"/stats","servers":[{"url":"https://{appid}.api-{region}.cometchat.io/v3","variables":{"appid":{"default":"appId","description":"(Required) App ID"},"region":{"enum":["us","eu"],"default":"region","description":"Select Region"}}}],"securitySchemes":{"apiKey":{"type":"apiKey","description":"API Key with fullAccess scope(i.e. Rest API Key from the Dashboard).","name":"apikey","in":"header"}},"info":{"title":"Analytics APIs","description":"Embed usage reports in your app using our analytics API.","version":"3.0"},"postman":{"name":"Usage Metrics","description":{"content":"Usage metrics of an app.","type":"text/plain"},"url":{"path":["stats"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Unix timestamp from which usage has to be fetched.","type":"text/plain"},"key":"fromDate","value":""},{"disabled":false,"description":{"content":"(Required) Unix timestamp till which usage has to be fetched.","type":"text/plain"},"key":"toDate","value":""}],"variable":[]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET","auth":{"type":"apikey","apikey":[{"type":"any","value":"apikey","key":"key"},{"type":"any","value":"<API Key>","key":"value"},{"type":"any","value":"header","key":"in"}]}}}
+sidebar_class_name: "get api-method"
+info_path: first/analytics-apis
+custom_edit_url: null
+proxy: https://cors.pan.dev
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Usage Metrics
+
+
+
+Usage metrics of an app.
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"fromDate","in":"query","description":"Unix timestamp from which usage has to be fetched.","required":true,"schema":{"type":"integer"}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"toDate","in":"query","description":"Unix timestamp till which usage has to be fetched.","required":true,"schema":{"type":"integer"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Usage metrics of an app.
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>data</strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong></strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><div style={{"marginTop":".5rem","marginBottom":".5rem"}}>
+
+Response data
+
+</div><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>metrics</strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"audio_minutes"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem><SchemaItem collapsible={false} name={"video_minutes"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem><SchemaItem collapsible={false} name={"recorded_minutes"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem><SchemaItem collapsible={false} name={"active_users"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem><SchemaItem collapsible={false} name={"concurrent_users"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem></div></details></SchemaItem><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>time_range</strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"fromDate"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem><SchemaItem collapsible={false} name={"toDate"} required={false} schemaName={"integer"} qualifierMessage={undefined} schema={{"type":"integer"}}></SchemaItem></div></details></SchemaItem></div></details></SchemaItem></div></details></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"data\": {\n    \"\": {\n      \"metrics\": {\n        \"audio_minutes\": 0,\n        \"video_minutes\": 0,\n        \"recorded_minutes\": 0,\n        \"active_users\": 0,\n        \"concurrent_users\": 0\n      },\n      \"time_range\": {\n        \"fromDate\": 0,\n        \"toDate\": 0\n      }\n    }\n  }\n}"} language={"json"}></ResponseSamples></TabItem><TabItem label={"Example"} value={"Example"}><ResponseSamples responseExample={"{\n  \"data\": {\n    \"metrics\": {\n      \"audio_minutes\": 0,\n      \"video_minutes\": 0,\n      \"recorded_minutes\": 0,\n      \"active_users\": 0,\n      \"concurrent_users\": 0\n    },\n    \"time_range\": {\n      \"fromDate\": 1630164253000,\n      \"toDate\": 1632842653000\n    }\n  }\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>

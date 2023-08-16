@@ -1,0 +1,33 @@
+---
+id: kick-group-member
+title: "Kick"
+description: "Removes a member with given UID from a group for a given GUID."
+sidebar_label: "Kick"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["Group Members"],"description":"Removes a member with given UID from a group for a given GUID.","operationId":"kick-group-member","parameters":[{"name":"onBehalfOf","in":"header","description":"UID of the user on whose behalf the action is performed.","schema":{"type":"string"}},{"name":"guid","in":"path","description":"A GUID of a group.","required":true,"schema":{"type":"string"},"examples":{"string":{"summary":"GUID","value":""}}},{"name":"uid","in":"path","description":"An UID of a user.","required":true,"schema":{"type":"string"},"examples":{"string":{"summary":"UID","value":""}}}],"responses":{"200":{"description":"Kicked Group Members","content":{"application/json":{"schema":{"properties":{"data":{"properties":{"":{"properties":{"success":{"type":"boolean"},"message":{"type":"string"}},"type":"object","title":"deleteSchema"}},"type":"object"}},"type":"object"},"example":{"data":{"success":true,"message":"The member with superhero3 has been kicked from the Group with supergroup."}}}}}},"security":[{"apiKey":[]}],"method":"delete","path":"/groups/{guid}/members/{uid}","servers":[{"url":"https://{appid}.api-{region}.cometchat.io/v3","variables":{"appid":{"default":"appId","description":"(Required) App ID"},"region":{"enum":["us","eu"],"default":"us","description":"Select Region"}}}],"securitySchemes":{"apiKey":{"type":"apiKey","description":"API Key with fullAccess scope(i.e. Rest API Key from the Dashboard).","name":"apikey","in":"header"}},"info":{"title":"Chat APIs","description":"Manage messages, users, groups for a particular app using our Chat API.","version":"3.0"},"postman":{"name":"Kick","description":{"content":"Removes a member with given UID from a group for a given GUID.","type":"text/plain"},"url":{"path":["groups",":guid","members",":uid"],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) A GUID of a group.","type":"text/plain"},"type":"any","value":"","key":"guid"},{"disabled":false,"description":{"content":"(Required) An UID of a user.","type":"text/plain"},"type":"any","value":"","key":"uid"}]},"header":[{"disabled":false,"description":{"content":"UID of the user on whose behalf the action is performed.","type":"text/plain"},"key":"onBehalfOf","value":""},{"key":"Accept","value":"application/json"}],"method":"DELETE","auth":{"type":"apikey","apikey":[{"type":"any","value":"apikey","key":"key"},{"type":"any","value":"<API Key>","key":"value"},{"type":"any","value":"header","key":"in"}]}}}
+sidebar_class_name: "delete api-method"
+info_path: second/chat-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Kick
+
+
+
+Removes a member with given UID from a group for a given GUID.
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"guid","in":"path","description":"A GUID of a group.","required":true,"schema":{"type":"string"},"examples":{"string":{"summary":"GUID","value":""}}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"uid","in":"path","description":"An UID of a user.","required":true,"schema":{"type":"string"},"examples":{"string":{"summary":"UID","value":""}}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"onBehalfOf","in":"header","description":"UID of the user on whose behalf the action is performed.","schema":{"type":"string"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Kicked Group Members
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>data</strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong></strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"success"} required={false} schemaName={"boolean"} qualifierMessage={undefined} schema={{"type":"boolean"}}></SchemaItem><SchemaItem collapsible={false} name={"message"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string"}}></SchemaItem></div></details></SchemaItem></div></details></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"data\": {\n    \"\": {\n      \"success\": true,\n      \"message\": \"string\"\n    }\n  }\n}"} language={"json"}></ResponseSamples></TabItem><TabItem label={"Example"} value={"Example"}><ResponseSamples responseExample={"{\n  \"data\": {\n    \"success\": true,\n    \"message\": \"The member with superhero3 has been kicked from the Group with supergroup.\"\n  }\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>

@@ -232,6 +232,7 @@
       }
     }
   },
+
   {
     "id": "chat-widgets-wordpress",
     "path": "docs/chat/widgets/wordpress",
