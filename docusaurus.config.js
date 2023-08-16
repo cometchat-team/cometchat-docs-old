@@ -17,6 +17,7 @@ const metadata = {
   url: "https://google.com",
   baseUrl: "/",
   favicon: "/homepage/logo.png",
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -123,7 +124,13 @@ const config = {
 
         items: [
           {
-            label: "SDKs",
+            label: "Overview",
+            to: "guides",
+            position: "left",
+            // className: "new-badge",
+          },
+          {
+            label: "Implementation",
             type: "dropdown",
             className: "my-website-dropdown",
             items: [
@@ -133,12 +140,6 @@ const config = {
                 className: "my-website-dropdown",
               },
             ],
-          },
-          {
-            label: "Guides",
-            to: "guides",
-            position: "left",
-            className: "new-badge",
           },
           {
             label: "Support",
