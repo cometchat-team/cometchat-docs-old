@@ -1,3 +1,0 @@
-function Math() {
-  return <></>;
-}
