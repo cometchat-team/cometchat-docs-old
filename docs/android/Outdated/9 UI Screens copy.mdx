@@ -1,0 +1,444 @@
+![](https://res.cloudinary.com/developerhub/image/upload/v1623199472/v2_5163/u6hyilayagurer9x7tbp.png)
+
+### 1.ComeChatUserListScreen
+
+The `ComeChatUserListScreen` is a fragment with a List of users. The Fragment has all the necessary listeners and methods required to display the user's list.
+
+![](https://res.cloudinary.com/developerhub/image/upload/v1623199472/v2_5163/u6hyilayagurer9x7tbp.png)
+
+### Usage
+
+In your `layout.xml` add the following snippet to use the `ComeChatUserListScreen`. Adding the following code snippet will give you a fully working list of users.
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<div class="quickstart">
+<div width="100%" style="display:inline-block;border-color:#fff">
+  <div width="50%" style="float: left;height: 350px;padding-bottom: 20px;background-color:
+#F6F6F6;border-radius: 8px;width: 80%;color:#fff;">
+    <div style="display:inline-block;width:100%;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#000;background-color:#eaeaea;">
+      <b>XML</b>
+      <div style="color:grey;float:right;margin-right:10px;"onclick="copyFunction()" onMouseOut="this.style.color='grey'" onMouseOver="this.style.color='black'"><a href="#usage"><i class="fa fa-copy"></i></a></div>
+    </div>
+    <br/><br/><br/><br/>
+    <div style="padding-left:20px;overflow-wrap: break-word;">
+       <code id="codeValue" style="color:#000;">
+         <span style="color:#c8293d;"> &lt;fragment</span><br/>
+         <span style="color:#4ba983;">android:id</span>=<span style="color:#eeb503;">"@+id/userList"</span><br/>
+         <span style="color:#4ba983;">android:layout_width</span>=<span style="color:#eeb503;">"match_parent"</span><br/>
+         <span style="color:#4ba983;">android:layout_height</span>=<span style="color:#eeb503;">"match_parent"</span><br/>
+         <span style="color:#4ba983;">class</span>=<span style="color:#eeb503;">"screen.CometChatUserListScreen"</span><br/>
+         <span style="color:#c8293d;">/&gt;</span>
+        </code>
+    </div>
+  </div>
+  <div style="width:20%;margin-top:20px;float:left;">
+    <figure>   
+      <img src="https://files.readme.io/2b9ad69-group_32.png" width="170px" height="300px"/>
+			</figure>
+  </div>
+<div style="clear:both"></div>
+</div>
+</div>
+### Note About `UserItemClickListener`
+
+To get click event of the list you must use `UserItemClickListener`. The `UserItemClickListener` has
+`setItemClickListener()` on handle single click and `setItemLongClickListener` to handle long click events.
+
+```java
+CometChatUserListScreen.setItemClickListener(new UserItemClickListener() {
+                @Override
+                public void setItemClickListener(User user, int position) {
+                    super.setItemClickListener(user, position);
+                }
+
+                @Override
+                public void setItemLongClickListener(User user, int position) {
+                    super.setItemLongClickListener(user, position);
+                }
+            });
+```
+
+---
+
+### 2.CometChatGroupListScreen
+
+The `CometChatGroupListScreen` is a fragment with a List of groups Fragment has all the necessary listeners and methods required to display list of groups
+
+### Usage
+
+In your `layout.xml` add the following snippet to use the `CometChatGroupListScreen`.Adding the following code snippet will give you a fully working list of groups.
+
+<div class="quickstart">
+  <div width="100%" style="display:inline-block;border-color:#fff">
+    <div
+      width="50%"
+      style="float: left;height: 350px;padding-bottom: 20px;background-color:
+#F6F6F6;border-radius: 8px;width: 80%;color:#fff;">
+      <div style="display:inline-block;width:100%;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#000;background-color:#eaeaea;">
+        <b>XML</b>
+        <div
+          style="color:grey;float:right;margin-right:10px;"
+          onclick="copyFunction()"
+          onMouseOut="this.style.color='grey'"
+          onMouseOver="this.style.color='black'">
+          <a href="#usage">
+            <i class="fa fa-copy"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style="padding-left:20px;overflow-wrap: break-word;">
+        <code id="codeValue" style="color:#000;">
+          <span style="color:#c8293d;"> &lt;fragment</span>
+          <br />
+          <span style="color:#4ba983;">android:id</span>=
+          <span style="color:#eeb503;">"@+id/groupList"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_width</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_height</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">class</span>=
+          <span style="color:#eeb503;">"screen.CometChatGroupListScreen"</span>
+          <br />
+          <span style="color:#c8293d;">/&gt;</span>
+        </code>
+      </div>
+    </div>
+    <div style="width:20%;margin-top:20px;float:left;">
+      <figure>
+        <img
+          src="https://files.readme.io/036940f-group_33.png"
+          width="160px"
+          height="300px"
+        />
+      </figure>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+### Note About `GroupItemClickListener`
+
+To get click event of the list you must use `GroupItemClickListener`. The `GroupItemClickListener` has
+`setItemClickListener()` on handle single click and `setItemLongClickListener` to handle long click events.
+
+```java
+CometChatGroupListScreen.setItemClickListener(new GroupItemClickListener() {
+                @Override
+                public void setItemClickListener(Group group, int position) {
+                    super.setItemClickListener(group, position);
+                }
+
+                @Override
+                public void setItemLongClickListener(Group group, int position) {
+                    super.setItemLongClickListener(group, position);
+                }
+            });
+```
+
+---
+
+### 3.CometChatConversationListScreen
+
+The `CometChatConversationListScreen` is a fragment with a List of conversation. The Fragment has all the necessary listeners and methods required to display the list of conversations.
+
+### Usage
+
+In your `layout.xml` add the following snippet to use the `CometChatConversationListScreen`.Adding the following code snippet will give you a fully working list of conversations.
+
+<div class="quickstart">
+  <div width="100%" style="display:inline-block;border-color:#fff">
+    <div
+      width="50%"
+      style="float: left;height: 350px;padding-bottom: 20px;background-color:
+#F6F6F6;border-radius: 8px;width: 70%;color:#fff;">
+      <div style="display:inline-block;width:100%;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#000;background-color:#eaeaea;">
+        <b>XML</b>
+        <div
+          style="color:grey;float:right;margin-right:10px;"
+          onclick="copyFunction()"
+          onMouseOut="this.style.color='grey'"
+          onMouseOver="this.style.color='black'">
+          <a href="#usage">
+            <i class="fa fa-copy"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style="padding-left:20px;overflow-wrap: break-word;">
+        <code id="codeValue" style="color:#000;">
+          <span style="color:#c8293d;"> &lt;fragment</span>
+          <br />
+          <span style="color:#4ba983;">android:id</span>=
+          <span style="color:#eeb503;">"@+id/conversationList"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_width</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_height</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">class</span>=
+          <span style="color:#eeb503;">
+            "screen.CometChatConversationListScreen"
+          </span>
+          <br />
+          <span style="color:#c8293d;">/&gt;</span>
+        </code>
+      </div>
+    </div>
+    <div style="width:25%;margin-top:20px;float:left;">
+      <figure>
+        <img
+          src="https://files.readme.io/25e9adb-group_30.png"
+          width="180px"
+          height="300px"
+        />
+      </figure>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+### Note About `ConversationItemClickListener`
+
+To get click event of the list you must use `ConversationItemClickListener`. The `ConversationItemClickListener` has `setItemClickListener()` on handle single click and `setItemLongClickListener` to handle long click events.
+
+```java
+ConversationListScreen.setItemClickListener(new ConversationItemClickListener() {
+   @Override
+   public void setItemClickListener(Conversation conversation, int position) {
+                super.setItemClickListener(conversation, position);
+         }
+
+  @Override
+  public void setItemLongClickListener(Conversation conversation, int position) {
+               super.setItemLongClickListener(conversation, position);
+         }
+    });
+```
+
+---
+
+### 4.CometChatMessageScreen
+
+`CometChatMessageScreen` is a fragment that consists of send and received messages. It is capable of sending and receiving different types of messages such as text, image, and documents.
+
+### Usage
+
+To use `CometChatMessageScreen` follow the below code snippets. `CometChatMessageScreen` is a dynamic so it will require some arguments. Add a `FrameLayout` in your `layout.xml` .
+
+<div class="quickstart">
+  <div width="100%" style="display:inline-block;border-color:#fff">
+    <div
+      width="50%"
+      style="float: left;height: 350px;padding-bottom: 20px;background-color:
+#F6F6F6;border-radius: 8px;width: 80%;color:#fff;">
+      <div style="display:inline-block;width:100%;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#000;background-color:#eaeaea;">
+        <b>XML</b>
+        <div
+          style="color:grey;float:right;margin-right:10px;"
+          onclick="copyFunction()"
+          onMouseOut="this.style.color='grey'"
+          onMouseOver="this.style.color='black'">
+          <a href="#usage">
+            <i class="fa fa-copy"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style="padding-left:20px;overflow-wrap: break-word;">
+        <code id="codeValue" style="color:#000;">
+          <span style="color:#c8293d;"> &lt;FrameLayout</span>
+          <br />
+          <span style="color:#4ba983;">android:id</span>=
+          <span style="color:#eeb503;">"@+id/chatFrame"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_width</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_height</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#c8293d;">/&gt;</span>
+        </code>
+      </div>
+    </div>
+    <div style="width:20%;margin-top:20px;float:left;">
+      <figure>
+        <img
+          src="https://files.readme.io/f5e5c31-group_24.png"
+          width="170px"
+          height="300px"
+        />
+      </figure>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+In your activity set the required parameter in the following manner.
+
+```java
+Bundle bundle = new Bundle();
+Fragment chatFragment=new CometChatMessageScreen()
+
+bundle.putString(StringContract.IntentStrings.AVATAR,"AvatarUrl");
+bundle.putString(StringContract.IntentStrings.NAME, "Name");
+bundle.putString(StringContract.IntentStrings.UID,"UID");
+bundle.putString(StringContract.IntentStrings.STATUS,"STATUS");
+bundle.putString(StringContract.IntentStrings.TYPE,CometChatConstants.RECEIVER_TYPE_USER);
+chatFragment.setArguments(bundle);
+getSupportFragmentManager().beginTransaction().replace(R.id.chatFrame,fragment).commit();
+
+
+
+```
+
+```java
+Bundle bundle = new Bundle();
+Fragment chatFragment=new CometChatMessageScreen()
+
+bundle.putString(StringContract.IntentStrings.AVATAR,"GroupIcon");
+bundle.putString(StringContract.IntentStrings.NAME, "Name");
+bundle.putString(StringContract.IntentStrings.GUID,"GUID");
+bundle.putString(StringContract.IntentStrings.TYPE,CometChatConstants.RECEIVER_TYPE_GROUP);
+chatFragment.setArguments(bundle);
+getSupportFragmentManager().beginTransaction().replace(R.id.chatFrame,fragment).commit();
+```
+
+---
+
+### 5.CometChatUserInfoScreen
+
+`CometChatUserInfoScreen` is a fragment which provides detail about the currently logged-in user in the CometChat.
+
+### Usage
+
+Add the following code in your `layout.xml`
+
+<div class="quickstart">
+  <div width="100%" style="display:inline-block;border-color:#fff">
+    <div
+      width="50%"
+      style="float: left;height: 350px;padding-bottom: 20px;background-color:
+#F6F6F6;border-radius: 8px;width: 80%;color:#fff;">
+      <div style="display:inline-block;width:100%;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#000;background-color:#eaeaea;">
+        <b>XML</b>
+        <div
+          style="color:grey;float:right;margin-right:10px;"
+          onclick="copyFunction()"
+          onMouseOut="this.style.color='grey'"
+          onMouseOver="this.style.color='black'">
+          <a href="#usage">
+            <i class="fa fa-copy"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style="padding-left:20px;overflow-wrap: break-word;">
+        <code id="codeValue" style="color:#000;">
+          <span style="color:#c8293d;"> &lt;fragment</span>
+          <br />
+          <span style="color:#4ba983;">android:id</span>=
+          <span style="color:#eeb503;">"@+id/userInfo"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_width</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_height</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">class</span>=
+          <span style="color:#eeb503;">"screen.CometChatUserInfoScreen"</span>
+          <br />
+          <span style="color:#c8293d;">/&gt;</span>
+        </code>
+      </div>
+    </div>
+    <div style="width:20%;margin-top:20px;float:left;">
+      <figure>
+        <img
+          src="https://files.readme.io/8472e7d-group_34.png"
+          width="170px"
+          height="300px"
+        />
+      </figure>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+### 6 CometChatCallListScreen
+
+You can use the CometChatCallList to get a list of all the calls made by the logged-in user to other users and groups.
+
+### Usage
+
+Add the following code in your `layout.xml`
+
+<div class="quickstart">
+  <div width="100%" style="display:inline-block;border-color:#fff">
+    <div
+      width="50%"
+      style="float: left;height: 350px;padding-bottom: 20px;background-color:
+#F6F6F6;border-radius: 8px;width: 80%;color:#fff;">
+      <div style="display:inline-block;width:100%;padding-left:10px;padding-top:10px;padding-bottom:10px;color:#000;background-color:#eaeaea;">
+        <b>XML</b>
+        <div
+          style="color:grey;float:right;margin-right:10px;"
+          onclick="copyFunction()"
+          onMouseOut="this.style.color='grey'"
+          onMouseOver="this.style.color='black'">
+          <a href="#usage">
+            <i class="fa fa-copy"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style="padding-left:20px;overflow-wrap: break-word;">
+        <code id="codeValue" style="color:#000;">
+          <span style="color:#c8293d;"> &lt;fragment</span>
+          <br />
+          <span style="color:#4ba983;">android:id</span>=
+          <span style="color:#eeb503;">"@+id/callListScreen"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_width</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">android:layout_height</span>=
+          <span style="color:#eeb503;">"match_parent"</span>
+          <br />
+          <span style="color:#4ba983;">class</span>=
+          <span style="color:#eeb503;">"screen.CometChatCallListScreen"</span>
+          <br />
+          <span style="color:#c8293d;">/&gt;</span>
+        </code>
+      </div>
+    </div>
+    <div style="width:20%;margin-top:20px;float:left;">
+      <figure>
+        <img
+          src="https://files.readme.io/8ec73a2-group_31.png"
+          width="170px"
+          height="300px"
+        />
+      </figure>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>

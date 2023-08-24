@@ -67,35 +67,35 @@ const plugins = [
   // ...docs_plugins,
   webpackPlugin,
 
-  [
-    "docusaurus-plugin-openapi-docs",
-    {
-      id: "openapi",
-      docsPluginId: "classic",
-      config: {
-        first: {
-          specPath: "static/api/json/first.json",
-          outputDir: "docs/first",
-          sidebarOptions: {
-            groupPathsBy: "tag",
-            categoryLinkSource: "tag",
-          },
-          template: "api.mustache",
-          hideSendButton: false,
-        },
-        second: {
-          specPath: "static/api/json/second.json",
-          outputDir: "docs/second",
-          sidebarOptions: {
-            groupPathsBy: "tag",
-            categoryLinkSource: "tag",
-          },
-          template: "api.mustache",
-          hideSendButton: false,
-        },
-      },
-    },
-  ],
+  // [
+  //   "docusaurus-plugin-openapi-docs",
+  //   {
+  //     id: "openapi",
+  //     docsPluginId: "classic",
+  //     config: {
+  //       first: {
+  //         specPath: "static/api/json/first.json",
+  //         outputDir: "docs/first",
+  //         sidebarOptions: {
+  //           groupPathsBy: "tag",
+  //           categoryLinkSource: "tag",
+  //         },
+  //         template: "api.mustache",
+  //         hideSendButton: false,
+  //       },
+  //       second: {
+  //         specPath: "static/api/json/second.json",
+  //         outputDir: "docs/second",
+  //         sidebarOptions: {
+  //           groupPathsBy: "tag",
+  //           categoryLinkSource: "tag",
+  //         },
+  //         template: "api.mustache",
+  //         hideSendButton: false,
+  //       },
+  //     },
+  //   },
+  // ],
 ];
 
 /** @type {import('@docusaurus/types').Config} */

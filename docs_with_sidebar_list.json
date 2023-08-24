@@ -1,8 +1,30 @@
 [
   {
+    "id": "android",
+    "path": "docs/android",
+    "routeBasePath": "/android",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
+    "id": "angular",
+    "path": "docs/angular",
+    "routeBasePath": "/angular",
+    "lastVersion": "current",
+    "versions": {
+      "current": {
+        "label": "3.0.0"
+      }
+    }
+  },
+  {
     "id": "chat",
-    "path": "docs/docs/chat/sdks",
-    "routeBasePath": "/chat/sdks",
+    "path": "docs/chat",
+    "routeBasePath": "/chat",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -11,9 +33,9 @@
     }
   },
   {
-    "id": "chat-sdks-javascript",
-    "path": "docs/chat/sdk/javascript",
-    "routeBasePath": "/chat/sdk/javascript",
+    "id": "flutter",
+    "path": "docs/flutter",
+    "routeBasePath": "/flutter",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -22,9 +44,9 @@
     }
   },
   {
-    "id": "chat-sdks-android",
-    "path": "docs/chat/sdk/android",
-    "routeBasePath": "/chat/sdk/android",
+    "id": "ionic",
+    "path": "docs/ionic",
+    "routeBasePath": "/ionic",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -33,9 +55,9 @@
     }
   },
   {
-    "id": "chat-sdks-ios",
-    "path": "docs/chat/sdk/ios",
-    "routeBasePath": "/chat/sdk/ios",
+    "id": "ios",
+    "path": "docs/ios",
+    "routeBasePath": "/ios",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -44,9 +66,9 @@
     }
   },
   {
-    "id": "chat-sdks-flutter",
-    "path": "docs/chat/sdk/flutter",
-    "routeBasePath": "/chat/sdk/flutter",
+    "id": "java",
+    "path": "docs/java",
+    "routeBasePath": "/java",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -55,9 +77,9 @@
     }
   },
   {
-    "id": "chat-sdks-react-native",
-    "path": "docs/chat/sdk/react-native",
-    "routeBasePath": "/chat/sdk/react-native",
+    "id": "javascript",
+    "path": "docs/javascript",
+    "routeBasePath": "/javascript",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -66,99 +88,9 @@
     }
   },
   {
-    "id": "chat-sdks-ionic",
-    "path": "docs/chat/sdk/ionic",
-    "routeBasePath": "/chat/sdk/ionic",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "3.0.0"
-      }
-    }
-  },
-
-  {
-    "id": "chat-ui-kits-android",
-    "path": "docs/chat/ui-kits/android",
-    "routeBasePath": "/chat/ui-kits/android",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-  {
-    "id": "chat-ui-kits-ios",
-    "path": "docs/chat/ui-kits/ios",
-    "routeBasePath": "/chat/ui-kits/ios",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-  {
-    "id": "chat-ui-kits-angular",
-    "path": "docs/chat/ui-kits/angular",
-    "routeBasePath": "/chat/ui-kits/angular",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-  {
-    "id": "chat-ui-kits-react",
-    "path": "docs/chat/ui-kits/react",
-    "routeBasePath": "/chat/ui-kits/react",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-  {
-    "id": "chat-ui-kits-vue",
-    "path": "docs/chat/ui-kits/vue",
-    "routeBasePath": "/chat/ui-kits/vue",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-  {
-    "id": "chat-ui-kits-flutter",
-    "path": "docs/chat/ui-kits/flutter",
-    "routeBasePath": "/chat/ui-kits/flutter",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-  {
-    "id": "chat-ui-kits-react-native",
-    "path": "docs/chat/ui-kits/react-native",
-    "routeBasePath": "/chat/ui-kits/react-native",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "4.0.0"
-      }
-    }
-  },
-
-  {
-    "id": "call-sdks-javascript",
-    "path": "docs/call/sdk/javascript",
-    "routeBasePath": "/call/sdk/javascript",
+    "id": "kotlin",
+    "path": "docs/kotlin",
+    "routeBasePath": "/kotlin",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -167,9 +99,9 @@
     }
   },
   {
-    "id": "call-sdks-android",
-    "path": "docs/call/sdk/android",
-    "routeBasePath": "/call/sdk/android",
+    "id": "react",
+    "path": "docs/react",
+    "routeBasePath": "/react",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -178,9 +110,9 @@
     }
   },
   {
-    "id": "call-sdks-ios",
-    "path": "docs/call/sdk/ios",
-    "routeBasePath": "/call/sdk/ios",
+    "id": "react-native",
+    "path": "docs/react-native",
+    "routeBasePath": "/react-native",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -189,9 +121,9 @@
     }
   },
   {
-    "id": "call-sdks-flutter",
-    "path": "docs/call/sdk/flutter",
-    "routeBasePath": "/call/sdk/flutter",
+    "id": "rest-apis",
+    "path": "docs/rest-apis",
+    "routeBasePath": "/rest-apis",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -200,9 +132,9 @@
     }
   },
   {
-    "id": "call-sdks-react-native",
-    "path": "docs/call/sdk/react-native",
-    "routeBasePath": "/call/sdk/react-native",
+    "id": "v4",
+    "path": "docs/v4",
+    "routeBasePath": "/v4",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -211,9 +143,9 @@
     }
   },
   {
-    "id": "call-sdks-ionic",
-    "path": "docs/call/sdk/ionic",
-    "routeBasePath": "/call/sdk/ionic",
+    "id": "vue",
+    "path": "docs/vue",
+    "routeBasePath": "/vue",
     "lastVersion": "current",
     "versions": {
       "current": {
@@ -222,21 +154,9 @@
     }
   },
   {
-    "id": "chat-widgets-web",
-    "path": "docs/chat/widgets/web",
-    "routeBasePath": "/chat/widgets/web",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "3.0.0"
-      }
-    }
-  },
-
-  {
-    "id": "chat-widgets-wordpress",
-    "path": "docs/chat/widgets/wordpress",
-    "routeBasePath": "/chat/widgets/wordpress",
+    "id": "web",
+    "path": "docs/web",
+    "routeBasePath": "/web",
     "lastVersion": "current",
     "versions": {
       "current": {
