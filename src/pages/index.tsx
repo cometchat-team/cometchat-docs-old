@@ -4,6 +4,7 @@ const metadata = require("../data/metadata.json");
 import Head from "@docusaurus/Head";
 import Hero from "../components/Hero";
 import IntegrationMethods from "../components/IntegrationMethods";
+import APIMigration from "../components/APIMigration";
 
 export default function Homepage() {
   return (
@@ -16,6 +17,7 @@ export default function Homepage() {
       </Head>
       <Hero />
       <IntegrationMethods />
+      <APIMigration />
     </Layout>
   );
 }
