@@ -52,6 +52,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.schedule_a_demo_button {
+  @apply mx-2 rounded-[10px] bg-[#6852d6] text-white;
+}
+.schedule_a_demo_button svg {
+  @apply hidden;
+}
+.schedule_a_demo_button:hover {
+  @apply text-gray-50;
+}
 @layer base {
   :root {
     --docs-color-primary-100: 26 144 255;
@@ -232,6 +241,7 @@ html[data-theme="dark"] {
 
 nav.navbar {
   border-bottom: 1px solid var(--ifm-toc-border-color);
+  @apply bg-[#0E0B17] py-0;
 }
 
 pre.prism-code {
@@ -702,6 +712,7 @@ code[data-code="required"] {
 .dropdown > .navbar__link:after {
   content: "";
   border: none;
+  @apply hidden;
   position: static;
   top: auto;
   transform: none;
@@ -718,39 +729,6 @@ html[data-theme="dark"] .dropdown > .navbar__link:after {
 
 .dropdown:hover > .navbar__link:after {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%231a90ff'/%3E%3C/svg%3E") !important;
-}
-
-.my-website-dropdown + ul.dropdown__menu {
-  @apply bg-secondary-900 p-0;
-}
-
-.my-website-dropdown .sdk-link {
-  @apply -ml-1 flex items-center gap-1.5 rounded-md p-2 text-inherit hover:bg-secondary-700;
-  @apply text-xs;
-}
-
-.my-website-dropdown .sdk-ul > li {
-  flex-basis: 48%;
-}
-
-.my-website-dropdown .sdk-ul {
-  @apply mt-2 flex list-none flex-wrap gap-1 pl-0;
-}
-
-.my-website-dropdown .sdk-link > img {
-  @apply h-6 w-6;
-}
-
-.my-website-dropdown a {
-  @apply no-underline;
-}
-
-.my-website-dropdown :is(h1, h2, h3, h4, h5) {
-  @apply font-medium;
-}
-
-.my-website-dropdown h3 {
-  @apply !font-bold;
 }
 
 .sdks-dropdown h2 {
@@ -1084,14 +1062,13 @@ details p {
 }
 
 .DocSearch-Button {
-  @apply lg:!rounded-md;
+  @apply bg-[#FFFFFF05] lg:!rounded-md;
 }
 
 .DocSearch-Button-Key {
   background: theme(colors.secondary.800) !important;
-  top: 0 !important;
-  padding: 0 !important;
-  @apply !border !border-solid !border-text-400/30;
+
+  @apply top-0 !border !border-solid !border-[#FFFFFF3D] p-0;
   @apply !shadow-none;
   @apply flex items-center;
 }
@@ -1102,7 +1079,7 @@ details p {
 }
 
 .DocSearch-Button-Placeholder {
-  @apply !text-xs;
+  @apply !text-xs text-[#FFFFFF];
 }
 
 article ol {
@@ -1193,4 +1170,49 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   max-width: 560px;
   margin: 0 auto;
   min-height: 315px;
+}
+
+/* CUSTOM_NEW */
+
+.DocSearch.DocSearch-Button {
+  @apply min-w-[250px] !rounded-[14px] border border-solid border-[#FFFFFF3D] bg-[#FFFFFF05];
+}
+
+/* NAVBAR ITEM */
+
+.navbar__item,
+.navbar__item.dropdown a {
+  @apply text-[#FAFAFF];
+}
+
+.navbar__item__btm,
+.navbar__item.dropdown {
+  @apply my-0 flex h-full flex-col items-center justify-center bg-transparent;
+}
+.navbar__item__btm:hover,
+.navbar__item.dropdown:hover {
+  @apply text-white;
+  background: linear-gradient(
+    0deg,
+    rgba(140, 124, 224, 0.24) 0%,
+    rgba(140, 124, 224, 0) 28%
+  );
+}
+.navbar__item.dropdown a:hover {
+  @apply text-white;
+}
+
+/* MODE SWITCH */
+.navbar__items--right > :last-child {
+  @apply text-white;
+}
+
+.navbar__items--right > :last-child > button:hover {
+  background: none;
+}
+
+/* DROPDOWN MENU */
+
+.navbar__item.dropdown {
+  @apply static;
 }

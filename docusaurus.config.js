@@ -149,28 +149,22 @@ const config = {
       navbar: {
         logo: {
           href: "/",
-          src: "/img/logo.svg",
-          srcDark: "/img/logo.svg",
+          src: "/imgs/logo.svg",
+          srcDark: "/imgs/logo.svg",
           alt: "Logo",
-          height: "40px",
-          width: "40px",
+          width: "150px",
         },
 
         items: [
           {
-            label: "API Zoo",
-            to: "/category/petstore-api",
-          },
-          {
             label: "Overview",
             to: "guides",
             position: "left",
-            // className: "new-badge",
+            className: "navbar__item__btm",
           },
           {
             label: "Implementation",
             type: "dropdown",
-            className: "my-website-dropdown",
             items: [
               {
                 type: "html",
@@ -180,44 +174,20 @@ const config = {
             ],
           },
           {
-            label: "Support",
-            to: "https://google.com",
-          },
-          {
-            label: "API Reference",
-            to: "/api/",
-          },
-          {
-            label: "Resources",
-            type: "dropdown",
-            className: "my-website-dropdown resources-dropdown",
-            items: [
-              {
-                type: "html",
-                value: resourcesHTML,
-                className: "my-website-dropdown",
-              },
-            ],
-          },
-          {
-            label: "Feedback",
-            to: "/feedback/",
-          },
-          {
             type: "search",
             position: "right",
           },
           {
-            label: "Book a demo",
+            label: "Log in",
             href: "https://google.com",
             position: "right",
             className: "navbar-book-demo",
           },
           {
-            label: "Sign Up",
+            label: "Schedule a demo",
             href: "https://google.com",
             position: "right",
-            className: "dev-portal-signup dev-portal-link",
+            className: "schedule_a_demo_button",
           },
         ],
       },
@@ -249,7 +219,6 @@ const config = {
         appId: "fff",
         apiKey: "ffff",
         indexName: "docs",
-        contextualSearch: true,
         searchParameters: {},
       },
     }),

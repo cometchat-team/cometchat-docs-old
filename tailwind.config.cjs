@@ -6,6 +6,7 @@ module.exports = {
     preflight: false,
     container: false,
   },
+  important: true,
   darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{jsx,tsx,html}"],
   theme: {

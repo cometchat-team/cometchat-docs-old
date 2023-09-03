@@ -1,0 +1,10 @@
+.schedule_a_demo_button {
+  background-color: #6852d6;
+  color: white;
+  border-radius: 10px;
+  --ifm-link-hover-color: #fff;
+  --ifm-navbar-link-hover-color: #fff;
+}
+.schedule_a_demo_button svg {
+  display: none;
+}
