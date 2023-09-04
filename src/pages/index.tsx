@@ -5,6 +5,8 @@ import Head from "@docusaurus/Head";
 import Hero from "../components/Hero";
 import IntegrationMethods from "../components/IntegrationMethods";
 import APIMigration from "../components/APIMigration";
+import SampleApps from "../components/SampleApps";
+import ImplementationGuides from "../components/ImplementationGuides";
 
 export default function Homepage() {
   return (
@@ -18,6 +20,8 @@ export default function Homepage() {
       <Hero />
       <IntegrationMethods />
       <APIMigration />
+      <SampleApps />
+      <ImplementationGuides />
     </Layout>
   );
 }
