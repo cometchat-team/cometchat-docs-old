@@ -8,6 +8,7 @@ import APIMigration from "../components/APIMigration";
 import SampleApps from "../components/SampleApps";
 import ImplementationGuides from "../components/ImplementationGuides";
 import Help from "../components/Help";
+import Footer from "../components/Footer";
 
 export default function Homepage() {
   return (
@@ -24,6 +25,7 @@ export default function Homepage() {
       <SampleApps />
       <ImplementationGuides />
       <Help />
+      <Footer />
     </Layout>
   );
 }
