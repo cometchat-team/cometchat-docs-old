@@ -7,6 +7,7 @@ import IntegrationMethods from "../components/IntegrationMethods";
 import APIMigration from "../components/APIMigration";
 import SampleApps from "../components/SampleApps";
 import ImplementationGuides from "../components/ImplementationGuides";
+import Help from "../components/Help";
 
 export default function Homepage() {
   return (
@@ -22,6 +23,7 @@ export default function Homepage() {
       <APIMigration />
       <SampleApps />
       <ImplementationGuides />
+      <Help />
     </Layout>
   );
 }

@@ -33,7 +33,7 @@ const DATA = [
 
 function ImplementationGuides() {
   return (
-    <div className="mb-10 mt-[70px] flex w-full flex-col items-center bg-[#F6F6FA] px-12 pt-[80px]">
+    <div className="mb-10 mt-[70px] flex w-full flex-col items-center bg-[#F6F6FA] px-12 pb-[60px] pt-[80px]">
       <div className="flex w-full flex-row items-center justify-between">
         <div className="flex w-11/12 flex-col items-start">
           <h1 className="m-0 mb-1">Implementation Guides</h1>
