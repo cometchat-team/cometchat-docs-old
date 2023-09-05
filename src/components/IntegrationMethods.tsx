@@ -122,17 +122,17 @@ const DATA = [
 
 function IntegrationMethods() {
   return (
-    <div className="mb-10 mt-[150px] flex w-full flex-col items-center">
-      <div className="flex w-11/12 flex-col items-start">
+    <div className="mb-10 mt-[170px] flex w-full flex-col items-center px-[64px]">
+      <div className="flex w-full  max-w-[1440px] flex-col items-start">
         <h1 className="m-0 mb-1">Integration Methods</h1>
         <p>Choose from your preferred implementation method</p>
-        <div className="grid w-full grid-cols-2 gap-10 px-24">
+        <div className="grid w-full grid-cols-2 gap-[40px]">
           {DATA.slice(0, 2).map((item) => (
             <Card key={item.title} {...item} />
           ))}
         </div>
         <hr className="w-full bg-[#14131D14]" />
-        <div className="grid w-full grid-cols-2 gap-10 px-24">
+        <div className="grid w-full grid-cols-2 gap-[40px]">
           {DATA.slice(2).map((item) => (
             <Card key={item.title} {...item} />
           ))}
@@ -146,7 +146,7 @@ export default IntegrationMethods;
 
 function Card({ title, description, items, icons }) {
   return (
-    <div className="w-10/12 p-6">
+    <div className="w-full px-[40px] py-[32px]">
       {/* icons */}
       <div
         style={{

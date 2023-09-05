@@ -22,6 +22,7 @@ module.exports = {
       screens: {
         sm: "0px",
         lg: "997px",
+        xlg: "1400px",
       },
       colors: {
         primary: {

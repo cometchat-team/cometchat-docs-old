@@ -27,7 +27,7 @@ const DATA = [
 function SampleApps() {
   return (
     <div className="mb-10 mt-[150px] flex w-full flex-col items-center px-12">
-      <div className="flex w-full flex-row items-center justify-between">
+      <div className="flex w-full  max-w-[1440px] flex-row items-center justify-between">
         <div className="flex w-11/12 flex-col items-start">
           <h1 className="m-0 mb-1">Sample Apps</h1>
           <p>Dive into practical examples of what's achievable</p>
@@ -37,7 +37,7 @@ function SampleApps() {
           View All
         </a>
       </div>
-      <div className="mt-4 grid w-full grid-cols-3 gap-10">
+      <div className="mt-4 grid w-full max-w-[1440px] grid-cols-3 gap-10">
         {DATA.map((item) => (
           <Card key={item.title} {...item} />
         ))}

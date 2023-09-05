@@ -66,7 +66,7 @@ function Hero() {
         className="absolute -left-[3%] bottom-0 h-[200px] w-[200px] object-contain"
       />
       {/* middle */}
-      <div className="my-16 flex w-1/2 flex-col items-center justify-center text-center">
+      <div className="my-16 flex  w-1/2 max-w-[1440px] flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-semibold">Get Started</h1>
         <p className="text-xl">
           Seamlessly integrate real-time chat, voice, and video
@@ -75,7 +75,7 @@ function Hero() {
         </p>
       </div>
       {/* Cards */}
-      <div className="grid w-3/4 grid-cols-4 gap-4">
+      <div className="grid w-[calc(100%-352px)]  max-w-[1440px] grid-cols-4 gap-4">
         {DATA.map((item) => (
           <CardItem key={item.title} {...item} />
         ))}
@@ -121,7 +121,7 @@ function CardItem({ icon, title }: { icon: string; title: string }) {
 
 function ADCard() {
   return (
-    <div className="absolute -bottom-[110px] left-1/2 z-10 flex w-3/4 -translate-x-1/2 transform flex-col items-center justify-center rounded-[32px] bg-white">
+    <div className="absolute -bottom-[110px]  left-1/2 z-10 flex w-3/4 max-w-[1440px] -translate-x-1/2 transform flex-col items-center justify-center rounded-[32px] bg-white">
       <div
         className="relative flex h-[220px] w-full flex-col items-start overflow-hidden rounded-[32px] bg-[#756CF6] bg-opacity-10 p-8"
         style={{

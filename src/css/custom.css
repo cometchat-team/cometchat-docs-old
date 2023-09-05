@@ -241,7 +241,10 @@ html[data-theme="dark"] {
 
 nav.navbar {
   border-bottom: 1px solid var(--ifm-toc-border-color);
-  @apply bg-[#0E0B17] py-0;
+  @apply flex flex-col items-center justify-center bg-[#0E0B17] py-0;
+}
+nav.navbar .navbar__inner {
+  @apply max-w-[1400px];
 }
 
 pre.prism-code {

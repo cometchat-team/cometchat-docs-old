@@ -31,7 +31,7 @@ const SOCIAL_MEDIA = [
 function Footer() {
   return (
     <div className="flex w-full flex-row items-center justify-center bg-[#0A0914] py-6 text-[#FAFAFF]">
-      <div className="flex w-full flex-row items-center justify-between px-12 text-sm">
+      <div className="flex w-full max-w-[1440px]   flex-row items-center justify-between px-[48px] text-sm xlg:px-0 ">
         {/* links */}
         <div className="m-0 flex flex-row space-x-3">
           <p className="m-0">2023 © CometChat</p>
