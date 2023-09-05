@@ -11,6 +11,7 @@ import {
 } from "@docusaurus/theme-common/internal";
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import NavbarItem from "@theme/NavbarItem";
+import Implementation from "@site/src/components/navbar/Implementation";
 function isItemActive(item, localPathname) {
   if (isSamePath(item.to, localPathname)) {
     return true;
@@ -86,14 +87,7 @@ function DropdownNavbarItemDesktop({
         {props.children ?? props.label}
       </NavbarNavLink>
       <ul className="dropdown__menu">
-        {items.map((childItemProps, i) => (
-          <NavbarItem
-            isDropdownItem
-            activeClassName="dropdown__link--active"
-            {...childItemProps}
-            key={i}
-          />
-        ))}
+        <Implementation />
       </ul>
     </div>
   );

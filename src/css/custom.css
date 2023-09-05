@@ -1219,3 +1219,16 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
 .navbar__item.dropdown {
   @apply static;
 }
+
+.dropdown__menu {
+  width: 100% !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  /* to be deleted */
+  /* opacity: 1 !important;
+  visibility: visible !important; */
+}
+
+.navbar__inner {
+  height: 100% !important;
+}
