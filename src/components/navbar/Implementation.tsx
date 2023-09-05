@@ -137,7 +137,7 @@ const DATA = [
 
 function Implementation() {
   return (
-    <div className="flex w-full flex-wrap bg-[#191822]">
+    <div className="flex w-full max-w-[1400px] flex-wrap bg-[#191822]">
       <div className="flex w-full flex-row items-start justify-between">
         {DATA.map((card, index) => (
           <Card index={index} {...card} key={card.title} />
