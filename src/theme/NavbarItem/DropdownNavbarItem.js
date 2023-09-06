@@ -86,7 +86,9 @@ function DropdownNavbarItemDesktop({
         }}>
         {props.children ?? props.label}
       </NavbarNavLink>
-      <ul className="dropdown__menu">{/* <Implementation /> */}</ul>
+      <ul className="dropdown__menu">
+        <Implementation />
+      </ul>
     </div>
   );
 }

@@ -10,11 +10,12 @@ const code_themes = {
 const { webpackPlugin } = require("./plugins/webpack-plugin.cjs");
 const tailwindPlugin = require("./plugins/tailwind-plugin.cjs");
 
+// TODO: update this infos
 /** @type {import('@docusaurus/types').Config} */
 const metadata = {
-  title: "My Website Title",
-  tagline: "My tagline 🚀",
-  url: "https://google.com",
+  title: "Cometchat Docs",
+  tagline: "",
+  url: "https://docs.cometchat.com",
   baseUrl: "/",
   favicon: "/homepage/logo.png",
 
@@ -28,11 +29,16 @@ const metadata = {
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
 const docs = require("./docs_with_sidebar_list.json");
 
+// TODO: update this infos
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: true,
-  editUrl: "https://google.com",
+  // editUrl: "https://google.com",
   showLastUpdateTime: true,
+  remarkPlugins: [
+    [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
+  ],
+  sidebarPath: require.resolve("./sidebar_auto.js"),
 };
 
 /**
@@ -54,57 +60,17 @@ function create_doc_plugin({
   ];
 }
 
-// RESOURCES AND SDKS
-const fs = require("fs");
-// const resourcesHTML = fs.readFileSync("./src/snippets/resources.html", "utf-8");
-const sdksHTML = fs.readFileSync("./src/snippets/sdks.html", "utf-8");
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
-const path = require("path");
-
-const plugins = [
-  tailwindPlugin,
-  ...docs_plugins,
-  webpackPlugin,
-
-  // [
-  //   "docusaurus-plugin-openapi-docs",
-  //   {
-  //     id: "openapi",
-  //     docsPluginId: "classic",
-  //     config: {
-  //       first: {
-  //         specPath: "static/api/json/first.json",
-  //         outputDir: "docs/first",
-  //         sidebarOptions: {
-  //           groupPathsBy: "tag",
-  //           categoryLinkSource: "tag",
-  //         },
-  //         template: "api.mustache",
-  //         hideSendButton: false,
-  //       },
-  //       second: {
-  //         specPath: "static/api/json/second.json",
-  //         outputDir: "docs/second",
-  //         sidebarOptions: {
-  //           groupPathsBy: "tag",
-  //           categoryLinkSource: "tag",
-  //         },
-  //         template: "api.mustache",
-  //         hideSendButton: false,
-  //       },
-  //     },
-  //   },
-  // ],
-];
+const plugins = [tailwindPlugin, ...docs_plugins, webpackPlugin];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   ...metadata,
   plugins,
+
   trailingSlash: false,
-  // themes: ["docusaurus-theme-openapi-docs"],
-  // themes: ["@docusaurus/theme-live-codeblock"],
+  themes: ["@docusaurus/theme-live-codeblock"],
   clientModules: [require.resolve("./src/client/define-ui-kit.js")],
 
   presets: [
@@ -113,12 +79,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "docs",
-          id: "docs",
-          routeBasePath: "/",
-          // docLayoutComponent: "@theme/DocPage",
-          // docItemComponent: "@theme/ApiItem",
-          sidebarPath: require.resolve("./sidebar_auto.js"),
+          path: "docs/guides",
+          id: "guides",
+          routeBasePath: "/guides",
           ...defaultSettings,
         },
         blog: false,
@@ -169,7 +132,7 @@ const config = {
             items: [
               {
                 type: "html",
-                value: sdksHTML,
+                value: "<div></div>",
                 className: "my-website-dropdown",
               },
             ],
@@ -220,6 +183,7 @@ const config = {
         appId: "fff",
         apiKey: "ffff",
         indexName: "docs",
+        contextualSearch: true,
         searchParameters: {},
       },
     }),
@@ -232,7 +196,6 @@ const config = {
             syntax: "typescript",
             tsx: true,
           },
-
           target: "es2017",
         },
         module: {

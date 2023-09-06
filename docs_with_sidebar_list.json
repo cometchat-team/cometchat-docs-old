@@ -243,16 +243,5 @@
         "label": "3.0.0"
       }
     }
-  },
-  {
-    "id": "guides",
-    "path": "docs/guides",
-    "routeBasePath": "/guides",
-    "lastVersion": "current",
-    "versions": {
-      "current": {
-        "label": "3.0.0"
-      }
-    }
   }
 ]
