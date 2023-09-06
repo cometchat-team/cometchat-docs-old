@@ -30,13 +30,13 @@ const DATA = [
     ],
     icons: [
       {
-        icon: "chat",
+        icon: "chat.svg",
       },
       {
-        icon: "call",
+        icon: "call.svg",
       },
       {
-        icon: "video",
+        icon: "video.svg",
       },
     ],
   },
@@ -56,13 +56,13 @@ const DATA = [
     ],
     icons: [
       {
-        icon: "chat",
+        icon: "chat.svg",
       },
       {
-        icon: "call",
+        icon: "call.svg",
       },
       {
-        icon: "video",
+        icon: "video.svg",
       },
     ],
   },
@@ -70,7 +70,7 @@ const DATA = [
     title: "SDKs Chat",
     description:
       "For developers looking to develop chat functionalities from scratch",
-    icons: [{ icon: "chat" }],
+    icons: [{ icon: "chat.svg" }],
     items: [
       {
         title: "React",
@@ -96,7 +96,7 @@ const DATA = [
     title: "SDKs Call",
     description:
       "For developers looking to develop voice and video calling functionalities from scratch",
-    icons: [{ icon: "call" }, { icon: "video" }],
+    icons: [{ icon: "call.svg" }, { icon: "video.svg" }],
     items: [
       {
         title: "React",
@@ -156,7 +156,7 @@ function Card({ title, description, items, icons }) {
         {icons.map((icon) => (
           <img
             key={icon.icon}
-            src={`/imgs/icons/${icon.icon}.svg`}
+            src={`/imgs/icons/${icon.icon}`}
             alt={icon.icon}
             className="h-8 w-8 object-contain"
           />

@@ -40,7 +40,7 @@ const defaultSettings = {
  * @param {import('@docusaurus/plugin-content-docs').Options} options
  */
 function create_doc_plugin({
-  sidebarPath = require.resolve("./sidebars-default.js"),
+  sidebarPath = require.resolve("./sidebar_auto.js"),
   ...options
 }) {
   return [
@@ -56,7 +56,7 @@ function create_doc_plugin({
 
 // RESOURCES AND SDKS
 const fs = require("fs");
-const resourcesHTML = fs.readFileSync("./src/snippets/resources.html", "utf-8");
+// const resourcesHTML = fs.readFileSync("./src/snippets/resources.html", "utf-8");
 const sdksHTML = fs.readFileSync("./src/snippets/sdks.html", "utf-8");
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
@@ -64,38 +64,38 @@ const path = require("path");
 
 const plugins = [
   tailwindPlugin,
-  // ...docs_plugins,
+  ...docs_plugins,
   webpackPlugin,
 
-  [
-    "docusaurus-plugin-openapi-docs",
-    {
-      id: "openapi",
-      docsPluginId: "classic",
-      config: {
-        first: {
-          specPath: "static/api/json/first.json",
-          outputDir: "docs/first",
-          sidebarOptions: {
-            groupPathsBy: "tag",
-            categoryLinkSource: "tag",
-          },
-          template: "api.mustache",
-          hideSendButton: false,
-        },
-        second: {
-          specPath: "static/api/json/second.json",
-          outputDir: "docs/second",
-          sidebarOptions: {
-            groupPathsBy: "tag",
-            categoryLinkSource: "tag",
-          },
-          template: "api.mustache",
-          hideSendButton: false,
-        },
-      },
-    },
-  ],
+  // [
+  //   "docusaurus-plugin-openapi-docs",
+  //   {
+  //     id: "openapi",
+  //     docsPluginId: "classic",
+  //     config: {
+  //       first: {
+  //         specPath: "static/api/json/first.json",
+  //         outputDir: "docs/first",
+  //         sidebarOptions: {
+  //           groupPathsBy: "tag",
+  //           categoryLinkSource: "tag",
+  //         },
+  //         template: "api.mustache",
+  //         hideSendButton: false,
+  //       },
+  //       second: {
+  //         specPath: "static/api/json/second.json",
+  //         outputDir: "docs/second",
+  //         sidebarOptions: {
+  //           groupPathsBy: "tag",
+  //           categoryLinkSource: "tag",
+  //         },
+  //         template: "api.mustache",
+  //         hideSendButton: false,
+  //       },
+  //     },
+  //   },
+  // ],
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -103,7 +103,8 @@ const config = {
   ...metadata,
   plugins,
   trailingSlash: false,
-  themes: ["docusaurus-theme-openapi-docs"],
+  // themes: ["docusaurus-theme-openapi-docs"],
+  // themes: ["@docusaurus/theme-live-codeblock"],
   clientModules: [require.resolve("./src/client/define-ui-kit.js")],
 
   presets: [
@@ -115,9 +116,9 @@ const config = {
           path: "docs",
           id: "docs",
           routeBasePath: "/",
-          docLayoutComponent: "@theme/DocPage",
-          docItemComponent: "@theme/ApiItem",
-          sidebarPath: require.resolve("./sidebars-default.js"),
+          // docLayoutComponent: "@theme/DocPage",
+          // docItemComponent: "@theme/ApiItem",
+          sidebarPath: require.resolve("./sidebar_auto.js"),
           ...defaultSettings,
         },
         blog: false,

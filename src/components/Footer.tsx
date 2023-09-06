@@ -41,7 +41,9 @@ function Footer() {
         {/* social media */}
         <div className="flex flex-row items-center space-x-4">
           {SOCIAL_MEDIA.map((item) => (
-            <a className="flex flex-row items-center justify-center space-x-1 text-[#fafaff]">
+            <a
+              key={item.title}
+              className="flex flex-row items-center justify-center space-x-1 text-[#fafaff]">
               <img
                 className={`${
                   item.title === "X" ? "h-4" : "h-5"
