@@ -15,6 +15,11 @@ export default function TOCItems({
   ...props
 }) {
   const themeConfig = useThemeConfig();
+  // const minHeadingLevel =
+  //   minHeadingLevelOption ?? themeConfig.tableOfContents.minHeadingLevel;
+
+  // const maxHeadingLevel =
+  //   maxHeadingLevelOption ?? themeConfig.tableOfContents.maxHeadingLevel;
   const minHeadingLevel = 0;
   const maxHeadingLevel = 4;
   const tocTree = useFilteredAndTreeifiedTOC({

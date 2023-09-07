@@ -63,7 +63,9 @@ function DropdownNavbarItemDesktop({
       className={clsx(
         "navbar__item",
         "dropdown",
-        isVersions ? "dropdown--hoverable--versions" : "dropdown--hoverable",
+        isVersions
+          ? "dropdown--hoverable--versions bg-red-500"
+          : "dropdown--hoverable ",
 
         {
           "dropdown--right": position === "right",

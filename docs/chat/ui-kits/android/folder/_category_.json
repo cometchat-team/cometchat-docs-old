@@ -1,6 +1,5 @@
 {
-  "label": "Call",
-  "position": 2,
+  "label": "Folder",
   "link": {
     "type": "generated-index"
   }

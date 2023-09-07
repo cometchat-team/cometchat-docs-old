@@ -8,7 +8,7 @@ module.exports = {
   },
   important: true,
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{jsx,tsx,html}"],
+  content: ["./src/**/*.{jsx,tsx,html,js,ts}"],
   theme: {
     extend: {
       fontFamily: {

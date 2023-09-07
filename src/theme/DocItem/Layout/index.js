@@ -49,7 +49,9 @@ export default function DocItemLayout({ children }) {
           <DocItemPaginator />
         </div>
       </div>
-      {/* {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>} */}
+      {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+      {/* blur top right */}
+      <div className="absolute right-0 top-0 h-[250px] w-[200px] bg-[#6852D6] blur-[200px]"></div>
     </div>
   );
 }

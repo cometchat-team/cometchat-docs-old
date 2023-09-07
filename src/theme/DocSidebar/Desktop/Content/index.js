@@ -5,9 +5,11 @@ import {
   useAnnouncementBar,
   useScrollPosition,
 } from "@docusaurus/theme-common/internal";
-import { translate } from "@docusaurus/Translate";
 import DocSidebarItems from "@theme/DocSidebarItems";
+import CustomDropdown from "../../../../components/sidebar/CustomDropdown";
 import styles from "./styles.module.css";
+import SidebarFooter from "@site/src/components/sidebar/SidebarFooter";
+
 function useShowAnnouncementBar() {
   const { isActive } = useAnnouncementBar();
   const [showAnnouncementBar, setShowAnnouncementBar] = useState(isActive);
@@ -25,13 +27,8 @@ export default function DocSidebarDesktopContent({ path, sidebar, className }) {
   const showAnnouncementBar = useShowAnnouncementBar();
   return (
     <nav
-      aria-label={translate({
-        id: "theme.docs.sidebar.navAriaLabel",
-        message: "Docs sidebar",
-        description: "The ARIA label for the sidebar navigation",
-      })}
       className={clsx(
-        "menu thin-scrollbar",
+        "menu thin-scrollbar flex flex-col justify-between bg-[#F4F4F9]",
         styles.menu,
         showAnnouncementBar && styles.menuWithAnnouncementBar,
         className
@@ -39,6 +36,8 @@ export default function DocSidebarDesktopContent({ path, sidebar, className }) {
       <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, "menu__list")}>
         <DocSidebarItems items={sidebar} activePath={path} level={1} />
       </ul>
+      {/* sidebar bottom */}
+      <SidebarFooter />
     </nav>
   );
 }
