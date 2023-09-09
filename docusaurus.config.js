@@ -122,9 +122,14 @@ const config = {
         items: [
           {
             label: "Overview",
-            to: "guides",
-            position: "left",
-            className: "navbar__item__btm",
+            type: "dropdown",
+            items: [
+              {
+                type: "html",
+                value: "<div></div>",
+                className: "my-website-dropdown",
+              },
+            ],
           },
           {
             label: "Implementation",

@@ -12,6 +12,7 @@ import {
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import NavbarItem from "@theme/NavbarItem";
 import Implementation from "@site/src/components/navbar/Implementation";
+import Overview from "@site/src/components/navbar/Overview";
 function isItemActive(item, localPathname) {
   if (isSamePath(item.to, localPathname)) {
     return true;
@@ -89,7 +90,8 @@ function DropdownNavbarItemDesktop({
         {props.children ?? props.label}
       </NavbarNavLink>
       <ul className="dropdown__menu">
-        <Implementation />
+        {props.label === "Implementation" && <Implementation />}
+        {props.label === "Overview" && <Overview />}
       </ul>
     </div>
   );
