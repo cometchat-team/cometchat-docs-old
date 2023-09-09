@@ -1280,14 +1280,15 @@ button.sections-menu-trigger,
   color: white !important;
   border: none !important;
   border-radius: 16px !important;
-  max-width: 65%;
+  max-width: 68%;
 }
 .sections-menu-trigger .item-text > svg,
 .sections-menu-item .item-text > svg {
   fill: white !important;
 }
 /* version dropdown container */
-.multiSectionContainer_src-components-SidebarMenu-styles-module {
+.multiSectionContainer_src-components-SidebarMenu-styles-module,
+.multiSectionContainer_bYm7 {
   background: #f4f4f9 !important;
   white-space: nowrap !important;
 
@@ -1303,7 +1304,8 @@ button.sections-menu-trigger,
   font-size: 24px !important;
 }
 
-.row_src-components-SidebarMenu-styles-module a {
+.row_src-components-SidebarMenu-styles-module a,
+.multiSectionContainer_bYm7 a {
   color: #14131dbf !important;
   border: 1px solid #14131d80 !important;
   height: inherit !important;
