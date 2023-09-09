@@ -22,7 +22,7 @@ function SidebarFooter() {
       <ul className="p-0 text-sm">
         {DATA.map((item, index) => (
           <li
-            className="menu__link flex cursor-pointer flex-row items-center justify-between px-3"
+            className="menu__link flex cursor-pointer flex-row items-center justify-between px-3 font-semibold"
             key={index}>
             <span className="text-[#7E7D85]">{item.title}</span>
             {/* icon */}

@@ -1240,6 +1240,28 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   height: 100% !important;
 }
 
+/* VARS */
+:root {
+  --sidebar-version-dropdown: #14131dbf;
+  --sidebar-version-dropdown-border: #14131d80;
+  --sidebar-top-dropdown-container-bg: #f4f4f9;
+  --sidebar-top-dropdown-container-label: #1d131a;
+  --sidebar-top-dropdown-container-border: #14131d14;
+  --sidebar-nav-menu-bg: #f4f4f9;
+  --sidebar-item-label-color: #14131d;
+  --sidebar-item-label-opacity: 54%;
+}
+:root[data-theme="dark"] {
+  --sidebar-version-dropdown: #ffffffbf;
+  --sidebar-version-dropdown-border: #fafaff14;
+  --sidebar-top-dropdown-container-bg: #fafaff14;
+  --sidebar-top-dropdown-container-label: #fff;
+  --sidebar-top-dropdown-container-border: #fafaff14;
+  --sidebar-nav-menu-bg: #fafaff14;
+  --sidebar-item-label-color: #fff;
+}
+
+/* END VARS */
 /* ARROW */
 
 .breadcrumbs__item:not(:last-child):after {
@@ -1289,10 +1311,9 @@ button.sections-menu-trigger,
 /* version dropdown container */
 .multiSectionContainer_src-components-SidebarMenu-styles-module,
 .multiSectionContainer_bYm7 {
-  background: #f4f4f9 !important;
+  background: var(--sidebar-top-dropdown-container-bg) !important;
   white-space: nowrap !important;
-
-  border-bottom: 1px solid #14131d14 !important;
+  border-bottom: 1px solid var(--sidebar-top-dropdown-container-border) !important;
 }
 
 .section_src-components-SidebarMenu-styles-module:only-child,
@@ -1302,14 +1323,15 @@ button.sections-menu-trigger,
 }
 .label_src-components-SidebarMenu-styles-module,
 .label_WInT {
-  color: #1d131a !important;
+  color: var(--sidebar-top-dropdown-container-label) !important;
   font-size: 24px !important;
 }
 
+/* sidebar top version selector */
 .row_src-components-SidebarMenu-styles-module a,
 .multiSectionContainer_bYm7 a {
-  color: #14131dbf !important;
-  border: 1px solid #14131d80 !important;
+  color: var(--sidebar-version-dropdown) !important;
+  border: 1px solid var(--sidebar-version-dropdown-border) !important;
   height: inherit !important;
   margin: 0 !important;
   padding: 12px 16px !important;
@@ -1327,17 +1349,23 @@ button.sections-menu-trigger,
   justify-content: space-between !important;
 }
 
-/* sidebar indicator */
+/* sidebar item */
 ul.menu__list > li > a.menu__link:hover {
   background-color: #d0d6d06b !important;
 }
-.menu__link--active:not(.menu__link--sublist) {
+ul.menu__list > li > a.menu__link--active:not(.menu__link--sublist),
+.menu__link.menu__link--sublist.menu__link--active {
   border-left: 1px solid #6852d6 !important;
   border-right: none !important;
   background: transparent;
   border-radius: 0 !important;
+  opacity: 100% !important;
 }
-
+ul.menu__list > li > a.menu__link,
+.menu__link.menu__link--sublist {
+  color: var(--sidebar-item-label-color) !important;
+  opacity: var(--sidebar-item-label-opacity) !important;
+}
 /* toc items */
 
 .table-of-contents__left-border {
@@ -1366,4 +1394,5 @@ ul.menu__list > li > a.menu__link:hover {
 nav.menu.menu_Y1UP {
   padding-left: 20px !important;
   padding-right: 10px !important;
+  background-color: var(--sidebar-nav-menu-bg) !important;
 }
