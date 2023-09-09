@@ -1250,6 +1250,7 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   --sidebar-nav-menu-bg: #f4f4f9;
   --sidebar-item-label-color: #14131d;
   --sidebar-item-label-opacity: 54%;
+  --breadcrumbs-active-item-color: #14131d;
 }
 :root[data-theme="dark"] {
   --sidebar-version-dropdown: #ffffffbf;
@@ -1259,9 +1260,17 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   --sidebar-top-dropdown-container-border: #fafaff14;
   --sidebar-nav-menu-bg: #fafaff14;
   --sidebar-item-label-color: #fff;
+  --breadcrumbs-active-item-color: #fff;
 }
 
 /* END VARS */
+
+/* breadcrumbs */
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--breadcrumbs-active-item-color) !important;
+}
+
 /* ARROW */
 
 .breadcrumbs__item:not(:last-child):after {
