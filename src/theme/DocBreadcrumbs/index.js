@@ -10,6 +10,20 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { translate } from "@docusaurus/Translate";
 import styles from "./styles.module.css";
+
+function extractURL(url, item) {
+  const my_list = url.split("/");
+  // check if item in the list
+  if (my_list.includes(item)) {
+    // get the first items before the item
+    const index = my_list.indexOf(item);
+    const new_list = my_list.slice(0, index + 1);
+    return new_list.join("/");
+  } else {
+    return url;
+  }
+}
+
 // TODO move to design system folder
 function BreadcrumbsItemLink({ children, href, isLast }) {
   const className = "breadcrumbs__link";
@@ -97,22 +111,17 @@ export default function DocBreadcrumbs() {
         {homePageRoute && <HomeBreadcrumbItem />}
         {location.pathname
           .split("/")
-          .slice(1)
-          .filter((item) => item !== "category")
-          .filter(
-            (item) =>
-              !breadcrumbs.find(
-                (b) => b.label.toLowerCase() === item.toLowerCase()
-              )
-          )
+          .slice(1, 4)
           .map((item, idx) => {
             return (
               <BreadcrumbsItem
                 key={idx}
                 active={false}
                 index={idx}
-                addMicrodata={!!item}>
-                <BreadcrumbsItemLink href={item} isLast={false}>
+                addMicrodata={!!location.pathname}>
+                <BreadcrumbsItemLink
+                  href={extractURL(location.pathname, item)}
+                  isLast={false}>
                   {item}
                 </BreadcrumbsItemLink>
               </BreadcrumbsItem>
