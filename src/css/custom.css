@@ -1295,11 +1295,13 @@ button.sections-menu-trigger,
   border-bottom: 1px solid #14131d14 !important;
 }
 
-.section_src-components-SidebarMenu-styles-module:only-child {
+.section_src-components-SidebarMenu-styles-module:only-child,
+.section_olD1:only-child {
   background: transparent !important;
   padding-left: 25px !important;
 }
-.label_src-components-SidebarMenu-styles-module {
+.label_src-components-SidebarMenu-styles-module,
+.multiSectionContainer_bYm7 {
   color: #1d131a !important;
   font-size: 24px !important;
 }
@@ -1315,7 +1317,8 @@ button.sections-menu-trigger,
   white-space: nowrap !important;
 }
 
-.row_src-components-SidebarMenu-styles-module {
+.row_src-components-SidebarMenu-styles-module,
+.multiSectionContainer_bYm7 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1359,7 +1362,8 @@ ul.menu__list > li > a.menu__link:hover {
 .table-of-contents_link {
   color: #14131d !important;
 }
-.menu_src-theme-DocSidebar-Desktop-Content-styles-module {
+.menu_src-theme-DocSidebar-Desktop-Content-styles-module,
+nav.menu.menu_Y1UP {
   padding-left: 20px !important;
   padding-right: 10px !important;
 }

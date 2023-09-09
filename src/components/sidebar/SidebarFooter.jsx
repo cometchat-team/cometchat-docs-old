@@ -17,7 +17,7 @@ const DATA = [
 
 function SidebarFooter() {
   return (
-    <div className="w-auto">
+    <div className="mt-6 w-auto">
       <h3 className="m-0 mb-3 pl-3 text-base">Links</h3>
       <ul className="p-0 text-sm">
         {DATA.map((item, index) => (
