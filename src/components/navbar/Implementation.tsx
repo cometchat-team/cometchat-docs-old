@@ -1,8 +1,15 @@
+import Link from "@docusaurus/Link";
 import React from "react";
+
+function formatLink(base, title) {
+  // from React to react and From React Native to react-native
+  return base + title.toLowerCase().replace(" ", "-");
+}
 
 const DATA = [
   {
     title: "UI Kits",
+    base: "/chat/ui-kits/",
     items: [
       {
         title: "React",
@@ -43,6 +50,7 @@ const DATA = [
   },
   {
     title: "SDKs Chat",
+    base: "/chat/sdks/",
     items: [
       {
         title: "React",
@@ -79,6 +87,7 @@ const DATA = [
   },
   {
     title: "SDKs Call",
+    base: "/call/sdks/",
     items: [
       {
         title: "React",
@@ -115,6 +124,7 @@ const DATA = [
   },
   {
     title: "Widgets",
+    base: "/chat/widgets/",
     items: [
       {
         title: "WordPress",
@@ -149,7 +159,7 @@ function Implementation() {
 
 export default Implementation;
 
-function Card({ title, items, index }) {
+function Card({ title, items, base, index }) {
   return (
     <div
       style={{
@@ -163,8 +173,8 @@ function Card({ title, items, index }) {
       </h2>
       <div className="grid grid-cols-2 gap-6">
         {items.map((item, item_index) => (
-          <a
-            href=""
+          <Link
+            href={formatLink(base, item.title)}
             key={item.title}
             className={`flex flex-row items-center justify-start ${
               item_index < 4 ? " col-start-1 row-auto" : `col-start-2`
@@ -182,7 +192,7 @@ function Card({ title, items, index }) {
             <p className="m-0 whitespace-nowrap text-sm text-opacity-[84%]">
               {item.title}
             </p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

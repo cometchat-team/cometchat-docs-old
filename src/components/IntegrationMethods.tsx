@@ -8,24 +8,31 @@ const DATA = [
     items: [
       {
         title: "React",
+        link: "/chat/ui-kits/react",
       },
       {
         title: "React Native",
+        link: "/chat/ui-kits/react-native",
       },
       {
         title: "Angular",
+        link: "/chat/ui-kits/angular",
       },
       {
         title: "iOS Swift",
+        link: "/chat/ui-kits/ios-swift",
       },
       {
         title: "Android Kotlin",
+        link: "/chat/ui-kits/android-kotlin",
       },
       {
         title: "Android Java",
+        link: "/chat/ui-kits/android-java",
       },
       {
         title: "Vue",
+        link: "/chat/ui-kits/vue",
       },
     ],
     icons: [

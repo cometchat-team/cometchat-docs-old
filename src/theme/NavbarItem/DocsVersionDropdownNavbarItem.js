@@ -9,6 +9,7 @@ import { translate } from "@docusaurus/Translate";
 import { useLocation } from "@docusaurus/router";
 import DefaultNavbarItem from "@theme/NavbarItem/DefaultNavbarItem";
 import DropdownNavbarItem from "@theme/NavbarItem/DropdownNavbarItem";
+
 const getVersionMainDoc = (version) =>
   version.docs.find((doc) => doc.id === version.mainDocId);
 export default function DocsVersionDropdownNavbarItem({

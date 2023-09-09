@@ -6,6 +6,7 @@ import {
   AndroidIcon,
   AppleIcon,
   FlutterIcon,
+  VueIcon,
 } from "./icons";
 
 export type SectionsGroup = {
@@ -104,7 +105,7 @@ const SECTIONS: Section[] = [
   {
     name: "Vue",
     docId: "chat-ui-kits-vue",
-    icon: JSIcon,
+    icon: VueIcon,
     section: "chat-ui-kits",
   },
 
