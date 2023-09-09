@@ -53,7 +53,7 @@
 @tailwind utilities;
 
 .schedule_a_demo_button {
-  @apply mx-2 rounded-[10px] bg-[#6852d6] text-white;
+  @apply mx-2 flex  flex-col items-center justify-center rounded-[10px] bg-[#6852d6] p-0 py-[6px] !pr-3 pl-3 text-center text-white;
 }
 .schedule_a_demo_button svg {
   @apply hidden;
