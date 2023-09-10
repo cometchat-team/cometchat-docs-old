@@ -1405,3 +1405,22 @@ nav.menu.menu_Y1UP {
   padding-right: 10px !important;
   background-color: var(--sidebar-nav-menu-bg) !important;
 }
+
+/* pagination */
+nav.pagination-nav {
+  border-top: 1px solid #14131d14;
+  border-bottom: 1px solid #14131d14;
+  @apply justify-center gap-0;
+}
+nav.pagination-nav a {
+  @apply border-none text-xl font-semibold text-[#6852D6];
+}
+nav.pagination-nav a:first-child {
+  border-right: 1px solid #14131d14;
+  @apply rounded-none;
+}
+nav.pagination-nav a div:first-child,
+nav.pagination-nav a div:last-child::before,
+nav.pagination-nav a div:last-child::after {
+  @apply hidden;
+}
