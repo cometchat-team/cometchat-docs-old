@@ -1,6 +1,6 @@
 ## Navbar content
 
-### SDKs
+### SDKs 
 
 ![](./assets/Screenshot%20from%202023-08-02%2016-04-31.png)
 
