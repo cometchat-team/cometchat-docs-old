@@ -65,7 +65,7 @@ function DropdownNavbarItemDesktop({
         "navbar__item",
         "dropdown",
         isVersions
-          ? "dropdown--hoverable--versions bg-red-500"
+          ? "version--dropdown dropdown--hoverable--versions"
           : "dropdown--hoverable ",
 
         {
@@ -92,6 +92,16 @@ function DropdownNavbarItemDesktop({
       <ul className="dropdown__menu">
         {props.label === "Implementation" && <Implementation />}
         {props.label === "Overview" && <Overview />}
+        {props.label !== "Implementation" &&
+          props.label !== "Overview" &&
+          items.map((childItemProps, i) => (
+            <NavbarItem
+              isDropdownItem
+              activeClassName="dropdown__link--active"
+              {...childItemProps}
+              key={i}
+            />
+          ))}
       </ul>
     </div>
   );
