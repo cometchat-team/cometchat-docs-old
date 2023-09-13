@@ -1413,7 +1413,8 @@ nav.pagination-nav a div:last-child::after {
 }
 
 /* version dropdown */
-.version--dropdown > a {
+.version--dropdown > a,
+a.navbar__item.navbar__link.navbar__link--active {
   color: var(--sidebar-version-dropdown) !important;
   border: 1px solid var(--sidebar-version-dropdown-border) !important;
   height: inherit !important;
@@ -1422,6 +1423,11 @@ nav.pagination-nav a div:last-child::after {
   border-radius: 12px !important;
   white-space: nowrap !important;
   position: relative !important;
+}
+a.navbar__item.navbar__link.navbar__link--active {
+  padding: 12px 14px !important;
+  margin: var(--ifm-navbar-item-padding-vertical)
+    var(--ifm-navbar-item-padding-horizontal) !important;
 }
 
 .version--dropdown > ul.dropdown__menu {
