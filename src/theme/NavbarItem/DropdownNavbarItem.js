@@ -13,6 +13,8 @@ import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import NavbarItem from "@theme/NavbarItem";
 import Implementation from "@site/src/components/navbar/Implementation";
 import Overview from "@site/src/components/navbar/Overview";
+import { ChevronDown } from "react-feather";
+
 function isItemActive(item, localPathname) {
   if (isSamePath(item.to, localPathname)) {
     return true;
@@ -25,6 +27,7 @@ function isItemActive(item, localPathname) {
   }
   return false;
 }
+
 function containsActiveItems(items, localPathname) {
   return items.some((item) => isItemActive(item, localPathname));
 }
@@ -65,7 +68,7 @@ function DropdownNavbarItemDesktop({
         "navbar__item",
         "dropdown",
         isVersions
-          ? "dropdown--hoverable--versions bg-red-500"
+          ? "version--dropdown dropdown--hoverable--versions"
           : "dropdown--hoverable ",
 
         {
@@ -73,13 +76,25 @@ function DropdownNavbarItemDesktop({
           "dropdown--show": showDropdown,
         }
       )}>
+      {/* VERSIONS */}
       <NavbarNavLink
         aria-haspopup="true"
         aria-expanded={showDropdown}
         role="button"
         href={props.to ? undefined : "#"}
         className={clsx("navbar__link", className)}
-        {...props}
+        label={
+          <>
+            {props.label}{" "}
+            <ChevronDown
+              size={28}
+              strokeWidth={1}
+              className={`m-0 -mr-1 ${
+                showDropdown ? "" : "-rotate-90"
+              } stroke-black transition-transform duration-200`}
+            />
+          </>
+        }
         onClick={props.to ? undefined : (e) => e.preventDefault()}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
@@ -92,6 +107,16 @@ function DropdownNavbarItemDesktop({
       <ul className="dropdown__menu">
         {props.label === "Implementation" && <Implementation />}
         {props.label === "Overview" && <Overview />}
+        {props.label !== "Implementation" &&
+          props.label !== "Overview" &&
+          items.map((childItemProps, i) => (
+            <NavbarItem
+              isDropdownItem
+              activeClassName="dropdown__link--active"
+              {...childItemProps}
+              key={i}
+            />
+          ))}
       </ul>
     </div>
   );
