@@ -129,17 +129,17 @@ const DATA = [
 
 function IntegrationMethods() {
   return (
-    <div className="mb-10 mt-36 flex w-full flex-col items-center px-[64px]">
+    <div className="mb-10 mt-40 flex flex-col items-center con--cust">
       <div className="flex w-full  max-w-[1440px] flex-col items-start">
-        <h1 className="m-0 text-4xl  mb-1">Integration methods</h1>
-        <p className="font--custom--thin text-xl mt-1">Choose from your preferred implementation method</p>
-        <div className="grid w-full grid-cols-2 gap-[40px]">
+        <h1 className="m-0 h--cust  mb-1">Integration methods</h1>
+        <p className="font--custom--thin p--cust mt-1">Choose from your preferred implementation method</p>
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-3 md:gap-[40px]">
           {DATA.slice(0, 2).map((item) => (
             <Card key={item.title} {...item} />
           ))}
         </div>
-        <hr className="w-full bg-[#14131D14]" />
-        <div className="grid w-full grid-cols-2 gap-[40px]">
+        <hr className="w-full hidden md:flex bg-[#14131D14]" />
+        <div className="grid w-full grid-cols-1 mt-4 md:mt-0 md:grid-cols-2 gap-5 md:gap-[40px]">
           {DATA.slice(2).map((item) => (
             <Card key={item.title} {...item} />
           ))}
@@ -153,7 +153,7 @@ export default IntegrationMethods;
 
 function Card({ title, description, items, icons }) {
   return (
-    <div className="w-full px-[40px] py-[12px]">
+    <div className="w-full px-2 md:px-[40px] py-[12px]">
       {/* icons */}
       <div
         style={{
@@ -172,7 +172,7 @@ function Card({ title, description, items, icons }) {
       {/* text */}
       <div className="mt-4 mb-2">
         <h3 className="m-0">{title}</h3>
-        <p className="font--custom--thin mt-1 text-[18px]">{description}</p>
+        <p className="font--custom--thin mt-1 p--cust">{description}</p>
       </div>
       {/* items */}
       <div className="flex flex-wrap gap-2">

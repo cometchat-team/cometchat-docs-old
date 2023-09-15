@@ -33,20 +33,18 @@ const DATA = [
 
 function ImplementationGuides() {
   return (
-    <div className="mb-10  flex w-full flex-col items-center bg-[#F6F6FA] px-12 py-12">
-      <div className="flex w-full max-w-[1440px]  flex-row items-center justify-between">
-        
-
+    <div className="mb-10  flex flex-col items-center bg-[#F6F6FA] con--cust py-12">
+      <div className="flex w-full max-w-[1440px] flex-row items-start md:items-center justify-between">
         <div className="flex w-11/12 flex-col items-start">
-          <h1 className="m-0 text-[40px] mb-1 ">Implementation Guides</h1>
-          <p className="text-[18px] font--custom--thin ">Essential guides for optimal implementation</p>
+          <h1 className="m-0 h--cust mb-1 ">Implementation Guides</h1>
+          <p className="p--cust font--custom--thin ">Essential guides for optimal implementation</p>
         </div>
         {/* view more */}
         <a className="flex w-fit whitespace-nowrap font--custom--thin flex-col items-start justify-center rounded-xl border border-solid border-[#14131D1A] bg-[#14131D05] p-[10px] text-xs text-[#14131D]">
             View All
           </a>
       </div>
-      <div className="mt-3 grid  w-full max-w-[1440px] grid-cols-4 gap-6">
+      <div className="mt-3 grid  w-full max-w-[1440px] grid-cols-1 md:grid-cols-4 gap-6">
         {DATA.map((item) => (
           <Card key={item.title} {...item} />
         ))}
@@ -66,7 +64,7 @@ function Card({ title, description, thumbnail, link }) {
         className="mb-2 aspect-video w-full rounded-xl object-cover"
       />
       <h3 className="m-0 mb-2 font-normal">{title}</h3>
-      <p className="leading-6 text-[18px] font--custom--thin text-opacity-[0.74]">{description}</p>
+      <p className="leading-6 p--cust font--custom--thin">{description}</p>
       <a className="flex w-fit flex-row items-center justify-center rounded-xl  text-sm text-[#6852D6]">
         Learn more
       </a>

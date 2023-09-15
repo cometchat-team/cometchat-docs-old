@@ -1454,3 +1454,15 @@ a.navbar__item.navbar__link.navbar__link--active {
 .navbar__items > .navbar__item  {
   @apply hidden md:flex;
 }
+
+/* CUSTOM */
+
+.con--cust {
+  @apply px-4 w-full md:px-[64px];
+}
+.h--cust {
+  @apply md:text-[44px] text-3xl;
+}
+.p--cust {
+  @apply  text-[18px] text-opacity-[0.74] leading-6;
+}
