@@ -1464,5 +1464,5 @@ a.navbar__item.navbar__link.navbar__link--active {
   @apply md:text-[44px] text-3xl;
 }
 .p--cust {
-  @apply  text-[18px] text-opacity-[0.74] leading-6;
+  @apply  text-[18px] mt-1 text-opacity-[0.74] leading-6;
 }
