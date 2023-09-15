@@ -129,10 +129,10 @@ const DATA = [
 
 function IntegrationMethods() {
   return (
-    <div className="mb-10 mt-[170px] flex w-full flex-col items-center px-[64px]">
+    <div className="mb-10 mt-36 flex w-full flex-col items-center px-[64px]">
       <div className="flex w-full  max-w-[1440px] flex-col items-start">
-        <h1 className="m-0 mb-1">Integration Methods</h1>
-        <p>Choose from your preferred implementation method</p>
+        <h1 className="m-0 text-4xl  mb-1">Integration methods</h1>
+        <p className="font--custom--thin text-xl mt-1">Choose from your preferred implementation method</p>
         <div className="grid w-full grid-cols-2 gap-[40px]">
           {DATA.slice(0, 2).map((item) => (
             <Card key={item.title} {...item} />
@@ -153,7 +153,7 @@ export default IntegrationMethods;
 
 function Card({ title, description, items, icons }) {
   return (
-    <div className="w-full px-[40px] py-[32px]">
+    <div className="w-full px-[40px] py-[12px]">
       {/* icons */}
       <div
         style={{
@@ -165,19 +165,19 @@ function Card({ title, description, items, icons }) {
             key={icon.icon}
             src={`/imgs/icons/${icon.icon}`}
             alt={icon.icon}
-            className="h-8 w-8 object-contain"
+            className="h-7 w-7 object-contain"
           />
         ))}
       </div>
       {/* text */}
-      <div className="my-4">
-        <h2 className="m-0">{title}</h2>
-        <p>{description}</p>
+      <div className="mt-4 mb-2">
+        <h3 className="m-0">{title}</h3>
+        <p className="font--custom--thin mt-1 text-[18px]">{description}</p>
       </div>
       {/* items */}
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-2">
         {items.map((item) => (
-          <a className="flex w-fit flex-col items-center justify-center rounded-xl border border-solid border-[#604BC529] px-4 py-[6px] text-xs text-[#604BC5]">
+          <a className="flex w-fit flex-col items-center justify-center rounded-xl border border-solid border-[#604BC529] px-3 py-[6px] text-sm text-[#604BC5]">
             {item.title}
           </a>
         ))}

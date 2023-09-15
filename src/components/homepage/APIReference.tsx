@@ -7,12 +7,12 @@ const apiRefData = require("../../data/api-reference.json");
 
 export default function APIReferenceSection() {
   return (
-    <section className="relative mb-20 px-6">
+    <section className="relative mb-10 px-6">
       <Head>
         <link rel="prefetch" href={apiRefData.whiteImg} />
         <link rel="prefetch" href={apiRefData.blackImg} />
       </Head>
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-10 rounded-2xl bg-gradient-to-r from-black to-zinc-800 px-6 py-20 text-center text-white dark:from-zinc-100 dark:to-white dark:text-black lg:flex-row lg:p-20 lg:text-left">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-10 rounded-2xl bg-gradient-to-r from-black to-zinc-800 px-6 py-16 text-center text-white dark:from-zinc-100 dark:to-white dark:text-black lg:flex-row lg:p-20 lg:text-left">
         <Link
           href={apiRefData.link}
           aria-label="API Reference"
