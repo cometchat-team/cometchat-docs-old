@@ -26,18 +26,18 @@ const DATA = [
 
 function SampleApps() {
   return (
-    <div className="mb-10 mt-[150px] flex w-full flex-col items-center px-12">
+    <div className="mb-10 mt-14 flex w-full flex-col items-center px-12">
       <div className="flex w-full  max-w-[1440px] flex-row items-center justify-between">
         <div className="flex w-11/12 flex-col items-start">
-          <h1 className="m-0 mb-1">Sample Apps</h1>
-          <p>Dive into practical examples of what's achievable</p>
+          <h1 className="m-0 text-[40px] mb-1 ">Sample Apps</h1>
+          <p className="text-[18px] font--custom--thin ">Dive into practical examples of what's achievable</p>
         </div>
         {/* view more */}
-        <a className="flex w-fit flex-col items-center justify-center rounded-xl border border-solid border-[#14131D1A] px-4 py-[12px] text-sm text-[#14131D]">
-          View All
-        </a>
+        <a className="flex w-fit whitespace-nowrap font--custom--thin flex-col items-start justify-center rounded-xl border border-solid border-[#14131D1A] bg-[#14131D05] p-[10px] text-xs text-[#14131D]">
+            View All
+          </a>
       </div>
-      <div className="mt-4 grid w-full max-w-[1440px] grid-cols-3 gap-10">
+      <div className="mt-3 grid w-full max-w-[1440px] grid-cols-3 gap-10">
         {DATA.map((item) => (
           <Card key={item.title} {...item} />
         ))}
@@ -56,9 +56,9 @@ function Card({ title, description, thumbnail, clone }) {
         alt={title}
         className="mb-2 h-[220px] w-full rounded-xl object-cover"
       />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <a className="flex w-fit flex-row items-center justify-center rounded-xl border border-solid border-[#14131D1A] px-6 py-[12px] text-sm text-[#14131D]">
+      <h3 className="m-0 mb-1">{title}</h3>
+      <p className="font--custom--thin text-[18px] text-opacity-[0.74] leading-6">{description}</p>
+      <a className="flex w-fit whitespace-nowrap font--custom--thin flex-row items-center justify-center rounded-xl border border-solid border-[#14131D1A] bg-[#14131D05] px-3 py-2 text-xs text-[#14131D]">
         <img
           src="/imgs/logos/github.svg"
           alt="GitHub Logo"
