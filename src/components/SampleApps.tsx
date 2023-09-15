@@ -54,7 +54,7 @@ function Card({ title, description, thumbnail, clone }) {
       <img
         src={`/imgs/${thumbnail}`}
         alt={title}
-        className="mb-2 h-[220px] w-full rounded-xl object-cover"
+        className="mb-2 aspect-video w-full rounded-xl object-cover"
       />
       <h3 className="m-0 mb-1">{title}</h3>
       <p className="font--custom--thin text-[18px] text-opacity-[0.74] leading-6">{description}</p>
