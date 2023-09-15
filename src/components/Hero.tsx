@@ -121,9 +121,9 @@ function CardItem({ icon, title }: { icon: string; title: string }) {
 
 function ADCard() {
   return (
-    <div className="absolute -bottom-[90px]  left-1/2 z-10 flex w-3/4 max-w-[1440px] -translate-x-1/2 transform flex-col items-center justify-center rounded-[32px] bg-white">
+    <div className="absolute -bottom-[95px]  left-1/2 z-10 flex w-3/4 max-w-[1440px] -translate-x-1/2 transform flex-col items-center justify-center rounded-[32px] bg-white">
       <div
-        className="relative flex h-[180px] w-full flex-col items-start overflow-hidden rounded-[32px] bg-[#14131D0F] border border-solid border-[#14131D0A] bg-opacity-10 pt-6 px-7"
+        className="relative flex h-[190px] w-full flex-col items-start overflow-hidden rounded-[32px] bg-[#14131D0F] border border-solid border-[#14131D0A] bg-opacity-10 pt-6 px-7"
         style={{
           boxShadow: "0px 4px 20px 0px #14131D0F",
         }}>
@@ -140,7 +140,7 @@ function ADCard() {
           }}
           className="mt-2 font--custom--thin font-thin
       rounded-xl bg-[#6852D6]
-       px-7 py-2 text-xs text-[#FCFCFE]"
+       px-7 py-[10px] text-xs text-[#FCFCFE]"
           href="">
           Learn more
         </a>
