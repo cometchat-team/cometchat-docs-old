@@ -67,7 +67,7 @@
 @tailwind utilities;
 
 .schedule_a_demo_button {
-  @apply mx-2 flex  flex-col items-center justify-center rounded-[10px] bg-[#6852d6] p-0 py-[6px] !pr-3 pl-3 text-center text-white;
+  @apply mx-2 md:flex hidden flex-col items-center justify-center rounded-[10px] bg-[#6852d6] p-0 py-[6px] !pr-3 pl-3 text-center text-white;
 }
 .schedule_a_demo_button svg {
   @apply hidden;
@@ -1078,7 +1078,7 @@ details p {
 }
 
 .DocSearch-Button {
-  @apply bg-[#FFFFFF05] lg:!rounded-md;
+  @apply bg-[#FFFFFF05] lg:!rounded-md hidden md:flex;
 }
 
 .DocSearch-Button-Key {
@@ -1446,4 +1446,11 @@ a.navbar__item.navbar__link.navbar__link--active {
 
 .version--dropdown > ul.dropdown__menu {
   @apply !bg-secondary-900;
+}
+
+.searchBox_src-theme-Navbar-Search-styles-module{
+  @apply hidden md:flex;
+}
+.navbar__items > .navbar__item  {
+  @apply hidden md:flex;
 }
