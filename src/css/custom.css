@@ -1411,7 +1411,7 @@ nav.menu.menu_Y1UP {
 nav.pagination-nav {
   border-top: 1px solid #14131d14;
   border-bottom: 1px solid #14131d14;
-  @apply justify-center gap-0;
+  @apply justify-center gap-0 mt-6;
 }
 nav.pagination-nav a {
   @apply border-none text-xl font-semibold text-[#6852D6];
@@ -1465,4 +1465,17 @@ a.navbar__item.navbar__link.navbar__link--active {
 }
 .p--cust {
   @apply  text-[18px] mt-1 text-opacity-[0.74] leading-6;
+}
+main > .container {
+  @apply px-0 !pb-0;
+}
+.cust--con {
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+/* toc */
+.container > .cust--con > .row  > .col.col--3 {
+  @apply  sticky top-0;
+}
+.container > .cust--con > .row  > .col.col--3::after {
+  @apply  content-[""] sticky top-0 right-0 w-full h-full bg-[#6852D6] bg-opacity-10 blur-2xl;
 }

@@ -12,6 +12,7 @@ import DocItemContent from "@theme/DocItem/Content";
 import DocBreadcrumbs from "@theme/DocBreadcrumbs";
 import styles from "./styles.module.css";
 import FeedbackBottom from "@site/src/components/docItem/Feedback";
+import Footer from "@site/src/components/Footer";
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -34,7 +35,7 @@ function useDocTOC() {
 export default function DocItemLayout({ children }) {
   const docTOC = useDocTOC();
   return (
-    <div className="row">
+    <div className="row ">
       <div className={clsx("col", !docTOC.hidden && styles.docItemCol)}>
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
@@ -44,14 +45,13 @@ export default function DocItemLayout({ children }) {
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>
             <FeedbackBottom />
-            <DocItemFooter />
+            {/* <DocItemFooter /> */}
           </article>
           <DocItemPaginator />
         </div>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
-      {/* blur top right */}
-      <div className="absolute right-0 top-0 h-[250px] w-[200px] bg-[#6852D6] blur-[200px]"></div>
+     
     </div>
   );
 }
