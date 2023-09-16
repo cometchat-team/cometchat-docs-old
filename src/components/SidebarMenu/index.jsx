@@ -8,6 +8,7 @@ import * as Select from "@radix-ui/react-select";
 import SectionsMenu from "../SectionsMenu";
 import { useSectionMenu } from "../../lib/useSectionMenu";
 import styles from "./styles.module.css";
+import SectionsMenuDropdown from "../SectionsDropdown";
 
 function getPrettyPath(path) {
   return path.slice(-1) === "/" ? path.slice(0, -1) : path;
@@ -72,19 +73,17 @@ export default function SidebarMenu() {
           <div
             className={clsx(styles.section, styles.sectionActive)}
             tabIndex={0}
-            key={group.name}>
+            key={group.name}
+          >
             <div className={clsx(styles.label, className)}>{name}</div>
             <div>
               <div className={styles.row}>
-                <SectionsMenu
+                <SectionsMenuDropdown
                   defaultValue={docId}
                   values={docs}
                   onValueChange={handleSectionChange}
                   triggerClassName={styles.sectionsMenu}
                 />
-
-
-
                 <VersionDropdown
                   docsPluginId={docId}
                   dropdownItemsBefore={[]}

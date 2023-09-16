@@ -1201,9 +1201,13 @@ html[data-theme="dark"] .video_sidebar_header > div > a::before {
   @apply text-[#FAFAFF];
 }
 
+.navbar__items {
+  @apply h-full;
+}
+
 .navbar__item__btm,
 .navbar__item.dropdown {
-  @apply my-0 flex h-full flex-col items-center justify-center bg-transparent;
+  @apply my-0 flex h-full flex-col items-center justify-center bg-transparent ;
 }
 .navbar__items > .navbar__item__btm:hover,
 .navbar__items > .navbar__item.dropdown:hover {
@@ -1309,36 +1313,7 @@ li.breadcrumbs__item {
   color: #7b7a82;
 }
 
-/* version dropdown */
-.sections-menu-scrollButton {
-  /* rotate it */
-  transform: rotate(-90deg);
-  height: 35px;
-  width: 35px;
-  cursor: pointer;
-  color: white !important;
-}
-button.sections-menu-trigger,
-.sections-menu-item[aria-expanded="false"] {
-  background-color: #6852d6;
-  color: white !important;
-  border: none !important;
-  border-radius: 14px !important;
-  max-width: 68%;
-  padding: 4px 14px !important;
-}
-.sections-menu-trigger .item-text > svg,
-.sections-menu-item .item-text > svg {
-  fill: white !important;
-}
-/* version dropdown container */
-.multiSectionContainer_src-components-SidebarMenu-styles-module,
-.multiSectionContainer_bYm7 {
-  background: var(--sidebar-top-dropdown-container-bg) !important;
-  white-space: nowrap !important;
-  border-bottom: 1px solid var(--sidebar-top-dropdown-container-border) !important;
-  padding: 0 !important;
-}
+
 
 .section_src-components-SidebarMenu-styles-module:only-child,
 .section_olD1:only-child {
@@ -1429,18 +1404,7 @@ nav.pagination-nav a div:last-child::after {
   @apply hidden;
 }
 
-/* version dropdown */
-.version--dropdown > a,
-a.navbar__item.navbar__link.navbar__link--active {
-  color: var(--sidebar-version-dropdown) !important;
-  border: 1px solid var(--sidebar-version-dropdown-border) !important;
-  height: inherit !important;
-  margin: 0 !important;
-  padding: 9px 18px !important;
-  border-radius: 12px !important;
-  white-space: nowrap !important;
-  position: relative !important;
-}
+
 a.navbar__item.navbar__link.navbar__link--active {
   margin: var(--ifm-navbar-item-padding-vertical)
     var(--ifm-navbar-item-padding-horizontal) !important;

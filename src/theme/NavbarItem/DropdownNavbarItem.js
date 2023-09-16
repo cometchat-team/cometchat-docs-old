@@ -1,3 +1,7 @@
+/**
+ * Navbar dropdown for Overview and Implementation
+ */
+
 import React, { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
 import {
@@ -76,25 +80,14 @@ function DropdownNavbarItemDesktop({
           "dropdown--show": showDropdown,
         }
       )}>
-      {/* VERSIONS */}
+      {/* NAVBAR DROPDOWN */}
       <NavbarNavLink
         aria-haspopup="true"
         aria-expanded={showDropdown}
         role="button"
         href={props.to ? undefined : "#"}
-        className={clsx("navbar__link", className)}
-        label={
-          <>
-            {props.label}{" "}
-            <ChevronDown
-              size={28}
-              strokeWidth={1}
-              className={`m-0 -mr-1 ${
-                showDropdown ? "" : "-rotate-90"
-              } stroke-black transition-transform duration-200`}
-            />
-          </>
-        }
+        className={clsx("navbar__link ", className)}
+        label={props.label}
         onClick={props.to ? undefined : (e) => e.preventDefault()}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
