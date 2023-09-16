@@ -1323,8 +1323,9 @@ button.sections-menu-trigger,
   background-color: #6852d6;
   color: white !important;
   border: none !important;
-  border-radius: 16px !important;
+  border-radius: 14px !important;
   max-width: 68%;
+  padding: 4px 14px !important;
 }
 .sections-menu-trigger .item-text > svg,
 .sections-menu-item .item-text > svg {
@@ -1336,6 +1337,7 @@ button.sections-menu-trigger,
   background: var(--sidebar-top-dropdown-container-bg) !important;
   white-space: nowrap !important;
   border-bottom: 1px solid var(--sidebar-top-dropdown-container-border) !important;
+  padding: 0 !important;
 }
 
 .section_src-components-SidebarMenu-styles-module:only-child,
@@ -1346,7 +1348,8 @@ button.sections-menu-trigger,
 .label_src-components-SidebarMenu-styles-module,
 .label_WInT {
   color: var(--sidebar-top-dropdown-container-label) !important;
-  font-size: 24px !important;
+  font-size: 22px !important;
+  margin:0 !important;
 }
 
 .row_src-components-SidebarMenu-styles-module,
@@ -1433,13 +1436,12 @@ a.navbar__item.navbar__link.navbar__link--active {
   border: 1px solid var(--sidebar-version-dropdown-border) !important;
   height: inherit !important;
   margin: 0 !important;
-  padding: 9px 8px !important;
+  padding: 9px 18px !important;
   border-radius: 12px !important;
   white-space: nowrap !important;
   position: relative !important;
 }
 a.navbar__item.navbar__link.navbar__link--active {
-  padding: 12px 14px !important;
   margin: var(--ifm-navbar-item-padding-vertical)
     var(--ifm-navbar-item-padding-horizontal) !important;
 }
@@ -1478,4 +1480,7 @@ main > .container {
 }
 .container > .cust--con > .row  > .col.col--3::after {
   @apply  content-[""] sticky top-0 right-0 w-full h-full bg-[#6852D6] bg-opacity-10 blur-2xl;
+}
+.sections-menu-trigger{
+  @apply h-fit max-h-[44px];
 }

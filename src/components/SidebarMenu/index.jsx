@@ -3,6 +3,7 @@ import { useHistory } from "@docusaurus/router";
 import clsx from "clsx";
 import VersionDropdown from "@theme/NavbarItem/DocsVersionDropdownNavbarItem";
 import useGlobalData from "@docusaurus/useGlobalData";
+import * as Select from "@radix-ui/react-select";
 
 import SectionsMenu from "../SectionsMenu";
 import { useSectionMenu } from "../../lib/useSectionMenu";
@@ -81,6 +82,9 @@ export default function SidebarMenu() {
                   onValueChange={handleSectionChange}
                   triggerClassName={styles.sectionsMenu}
                 />
+
+
+
                 <VersionDropdown
                   docsPluginId={docId}
                   dropdownItemsBefore={[]}
