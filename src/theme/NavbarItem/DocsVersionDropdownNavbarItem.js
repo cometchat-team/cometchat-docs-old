@@ -66,7 +66,7 @@ export default function DocsVersionDropdownNavbarItem({
     return (
       <div
         className="flex !min-w-[80px] flex-row items-center justify-center rounded-lg border border-solid
-       border-[#14131d80] px-2 py-[11px] text-sm text-[#14131d80]"
+       border-[#14131d80] px-2 py-[11px] dark:text-[#FFFFFFBF]  dark:border-[#7B7A8280] text-sm text-[#14131d80]"
       >
         {dropdownLabel}
       </div>
