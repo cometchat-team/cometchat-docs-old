@@ -23,7 +23,7 @@ const SectionsMenuDropdown = forwardRef(
         {/* Trigger */}
         <label
           tabIndex={0}
-          className="btn flex !h-fit !min-h-fit !min-w-[150px] !max-w-[150px] flex-col items-start justify-center rounded-lg bg-[#6852d6] !py-2 capitalize text-white"
+          className="btn flex !h-fit !min-h-fit !min-w-[160px] !max-w-[170px] flex-col items-start justify-center rounded-lg bg-[#6852d6] !py-2 capitalize text-white"
         >
           <div className="flex w-full flex-row items-center justify-between">
             <div className="flex flex-row items-center ">

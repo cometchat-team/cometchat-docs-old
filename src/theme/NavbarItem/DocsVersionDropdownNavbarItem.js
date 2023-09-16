@@ -98,7 +98,12 @@ export default function DocsVersionDropdownNavbarItem({
         className="menu dropdown-content rounded-box z-[9999] w-52 bg-base-100  p-2 shadow"
       >
         {items.map((childItemProps, index) => (
-          <Link key={index} to={childItemProps.to}>
+          <Link 
+          style={{
+            textDecoration: "none",
+            color: "#14131d80",
+          }}
+           key={index} to={childItemProps.to}>
             <li>
               <a
                 className={clsx(

@@ -7,7 +7,6 @@ import * as Select from "@radix-ui/react-select";
 
 import SectionsMenu from "../SectionsMenu";
 import { useSectionMenu } from "../../lib/useSectionMenu";
-import styles from "./styles.module.css";
 import SectionsMenuDropdown from "../SectionsDropdown";
 
 function getPrettyPath(path) {
@@ -42,47 +41,31 @@ export default function SidebarMenu() {
     }
   };
 
-  if (sections) {
-    return (
-      <div className={styles.container}>
-        <SectionsMenu
-          defaultValue={docId}
-          values={sections}
-          onValueChange={handleSectionChange}
-          triggerClassName={styles.sectionsMenu}
-        />
-        <VersionDropdown
-          docsPluginId={docId}
-          dropdownItemsBefore={[]}
-          dropdownItemsAfter={[]}
-        />
-      </div>
-    );
-  }
-
   return (
-    <div className={clsx("sidebar-menu", styles.multiSectionContainer)}>
+    <div
+      className={clsx(
+        "sidebar-menu",
+        "border-0 border-b border-solid border-[#14131D14] bg-[#F4F4F9]",
+        "px-5 py-4"
+      )}
+    >
       {groups.map((group) => {
         const isDocIdInGroup = group.docs.find((doc) => doc.docId === docId);
         if (!isDocIdInGroup) return null;
         const { name, docs, className } = group;
 
-        const navigateToFirstSection = () => handleSectionChange(docs[0].docId);
-
         return (
-          <div
-            className={clsx(styles.section, styles.sectionActive)}
-            tabIndex={0}
-            key={group.name}
-          >
-            <div className={clsx(styles.label, className)}>{name}</div>
+          <div tabIndex={0} key={group.name}>
+            <div className={clsx(className, "mb-1 text-2xl font-bold")}>
+              {name}
+            </div>
             <div>
-              <div className={styles.row}>
+              <div className="flex w-full flex-row items-center justify-between">
                 <SectionsMenuDropdown
                   defaultValue={docId}
                   values={docs}
                   onValueChange={handleSectionChange}
-                  triggerClassName={styles.sectionsMenu}
+                  triggerClassName=""
                 />
                 <VersionDropdown
                   docsPluginId={docId}
@@ -90,7 +73,6 @@ export default function SidebarMenu() {
                   dropdownItemsAfter={[]}
                 />
               </div>
-              {/* <p className={styles.description}>{description}</p> */}
             </div>
           </div>
         );

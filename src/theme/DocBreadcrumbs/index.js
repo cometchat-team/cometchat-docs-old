@@ -10,6 +10,7 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { translate } from "@docusaurus/Translate";
 import styles from "./styles.module.css";
+import { ArrowRight, ChevronRight } from "react-feather";
 
 function extractURL(url, item) {
   const my_list = url.split("/");
@@ -105,28 +106,36 @@ export default function DocBreadcrumbs() {
         description: "The ARIA label for the breadcrumbs",
       })}>
       <ul
-        className="breadcrumbs"
+        className="breadcrumbs items-center "
         itemScope
         itemType="https://schema.org/BreadcrumbList">
+          {/* First one */}
         {homePageRoute && <HomeBreadcrumbItem />}
+        {/* middle ones */}
+        <ChevronRight size={20} className="text-[#7B7A82]" />
         {location.pathname
           .split("/")
           .slice(1, 4)
           .map((item, idx) => {
             return (
+              <>
               <BreadcrumbsItem
                 key={idx}
                 active={false}
                 index={idx}
                 addMicrodata={!!location.pathname}>
                 <BreadcrumbsItemLink
+                
                   href={extractURL(location.pathname, item)}
                   isLast={false}>
-                  {item}
+                  {item} 
                 </BreadcrumbsItemLink>
               </BreadcrumbsItem>
+            <ChevronRight size={20} className="text-[#7B7A82]" />
+            </>
             );
           })}
+          {/* Last one */}
         {breadcrumbs.map((item, idx) => {
           const isLast = idx === breadcrumbs.length - 1;
           return (
