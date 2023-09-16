@@ -45,7 +45,7 @@ export default function SidebarMenu() {
     <div
       className={clsx(
         "sidebar-menu",
-        "border-0 border-b border-solid border-[#14131D14] bg-[#F4F4F9]",
+        "border-0 border-b border-solid border-[#14131D14] bg-[#F4F4F9] dark:border-[#FAFAFF14] dark:bg-[#FAFAFF14]",
         "px-5 py-4"
       )}
     >
@@ -56,7 +56,12 @@ export default function SidebarMenu() {
 
         return (
           <div tabIndex={0} key={group.name}>
-            <div className={clsx(className, "mb-1 text-2xl font-bold")}>
+            <div
+              className={clsx(
+                className,
+                "mb-2 text-2xl font-bold dark:text-white"
+              )}
+            >
               {name}
             </div>
             <div>

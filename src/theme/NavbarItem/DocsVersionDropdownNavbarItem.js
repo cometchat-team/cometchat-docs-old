@@ -79,7 +79,7 @@ export default function DocsVersionDropdownNavbarItem({
       <label
         tabIndex={0}
         className="btn flex !h-[44px] !max-h-[44px] !min-h-[44px]  !w-[80px] flex-row items-center rounded-lg
-       border border-solid  border-[#14131d80] bg-transparent px-2 text-sm text-[#14131d80]"
+       border border-solid  border-[#14131d80] dark:border-[#7B7A8280] bg-transparent px-2 text-sm dark:text-[#FFFFFFBF] text-[#14131d80]"
       >
         <div className="flex w-full flex-row items-center justify-between">
           <span>{dropdownLabel}</span>
@@ -89,7 +89,7 @@ export default function DocsVersionDropdownNavbarItem({
             strokeWidth={1}
             className={`m-0 ${
               false ? "" : "-rotate-90"
-            } stroke-black transition-transform duration-200`}
+            } stroke-black dark:stroke-[#FFFFFFBF] transition-transform duration-200`}
           />
         </div>
       </label>
