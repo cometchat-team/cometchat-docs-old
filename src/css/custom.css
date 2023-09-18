@@ -1307,7 +1307,7 @@ li.breadcrumbs__item {
   background: none;
 }
 .breadcrumbs__link {
-  padding: 4px 8px;
+  @apply px-1 md:px-2 py-1 text-sm md:text-base;
   color: #7b7a82;
 }
 
