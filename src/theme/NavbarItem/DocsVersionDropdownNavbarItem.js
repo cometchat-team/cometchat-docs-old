@@ -65,8 +65,8 @@ export default function DocsVersionDropdownNavbarItem({
   if (items.length <= 1) {
     return (
       <div
-        className="flex !min-w-[80px] flex-row items-center justify-center rounded-lg border border-solid
-       border-[#14131d80] px-2 py-[11px] dark:text-[#FFFFFFBF]  dark:border-[#7B7A8280] text-sm text-[#14131d80]"
+        className="flex !min-w-[80px] flex-row items-center justify-center rounded-lg 
+       px-2 py-[11px] dark:text-[#FFFFFFBF]  text-sm text-[#14131d80]"
       >
         {dropdownLabel}
       </div>
@@ -78,20 +78,11 @@ export default function DocsVersionDropdownNavbarItem({
     <div className="dropdown">
       <label
         tabIndex={0}
-        className="btn flex !h-[44px] !max-h-[44px] !min-h-[44px]  !w-[80px] flex-row items-center rounded-lg
-       border border-solid  border-[#14131d80] dark:border-[#7B7A8280] bg-transparent px-2 text-sm dark:text-[#FFFFFFBF] text-[#14131d80]"
+        className="btn flex !h-[44px] !max-h-[44px] !min-h-[44px]  !w-[80px] flex-row items-center rounded-none
+       border-x-0 border-t-0 border-b border-dashed  border-[#14131d80] dark:border-[#7B7A8280] bg-transparent px-2 text-sm dark:text-[#FFFFFFBF] text-[#14131d80]"
       >
-        <div className="flex w-full flex-row items-center justify-between">
-          <span>{dropdownLabel}</span>
+          {dropdownLabel}
 
-          <ChevronDown
-            size={26}
-            strokeWidth={1}
-            className={`m-0 ${
-              false ? "" : "-rotate-90"
-            } stroke-black dark:stroke-[#FFFFFFBF] transition-transform duration-200`}
-          />
-        </div>
       </label>
       <ul
         tabIndex={0}
