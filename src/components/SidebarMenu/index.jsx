@@ -65,7 +65,7 @@ export default function SidebarMenu() {
               {name}
             </div>
             <div>
-              <div className="flex w-full flex-row items-center justify-between">
+              <div className="flex w-full flex-row items-center justify-around md:justify-between">
                 <SectionsMenuDropdown
                   defaultValue={docId}
                   values={docs}

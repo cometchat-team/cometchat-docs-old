@@ -1463,3 +1463,11 @@ main > .container {
 ul.menu__list {
   @apply !pl-0;
 }
+
+/* mobile sidebar */
+.navbar-sidebar--show .navbar-sidebar, .navbar-sidebar--show .navbar-sidebar__backdrop{
+  @apply flex flex-col;
+}
+.navbar-sidebar__items{
+  @apply w-full;
+}

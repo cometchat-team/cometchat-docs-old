@@ -75,7 +75,7 @@ export default function DocsVersionDropdownNavbarItem({
 
   return (
     // VERSION DROPDOWN FOR DOCS WITH VERSIONS
-    <div className="dropdown">
+    <div className="dropdown dropdown-end dropdown-bottom ">
       <label
         tabIndex={0}
         className="btn flex !h-[44px] !max-h-[44px] !min-h-[44px]  !w-[80px] flex-row items-center rounded-none
@@ -86,11 +86,11 @@ export default function DocsVersionDropdownNavbarItem({
       </label>
       <ul
         tabIndex={0}
-        className="menu dropdown-content rounded-box z-[9999] w-52 bg-base-100  p-2 shadow"
+        className="menu dropdown-content rounded-box z-[9999] w-fit bg-base-100  p-2 shadow"
       >
         {items.map((childItemProps, index) => (
           <Link 
-          style={{
+          style={{ 
             textDecoration: "none",
             color: "#14131d80",
           }}
