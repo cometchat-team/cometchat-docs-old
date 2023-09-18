@@ -1471,3 +1471,6 @@ ul.menu__list {
 .navbar-sidebar__items{
   @apply w-full;
 }
+.navbar-sidebar > .navbar-sidebar__brand{
+  @apply w-full;
+}
