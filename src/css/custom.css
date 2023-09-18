@@ -1412,7 +1412,7 @@ a.navbar__item.navbar__link.navbar__link--active {
   @apply !bg-secondary-900;
 }
 
-.searchBox_src-theme-Navbar-Search-styles-module{
+.searchBox_src-theme-Navbar-Search-styles-module, .searchBox_H2mL{
   @apply hidden md:flex;
 }
 .navbar__items > .navbar__item  {
@@ -1469,8 +1469,14 @@ ul.menu__list {
   @apply flex flex-col;
 }
 .navbar-sidebar__items{
-  @apply w-full;
+  @apply w-full max-h-[calc(100vh-60px)];
 }
 .navbar-sidebar > .navbar-sidebar__brand{
-  @apply w-full;
+  @apply w-full bg-cst-black;
+}
+
+
+/* CUSTOM */
+.cst-row{
+  @apply flex flex-row items-center;
 }

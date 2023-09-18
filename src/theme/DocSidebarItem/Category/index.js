@@ -152,7 +152,8 @@ export default function DocSidebarItemCategory({
           aria-expanded={collapsible ? !collapsed : undefined}
           href={collapsible ? hrefWithSSRFallback ?? '#' : hrefWithSSRFallback}
           {...props}>
-          {label}
+          {label} YO YO YO
+          
         </Link>
         {href && collapsible && (
           <CollapseButton
