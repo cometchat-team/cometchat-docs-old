@@ -1,3 +1,7 @@
+/**
+ * For Docs dropdown Versions
+ */
+
 import React from "react";
 import {
   useVersions,
@@ -7,8 +11,10 @@ import { useDocsPreferredVersion } from "@docusaurus/theme-common";
 import { useDocsVersionCandidates } from "@docusaurus/theme-common/internal";
 import { translate } from "@docusaurus/Translate";
 import { useLocation } from "@docusaurus/router";
-import DefaultNavbarItem from "@theme/NavbarItem/DefaultNavbarItem";
-import DropdownNavbarItem from "@theme/NavbarItem/DropdownNavbarItem";
+import Link from "@docusaurus/Link";
+import { ChevronDown } from "react-feather";
+import { useHistory } from "@docusaurus/router";
+import clsx from "clsx";
 
 const getVersionMainDoc = (version) =>
   version.docs.find((doc) => doc.id === version.mainDocId);
@@ -25,8 +31,6 @@ export default function DocsVersionDropdownNavbarItem({
   const versions = useVersions(docsPluginId);
   const { savePreferredVersionName } = useDocsPreferredVersion(docsPluginId);
   const versionLinks = versions.map((version) => {
-    // We try to link to the same doc, in another version
-    // When not possible, fallback to the "main doc" of the version
     const versionDoc =
       activeDocContext.alternateDocVersions[version.name] ??
       getVersionMainDoc(version);
@@ -35,6 +39,7 @@ export default function DocsVersionDropdownNavbarItem({
       // preserve ?search#hash suffix on version switches
       to: `${versionDoc.path}${search}${hash}`,
       isActive: () => version === activeDocContext.activeVersion,
+      isSelected: () => version.name === activeDocContext.preferredVersion,
       onClick: () => savePreferredVersionName(version.name),
     };
   });
@@ -42,10 +47,9 @@ export default function DocsVersionDropdownNavbarItem({
     ...dropdownItemsBefore,
     ...versionLinks,
     ...dropdownItemsAfter,
-    // {to: `${versionLinks[0].to.split("/").includes("versions") ? versionLinks[0].to :
-    // versionLinks[0].to + "versions"}`, label: "All Versions"}
   ];
   const dropdownVersion = useDocsVersionCandidates(docsPluginId)[0];
+  const history = useHistory();
   // Mobile dropdown is handled a bit differently
   const dropdownLabel =
     mobile && items.length > 1
@@ -56,36 +60,63 @@ export default function DocsVersionDropdownNavbarItem({
             "The label for the navbar versions dropdown on mobile view",
         })
       : dropdownVersion.label;
-  const dropdownTo =
-    mobile && items.length > 1
-      ? undefined
-      : getVersionMainDoc(dropdownVersion).path;
-  // We don't want to render a version dropdown with 0 or 1 item. If we build
-  // the site with a single docs version (onlyIncludeVersions: ['1.0.0']),
-  // We'd rather render a button instead of a dropdown
+
+  // DROPDOWN FOR DOCS WITH ONE VERSION
   if (items.length <= 1) {
     return (
-      <DefaultNavbarItem
-        {...props}
-        mobile={mobile}
-        label={dropdownLabel}
-        to={dropdownTo}
-        isActive={dropdownActiveClassDisabled ? () => false : undefined}
-      />
+      <div
+        className="flex !min-w-[80px] flex-row items-center justify-center rounded-lg border border-solid
+       border-[#14131d80] px-2 py-[11px] dark:text-[#FFFFFFBF]  dark:border-[#7B7A8280] text-sm text-[#14131d80]"
+      >
+        {dropdownLabel}
+      </div>
     );
   }
+
   return (
-    <DropdownNavbarItem
-      {...props}
-      style={{
-        zIndex: 100,
-      }}
-      mobile={mobile}
-      label={dropdownLabel}
-      to={dropdownTo}
-      items={items}
-      isActive={dropdownActiveClassDisabled ? () => false : undefined}
-      isVersions={true}
-    />
+    // VERSION DROPDOWN FOR DOCS WITH VERSIONS
+    <div className="dropdown">
+      <label
+        tabIndex={0}
+        className="btn flex !h-[44px] !max-h-[44px] !min-h-[44px]  !w-[80px] flex-row items-center rounded-lg
+       border border-solid  border-[#14131d80] dark:border-[#7B7A8280] bg-transparent px-2 text-sm dark:text-[#FFFFFFBF] text-[#14131d80]"
+      >
+        <div className="flex w-full flex-row items-center justify-between">
+          <span>{dropdownLabel}</span>
+
+          <ChevronDown
+            size={26}
+            strokeWidth={1}
+            className={`m-0 ${
+              false ? "" : "-rotate-90"
+            } stroke-black dark:stroke-[#FFFFFFBF] transition-transform duration-200`}
+          />
+        </div>
+      </label>
+      <ul
+        tabIndex={0}
+        className="menu dropdown-content rounded-box z-[9999] w-52 bg-base-100  p-2 shadow"
+      >
+        {items.map((childItemProps, index) => (
+          <Link 
+          style={{
+            textDecoration: "none",
+            color: "#14131d80",
+          }}
+           key={index} to={childItemProps.to}>
+            <li>
+              <a
+                className={clsx(
+                  childItemProps.to === history.location.pathname + "/" &&
+                    "!bg-[#00000016]"
+                )}
+              >
+                {childItemProps.label}
+              </a>
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 }
