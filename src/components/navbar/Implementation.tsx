@@ -1,4 +1,5 @@
 import Link from "@docusaurus/Link";
+import clsx from "clsx";
 import React from "react";
 
 function formatLink(base, title) {
@@ -148,7 +149,7 @@ const DATA = [
 function Implementation() {
   return (
     <div className="flex w-full max-w-[1400px] flex-wrap bg-[#191822]">
-      <div className="flex w-full flex-row items-start justify-between">
+      <div className="flex w-full flex-col items-start justify-between md:flex-row">
         {DATA.map((card, index) => (
           <Card index={index} {...card} key={card.title} />
         ))}
@@ -162,12 +163,12 @@ export default Implementation;
 function Card({ title, items, base, index }) {
   return (
     <div
-      style={{
-        backgroundColor: index == 1 || index == 2 ? "#272730" : "#191822",
-        paddingLeft: index == 0 ? 64 : 40,
-        paddingRight: index == 3 ? 64 : 40,
-      }}
-      className="flex h-full flex-1 flex-col items-start justify-start py-10">
+      className={clsx(
+        "flex h-full flex-1 flex-col items-start justify-start py-5 md:py-10",
+        index == 0 ? "px-4 md:px-14" : "px-4 md:px-10",
+        index == 1 || index == 2 ? "bg-[#272730]" : "bg-[#191822]"
+      )}
+    >
       <h2 className="mb-6 text-xl text-[#FAFAFF] text-opacity-[54%]">
         {title}
       </h2>
@@ -183,7 +184,8 @@ function Card({ title, items, base, index }) {
             style={{
               gridRowStart: item_index < 4 ? "auto" : item_index - 3,
               gridColumnStart: item_index < 4 ? 1 : 2,
-            }}>
+            }}
+          >
             <img
               className="h-5 object-contain grayscale"
               src={`/imgs/logos/${item.icon}`}
