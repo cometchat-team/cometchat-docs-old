@@ -84,7 +84,7 @@ export default function NavbarMobileSidebarLayout({
               </ul>
             </div>
           </div>
-          <div className="drawer-side h-[calc(100vh_-_60px)]  overflow-y-scroll">
+          <div className="drawer-side !h-[calc(100vh_-_60px)] !max-h-[calc(100vh_-_60px)] overflow-y-scroll">
             <label htmlFor="my-drawer" className="drawer-overlay"></label>
             {/* Sidebar content here */}
             <ul className="menu w-full flex-1 bg-[#191822] py-4 text-base-content">
