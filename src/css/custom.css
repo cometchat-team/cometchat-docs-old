@@ -1446,3 +1446,20 @@ main > .container {
 .sections-menu-trigger{
   @apply h-fit max-h-[44px];
 }
+
+/* Sidebar, menulist, folders */
+.menu__list-item-collapsible > a {
+  @apply flex-1 p-0 min-w-[240px] ;
+}
+.menu__list-item-collapsible > a::after {
+  @apply absolute right-4;
+}
+.menu__list-item-collapsible  {
+  @apply px-4 py-2 rounded-none w-full relative;
+}
+.menu__link.menu__link--sublist.menu__link--sublist-caret.menu__link--active {
+  @apply !border-l-0;
+}
+ul.menu__list {
+  @apply !pl-0;
+}
