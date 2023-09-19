@@ -42,6 +42,12 @@ module.exports = {
         text: {
           400: "rgb(var(--docs-color-text-400, 153 153 153) / <alpha-value>)",
         },
+        "cst-brand": {
+          DEFAULT: "rgba(104, 82, 214, 1)",
+        },
+        "cst-black": {
+          DEFAULT: "rgba(6, 5, 13, 1)",
+        }
       },
     },
   },

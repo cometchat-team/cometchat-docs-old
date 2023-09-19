@@ -106,7 +106,7 @@ export default function DocBreadcrumbs() {
         description: "The ARIA label for the breadcrumbs",
       })}>
       <ul
-        className="breadcrumbs items-center "
+        className="breadcrumbs  items-center "
         itemScope
         itemType="https://schema.org/BreadcrumbList">
           {/* First one */}

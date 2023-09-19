@@ -102,7 +102,7 @@ const DATA = [
 function Overview() {
   return (
     <div className="flex w-full max-w-[1400px] flex-wrap bg-[#191822]">
-      <div className="flex w-full flex-row items-start justify-between">
+      <div className="flex w-full flex-col items-start md:flex-row md:justify-between">
         <CardOverview {...DATA[0]} />
         <CardSamples {...DATA[1]} />
       </div>
@@ -114,18 +114,20 @@ export default Overview;
 
 function CardOverview({ title, items }) {
   return (
-    <div className="flex h-full w-full flex-1 flex-col items-start justify-start bg-[#191822]  py-10 pl-8">
+    <div className="flex h-full w-full flex-1 flex-col items-start justify-start bg-[#191822] py-6 pl-4 md:py-10 md:pl-8">
       <h2 className="mb-6 text-xl text-[#FAFAFF] text-opacity-[54%]">
         {title}
       </h2>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {items.map((item, item_index) => (
           <Link
             className="hover:no-underline"
             href={item.link}
-            key={item.title}>
+            key={item.title}
+          >
             <div
-              className={`flex flex-row items-center justify-start space-x-1 text-left text-xs text-[#FAFAFF]`}>
+              className={`flex flex-row items-center justify-start space-x-1 text-left text-xs text-[#FAFAFF]`}
+            >
               <img
                 className="mr-1 h-4 object-contain "
                 src={`/imgs/icons/${item.icon}`}
@@ -147,8 +149,8 @@ function CardOverview({ title, items }) {
 
 function CardSamples({ title, items }) {
   return (
-    <div className="flex h-full flex-col items-start justify-start bg-[#272730]  py-10 pl-12 pr-20">
-      <h2 className="mb-6 text-xl text-[#FAFAFF] text-opacity-[54%]">
+    <div className="flex h-full w-full flex-col items-start justify-start bg-[#272730] py-6 pl-4 md:w-auto md:py-10 md:pl-12 md:pr-20">
+      <h2 className="mb-6  text-xl text-[#FAFAFF] text-opacity-[54%]">
         {title}
       </h2>
       <div className="flex flex-col items-start gap-8">
@@ -156,15 +158,17 @@ function CardSamples({ title, items }) {
           <Link
             className="hover:no-underline"
             href={item.link}
-            key={item.title}>
+            key={item.title}
+          >
             <div
-              className={`flex flex-row items-center justify-start space-x-1 text-left text-xs text-[#FAFAFF]`}>
+              className={`flex flex-row items-center justify-start space-x-1 text-left text-xs text-[#FAFAFF]`}
+            >
               <img
                 className="mr-1 h-6 object-contain grayscale "
                 src={`/imgs/logos/${item.icon}`}
                 alt={item.title}
               />
-              <p className="m-0 whitespace-nowrap text-lg text-[#fafaff] text-opacity-[84%]">
+              <p className="m-0 whitespace-nowrap text-sm text-[#fafaff] text-opacity-[84%]">
                 {item.title}
               </p>
             </div>

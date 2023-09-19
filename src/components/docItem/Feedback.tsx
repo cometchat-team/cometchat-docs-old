@@ -16,17 +16,21 @@ function FeedbackBottomForm() {
   const [feedbackRate, setFeedbackRate] = useState("");
   const [feedbackMessage, setFeedbackMessage] = useState("");
   return (
-      <div className="flex flex-row mt-10 items-center"> 
-      <h3 className="text-[20px] font-medium m-0 mr-8 text-[#14131D]">Was this page helpful?</h3>
+    <div className="mt-10 flex flex-row items-center">
+      <h3 className="m-0 mr-8 whitespace-nowrap text-[20px] font-light text-[#14131D] dark:text-white md:font-medium">
+        Was this page helpful?
+      </h3>
       <div className="flex flex-row items-center space-x-3">
-        <div className="bg-[#6852D6] cursor-pointer px-4 py-2 text-[12px] !font-bold rounded-xl flex flex-row space-x-2 items-center text-[#FCFCFE]">
-          <LikeIcon className="w-5 h-5" /> <span className="">Yes</span>
+        <div className="flex cursor-pointer flex-row items-center space-x-2 rounded-xl bg-cst-brand px-4 py-2 text-[12px] !font-bold text-[#FCFCFE]">
+          <LikeIcon className="h-5 w-5" />{" "}
+          <span className="hidden md:flex">Yes</span>
         </div>
-        <div className="bg-[#6852D6] cursor-pointer px-4 py-2 text-[12px] !font-bold rounded-xl flex flex-row space-x-2 items-center text-[#FCFCFE]">
-          <LikeIcon className="rotate-180 w-5 h-5" /> <span className="">No</span>
+        <div className="flex cursor-pointer flex-row items-center space-x-2 rounded-xl bg-cst-brand px-4 py-2 text-[12px] !font-bold text-[#FCFCFE]">
+          <LikeIcon className="h-5 w-5 rotate-180" />{" "}
+          <span className="hidden md:flex">No</span>
         </div>
       </div>
-       </div>
+    </div>
   );
 }
 

@@ -41,7 +41,7 @@ const SectionsMenuDropdown = forwardRef(
         </label>
         <ul
           tabIndex={0}
-          className="menu dropdown-content rounded-box z-[1] min-w-[200px] bg-base-100 p-2 shadow"
+          className="menu dropdown-content rounded-box z-[1] !min-w-[160px]  bg-base-100 p-2 shadow"
         >
           {values
             .filter(({ docId }) => docId !== currentSection.docId)
@@ -54,7 +54,7 @@ const SectionsMenuDropdown = forwardRef(
               >
                 <a className="flex w-full flex-row items-center">
                   <Icon className="mr-2 h-6 w-6 fill-white" />
-                  <span className="mr-2">{name}</span>
+                  <span className="mr-2 whitespace-nowrap">{name}</span>
                 </a>
               </li>
             ))}

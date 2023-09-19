@@ -60,7 +60,7 @@
     "react-markdown": "^8.0.4",
     "stream-browserify": "^3.0.0",
     "swc-loader": "^0.2.3",
-    "tailwindcss": "^3.2.7",
+    "tailwindcss": "^3.3.3",
     "typedoc": "^0.23.28",
     "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^5.0.2",
