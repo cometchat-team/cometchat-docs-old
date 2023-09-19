@@ -142,7 +142,7 @@ function IntegrationMethods() {
             <Card key={item.title} {...item} />
           ))}
         </div>
-        <hr className="hidden w-full bg-[#14131D14] md:flex" />
+        <hr className="hidden w-full bg-cst-border dark:bg-cst-border-dark md:flex" />
         <div className="mt-4 grid w-full grid-cols-1 gap-5 md:mt-0 md:grid-cols-2 md:gap-[40px]">
           {DATA.slice(2).map((item) => (
             <Card key={item.title} {...item} />
