@@ -1,4 +1,5 @@
 import React from "react";
+import { GithubIcon } from "../icons";
 
 const DATA = [
   {
@@ -26,18 +27,22 @@ const DATA = [
 
 function SampleApps() {
   return (
-    <div className="mb-10 mt-14 flex flex-col items-center con--cust">
-      <div className="flex w-full  max-w-[1440px] flex-row items-start md:items-center justify-between">
+    <div className="con--cust mb-10 mt-14 flex flex-col items-center">
+      <div className="flex w-full  max-w-[1440px] flex-row items-start justify-between md:items-center">
         <div className="flex w-11/12 flex-col items-start">
-          <h1 className="m-0 h--cust mb-1">Sample Apps</h1>
-          <p className="p--cust font--custom--thin ">Dive into practical examples of what's achievable</p>
+          <h1 className="h--cust m-0 mb-1 text-cst-sec-title dark:text-cst-sec-title-dark">
+            Sample Apps
+          </h1>
+          <p className="p--cust font--custom--thin text-cst-sec-subtitle dark:text-cst-sec-subtitle-dark ">
+            Dive into practical examples of what's achievable
+          </p>
         </div>
         {/* view more */}
-        <a className="flex w-fit whitespace-nowrap font--custom--thin flex-col items-start justify-center rounded-xl border border-solid border-[#14131D1A] bg-[#14131D05] p-[10px] text-xs text-[#14131D]">
-            View All
-          </a>
+        <a className="font--custom--thin flex w-fit flex-col items-start justify-center whitespace-nowrap rounded-xl border border-solid border-cst-border bg-[#14131D05] p-[10px] text-xs text-cst-black dark:border-cst-border-dark dark:text-cst-white">
+          View All
+        </a>
       </div>
-      <div className="mt-3 grid w-full max-w-[1440px] grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+      <div className="mt-3 grid w-full max-w-[1440px] grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
         {DATA.map((item) => (
           <Card key={item.title} {...item} />
         ))}
@@ -56,14 +61,14 @@ function Card({ title, description, thumbnail, clone }) {
         alt={title}
         className="mb-2 aspect-video w-full rounded-xl object-cover"
       />
-      <h3 className="m-0 mb-1">{title}</h3>
-      <p className="font--custom--thin p--cust">{description}</p>
-      <a className="flex w-fit whitespace-nowrap font--custom--thin flex-row items-center justify-center rounded-xl border border-solid border-[#14131D1A] bg-[#14131D05] px-3 py-2 text-xs text-[#14131D]">
-        <img
-          src="/imgs/logos/github.svg"
-          alt="GitHub Logo"
-          className="mr-[8px] h-[20px] w-[20px]"
-        />
+      <h3 className="m-0 mb-1 text-cst-sec-title dark:text-cst-sec-title-dark">
+        {title}
+      </h3>
+      <p className="font--custom--thin p--cust text-cst-sec-subtitle dark:text-cst-sec-subtitle-dark">
+        {description}
+      </p>
+      <a className="font--custom--thin flex w-fit flex-row items-center justify-center whitespace-nowrap rounded-xl border border-solid  border-cst-border bg-[#14131D05] p-[10px] px-3 py-2 text-xs text-cst-black dark:border-cst-border-dark dark:text-cst-white">
+        <GithubIcon className="mr-[8px] h-[20px] w-[20px] fill-black  dark:fill-white" />
         Clone
       </a>
     </div>
