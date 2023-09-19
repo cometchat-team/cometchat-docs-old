@@ -34,11 +34,13 @@ const DATA = [
 
 function Help() {
   return (
-    <div className="mb-12 mt-6 flex flex-col items-center con--cust">
+    <div className="con--cust mb-12 mt-6 flex flex-col items-center">
       <div className="flex  max-w-[1440px]  flex-col items-center justify-center text-center">
-        <h1 className="m-0 h--cust text-left mb-10">How can we help you?</h1>
+        <h1 className="h--cust m-0 mb-10 text-left text-cst-sec-title dark:text-cst-sec-title-dark">
+          How can we help you?
+        </h1>
       </div>
-      <div className="mt-4 grid  w-full max-w-[1440px] grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="mt-4 grid  w-full max-w-[1440px] grid-cols-1 gap-10 md:grid-cols-3">
         {DATA.map((item) => (
           <Card key={item.title} {...item} />
         ))}
@@ -57,9 +59,13 @@ function Card({ title, description, icon, link }) {
         alt={title}
         className="mb-2 h-8 object-contain"
       />
-      <h4 className="m-0">{title}</h4>
-      <p className="font--custom--thin m-0 text-opacity-[0.74]  leading-6 mt-1">{description}</p>
-      <a className="flex w-fit flex-row items-center justify-center rounded-xl mt-2 text-sm text-[#6852D6]">
+      <h4 className="m-0 text-cst-sec-title dark:text-cst-sec-title-dark">
+        {title}
+      </h4>
+      <p className="font--custom--thin m-0 mt-1 leading-6 text-cst-sec-subtitle text-opacity-[0.74] dark:text-cst-sec-subtitle-dark">
+        {description}
+      </p>
+      <a className="mt-2 flex w-fit flex-row items-center justify-center rounded-xl text-sm text-[#6852D6]">
         {link.title}
       </a>
     </div>
