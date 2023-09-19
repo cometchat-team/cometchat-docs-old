@@ -75,6 +75,12 @@ module.exports = {
         "cst-sec-subtitle-dark": {
           DEFAULT: "rgba(255, 255, 255, 0.74)",
         },
+        "cst-bg-secondary": {
+          DEFAULT: "rgb(246, 246, 250)",
+        },
+        "cst-bg-secondary-dark": {
+          DEFAULT: "rgba(20, 19, 29, 0.8)",
+        },
       },
     },
   },
