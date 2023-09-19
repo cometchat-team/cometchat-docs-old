@@ -174,7 +174,7 @@ body {
   --docs-color-text: #000000;
   --docs-color-text-100: #646464;
 
-  --docs-color-background: #ffffff;
+  --docs-color-background: #0B0A15;
   --docs-color-background-100: #f8f8f8;
   --docs-color-background-200: #efefef;
   --docs-color-background-300: #dcdcdc;
@@ -1486,4 +1486,12 @@ ul.menu__list {
 }
 [data-theme="dark"]:root {
   --cst-border-color: #ffffff14;
+}
+
+/* root page */
+.docPage_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module {
+  @apply !bg-[#FAFAFF] dark:!bg-[#0B0A15];
+}
+#__docusaurus {
+  @apply !bg-[#FAFAFF] dark:!bg-[#0B0A15];
 }
