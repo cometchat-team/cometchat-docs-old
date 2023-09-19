@@ -63,6 +63,18 @@ module.exports = {
         "cst-card-bg-dark": {
           DEFAULT: "rgba(20, 19, 29, 0.8)",
         },
+        "cst-sec-title": {
+          DEFAULT: "rgba(20, 19, 29, 1)",
+        },
+        "cst-sec-title-dark": {
+          DEFAULT: "rgba(255, 255, 255, 1)",
+        },
+        "cst-sec-subtitle": {
+          DEFAULT: "rgba(20, 19, 29, 0.74)",
+        },
+        "cst-sec-subtitle-dark": {
+          DEFAULT: "rgba(255, 255, 255, 0.74)",
+        },
       },
     },
   },
