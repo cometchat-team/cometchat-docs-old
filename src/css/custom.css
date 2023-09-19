@@ -1480,3 +1480,10 @@ ul.menu__list {
 .cst-row{
   @apply flex flex-row items-center;
 }
+
+:root {
+  --cst-border-color: #14131D14;
+}
+[data-theme="dark"]:root {
+  --cst-border-color: #ffffff14;
+}

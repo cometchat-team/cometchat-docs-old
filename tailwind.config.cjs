@@ -47,7 +47,22 @@ module.exports = {
         },
         "cst-black": {
           DEFAULT: "rgba(6, 5, 13, 1)",
-        }
+        },
+        "cst-white": {
+          DEFAULT: "rgb(243, 243, 248)",
+        },
+        "cst-border": {
+          DEFAULT: "rgba(20, 19, 29, 0.08)",
+        },
+        "cst-border-dark": {
+          DEFAULT: "rgba(123, 122, 130, 0.5)",
+        },
+        "cst-card-bg": {
+          DEFAULT: "rgba(250, 250, 255, 0.06)",
+        },
+        "cst-card-bg-dark": {
+          DEFAULT: "rgba(20, 19, 29, 0.8)",
+        },
       },
     },
   },

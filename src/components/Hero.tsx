@@ -54,7 +54,12 @@ const DATA = [
 
 function Hero() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center bg-[#F3F3F8] pb-[110px]">
+    <div
+      className={clsx(
+        "relative flex w-full flex-col items-center justify-center bg-cst-white pb-[110px] text-black",
+        "dark:bg-cst-black dark:text-white"
+      )}
+    >
       {/* images */}
       <img
         src="/imgs/planets.svg"
@@ -68,15 +73,8 @@ function Hero() {
       />
       {/* middle */}
       <div className="mb-6 mt-16 flex w-3/4 max-w-[1440px] flex-col items-center justify-center text-center md:w-1/2">
-        <h1 className="text-4xl font-extrabold text-blue-500 dark:text-red-500">
-          Get Started
-        </h1>
-        <p
-          className={clsx(
-            "p--cust  font--custom--thin text-blue-500",
-            "dark:text-red-500"
-          )}
-        >
+        <h1 className="text-4xl font-extrabold ">Get Started</h1>
+        <p className={clsx("p--cust  font--custom--thin ")}>
           Seamlessly integrate real-time chat, voice, and video
           functionalities.Begin your Cometchat implementation by selecting the
           technologies that best suit your organizational needs.
@@ -117,7 +115,12 @@ export default Hero;
 
 function CardItem({ icon, title }: { icon: string; title: string }) {
   return (
-    <div className="flex flex-col items-start rounded-[20px] border border-solid border-[#14131D14] bg-[#F3F3F8] py-3 pl-4 pr-3">
+    <div
+      className={clsx(
+        "flex flex-col items-start rounded-[20px] border border-solid border-cst-border bg-transparent py-3 pl-4 pr-3",
+        "dark:border-cst-border-dark"
+      )}
+    >
       <img
         src={`/imgs/logos/${icon}`}
         alt={title}
@@ -130,7 +133,7 @@ function CardItem({ icon, title }: { icon: string; title: string }) {
 
 function ADCard() {
   return (
-    <div className="absolute -bottom-[140px] left-1/2  z-10 flex w-11/12 max-w-[1440px] -translate-x-1/2 transform flex-col items-center justify-center rounded-[32px] bg-white md:-bottom-[95px] md:w-3/4">
+    <div className="absolute -bottom-[140px] left-1/2  z-10 flex w-11/12 max-w-[1440px] -translate-x-1/2 transform flex-col items-center justify-center rounded-[32px] bg-white dark:bg-cst-card-bg-dark md:-bottom-[95px] md:w-3/4">
       <div
         className="relative flex h-[280px] w-full flex-col items-start overflow-hidden rounded-[32px] border border-solid border-[#14131D0A] bg-[#14131D0F] bg-opacity-10 px-4  pt-6 md:h-[190px] md:px-7"
         style={{
