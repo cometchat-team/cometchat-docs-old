@@ -25,7 +25,7 @@ export default function NavbarMobileSidebarLayout({
   const items = useNavbarItems();
 
   return (
-    <div className="navbar-sidebar">
+    <div className="navbar-sidebar flex flex-col">
       {header}
       <div
         className={clsx("navbar-sidebar__items !max-h-full", {
