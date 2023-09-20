@@ -115,18 +115,22 @@ export default Hero;
 
 function CardItem({ icon, title }: { icon: string; title: string }) {
   return (
-    <div
-      className={clsx(
-        "flex flex-col items-start rounded-[20px] border border-solid border-cst-border bg-transparent py-3 pl-4 pr-3",
-        "dark:border-cst-border-dark"
-      )}
-    >
-      <img
-        src={`/imgs/logos/${icon}`}
-        alt={title}
-        className="h-12 w-12 object-contain grayscale"
-      />
-      <h3 className="mb-0 mt-1 text-[18px] font-bold">{title}</h3>
+    <div className="btn btn-ghost m-0 h-fit max-h-fit min-h-fit w-full !rounded-[20px] p-0 normal-case">
+      <div
+        className={clsx(
+          "flex w-full flex-col !items-start !rounded-[20px] !border !border-solid !border-cst-border !bg-transparent !py-3 !pl-4 !pr-3",
+          "dark:!border-cst-border-dark"
+        )}
+      >
+        <img
+          src={`/imgs/logos/${icon}`}
+          alt={title}
+          className="h-12 w-12 object-contain grayscale"
+        />
+        <h3 className="mb-0 mt-1 text-[18px] font-bold text-cst-sec-title dark:text-cst-sec-title-dark">
+          {title}
+        </h3>
+      </div>
     </div>
   );
 }
