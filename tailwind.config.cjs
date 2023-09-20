@@ -96,6 +96,15 @@ module.exports = {
         "cst-text-drawer-dark": {
           DEFAULT: "rgba(255,255,255,0.54)",
         },
+        "cst-border-docs-card": {
+          DEFAULT: "rgba(20, 19, 29, 0.04)",
+        },
+        "cst-bg-docs-card-dark": {
+          DEFAULT: "rgba(250, 250, 255, 0.06)",
+        },
+        "cst-bg-docs-card": {
+          DEFAULT: "rgba(20, 19, 29, 0.02)",
+        },
       },
     },
   },

@@ -8,6 +8,20 @@ slug: /
 
 This is a random content random content random content random content random content random content random content random content random
 
+```mdx-code-block
+import WhatNew from '@site/src/components/docs/New';
+
+<WhatNew>
+
+## What's New in v3
+
+- list 2
+- list 3
+
+</WhatNew>
+
+```
+
 ### heading 3
 
 content random content random content random content random content random content random content random content random content random
