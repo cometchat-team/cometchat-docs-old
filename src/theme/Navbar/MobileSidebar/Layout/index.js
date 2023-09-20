@@ -57,7 +57,7 @@ export default function NavbarMobileSidebarLayout({
                         key={i}
                         className="cts-rom btn btn-ghost drawer-button w-full justify-between"
                       >
-                        <span className="text-xs text-[#14131d89] ">
+                        <span className="text-xs text-cst-text-drawer dark:text-cst-text-drawer-dark ">
                           {item.label}
                         </span>
                         <svg
@@ -65,10 +65,10 @@ export default function NavbarMobileSidebarLayout({
                           height="24"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
+                          className="stroke-current text-cst-text-drawer dark:text-cst-text-drawer-dark"
                         >
                           <path
                             fill="none"
-                            stroke="#14131d89"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
@@ -78,7 +78,13 @@ export default function NavbarMobileSidebarLayout({
                       </label>
                     );
                   } else {
-                    return <NavbarItem mobile {...item} />;
+                    return (
+                      <NavbarItem
+                        className="text-cst-text-drawer dark:text-cst-text-drawer-dark"
+                        mobile
+                        {...item}
+                      />
+                    );
                   }
                 })}
               </ul>

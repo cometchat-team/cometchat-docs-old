@@ -90,6 +90,12 @@ module.exports = {
         "cst-secondary-text-dark": {
           DEFAULT: "rgba(123, 122, 130, 1)",
         },
+        "cst-text-drawer": {
+          DEFAULT: "rgba(20,19,29,0.54)",
+        },
+        "cst-text-drawer-dark": {
+          DEFAULT: "rgba(255,255,255,0.54)",
+        },
       },
     },
   },
