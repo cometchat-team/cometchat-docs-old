@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WhatNew({ children }) {
   return (
-    <div className="relative py-14">
+    <div className="relative h-fit w-full  py-14">
       {/* eclipse light */}
       <svg
         className="absolute -left-[1.2vh] top-0 z-0 flex h-[90%] dark:hidden"
@@ -61,8 +61,8 @@ export default function WhatNew({ children }) {
       <div className="relative h-fit w-full  rounded-xl ">
         {/* card */}
         <div
-          className="relative
-z-10 rounded-xl border-[1px] border-solid border-cst-border-docs-card bg-cst-bg-docs-card px-4 py-6 backdrop-blur-md dark:bg-cst-bg-docs-card-dark"
+          className="cst-docs-card-con
+relative z-10 rounded-xl border-[1px] border-solid border-cst-border-docs-card bg-cst-bg-docs-card px-4 py-6 backdrop-blur-md dark:bg-cst-bg-docs-card-dark"
         >
           {children}
         </div>
