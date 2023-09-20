@@ -37,7 +37,12 @@ export default function SidebarMenu() {
         const path = page + (hash && hash.length > 0 ? "#" + hash : "");
         router.push(getPrettyPath(path));
       } else {
-        const path = selectedSectionDocs[0].path;
+        const pathh = selectedSectionDocs.find(
+          (doc) =>
+            doc.path.split("/").filter((word) => word.length > 0).length === 3
+        );
+
+        const path = pathh?.path || selectedSectionDocs[0].path;
         router.push(getPrettyPath(path));
       }
     }
