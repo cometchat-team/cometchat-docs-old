@@ -1495,3 +1495,14 @@ ul.menu__list {
 #__docusaurus {
   @apply !bg-[#FAFAFF] dark:!bg-[#0B0A15];
 }
+/* search input */
+.DocSearch-Button .DocSearch-Search-Icon {
+  @apply !text-[#FAFAFF] !stroke-white h-4 w-4 mr-2;
+}
+.DocSearch-Button-Keys > kbd.DocSearch-Button-Key {
+  @apply hidden;
+}
+.DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+  @apply !bg-none;
+  background-color: transparent !important;
+}
