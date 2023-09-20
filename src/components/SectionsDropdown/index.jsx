@@ -41,7 +41,7 @@ const SectionsMenuDropdown = forwardRef(
         </label>
         <ul
           tabIndex={0}
-          className="menu dropdown-content rounded-box z-[1] !min-w-[160px]  bg-base-100 p-2 shadow"
+          className="menu dropdown-content rounded-box  z-[1] !min-w-[160px] bg-cst-bg-secondary-dark p-2 shadow dark:bg-cst-bg-secondary-dark"
         >
           {values
             .filter(({ docId }) => docId !== currentSection.docId)
