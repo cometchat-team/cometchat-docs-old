@@ -19,6 +19,9 @@ module.exports = {
       borderRadius: {
         sm: "4px",
       },
+      fontSize: {
+        "2xs": "0.675rem",
+      },
       screens: {
         sm: "0px",
         lg: "997px",
@@ -80,6 +83,12 @@ module.exports = {
         },
         "cst-bg-secondary-dark": {
           DEFAULT: "rgba(20, 19, 29, 0.8)",
+        },
+        "cst-secondary-text": {
+          DEFAULT: "rgba(123, 122, 130, 1)",
+        },
+        "cst-secondary-text-dark": {
+          DEFAULT: "rgba(123, 122, 130, 1)",
         },
       },
     },
