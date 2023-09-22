@@ -19,6 +19,9 @@ module.exports = {
       borderRadius: {
         sm: "4px",
       },
+      fontSize: {
+        "2xs": "0.675rem",
+      },
       screens: {
         sm: "0px",
         lg: "997px",
@@ -47,7 +50,61 @@ module.exports = {
         },
         "cst-black": {
           DEFAULT: "rgba(6, 5, 13, 1)",
-        }
+        },
+        "cst-white": {
+          DEFAULT: "rgb(243, 243, 248)",
+        },
+        "cst-border": {
+          DEFAULT: "rgba(20, 19, 29, 0.08)",
+        },
+        "cst-border-dark": {
+          DEFAULT: "rgba(123, 122, 130, 0.5)",
+        },
+        "cst-card-bg": {
+          DEFAULT: "rgba(250, 250, 255, 0.06)",
+        },
+        "cst-card-bg-dark": {
+          DEFAULT: "rgba(20, 19, 29, 0.8)",
+        },
+        "cst-sec-title": {
+          DEFAULT: "rgba(20, 19, 29, 1)",
+        },
+        "cst-sec-title-dark": {
+          DEFAULT: "rgba(255, 255, 255, 1)",
+        },
+        "cst-sec-subtitle": {
+          DEFAULT: "rgba(20, 19, 29, 0.74)",
+        },
+        "cst-sec-subtitle-dark": {
+          DEFAULT: "rgba(255, 255, 255, 0.74)",
+        },
+        "cst-bg-secondary": {
+          DEFAULT: "rgb(246, 246, 250)",
+        },
+        "cst-bg-secondary-dark": {
+          DEFAULT: "rgba(20, 19, 29, 0.8)",
+        },
+        "cst-secondary-text": {
+          DEFAULT: "rgba(123, 122, 130, 1)",
+        },
+        "cst-secondary-text-dark": {
+          DEFAULT: "rgba(123, 122, 130, 1)",
+        },
+        "cst-text-drawer": {
+          DEFAULT: "rgba(20,19,29,0.54)",
+        },
+        "cst-text-drawer-dark": {
+          DEFAULT: "rgba(255,255,255,0.54)",
+        },
+        "cst-border-docs-card": {
+          DEFAULT: "rgba(20, 19, 29, 0.04)",
+        },
+        "cst-bg-docs-card-dark": {
+          DEFAULT: "rgba(250, 250, 255, 0.06)",
+        },
+        "cst-bg-docs-card": {
+          DEFAULT: "rgba(20, 19, 29, 0.02)",
+        },
       },
     },
   },

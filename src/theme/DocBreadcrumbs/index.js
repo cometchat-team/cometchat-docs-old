@@ -27,10 +27,13 @@ function extractURL(url, item) {
 
 // TODO move to design system folder
 function BreadcrumbsItemLink({ children, href, isLast }) {
-  const className = "breadcrumbs__link";
+  const className = "breadcrumbs__link text-2xs md:text-base";
   if (isLast) {
     return (
-      <span className={className} itemProp="name">
+      <span
+        className={clsx(className, "text-cst-black dark:text-cst-white")}
+        itemProp="name"
+      >
         {children}
       </span>
     );
@@ -45,7 +48,10 @@ function BreadcrumbsItemLink({ children, href, isLast }) {
     // insist to infer one, even if it's invalid. Removing `itemProp="item
     // name"` for now, since I don't know how to properly fix it.
     // See https://github.com/facebook/docusaurus/issues/7241
-    <span className={className}>{children}</span>
+    <div className="flex flex-row items-center">
+      <span className={className}>{children}</span>
+      <ChevronRight className="mt-1 h-4 w-4 text-cst-secondary-text dark:text-cst-secondary-text-dark md:h-5 md:w-5" />
+    </div>
   );
 }
 // TODO move to design system folder
@@ -57,9 +63,10 @@ function BreadcrumbsItem({ children, active, index, addMicrodata }) {
         itemProp: "itemListElement",
         itemType: "https://schema.org/ListItem",
       })}
-      className={clsx("breadcrumbs__item", {
+      className={clsx("breadcrumbs__item  text-2xs md:text-base", {
         "breadcrumbs__item--active": active,
-      })}>
+      })}
+    >
       {children}
       <meta itemProp="position" content={String(index + 1)} />
     </li>
@@ -68,7 +75,7 @@ function BreadcrumbsItem({ children, active, index, addMicrodata }) {
 function HomeBreadcrumbItem() {
   const homeHref = useBaseUrl("/");
   return (
-    <li className="breadcrumbs__item">
+    <li className="breadcrumbs__item ">
       <Link
         aria-label={translate({
           id: "theme.docs.breadcrumbs.home",
@@ -76,11 +83,12 @@ function HomeBreadcrumbItem() {
           description: "The ARIA label for the home page in the breadcrumbs",
         })}
         className={clsx(
-          "breadcrumbs__link text-[#7B7A82]",
+          "breadcrumbs__link text-2xs  text-cst-secondary-text dark:text-cst-secondary-text-dark md:text-base",
 
           styles.breadcrumbsItemLink
         )}
-        href={homeHref}>
+        href={homeHref}
+      >
         Home
       </Link>
     </li>
@@ -104,38 +112,41 @@ export default function DocBreadcrumbs() {
         id: "theme.docs.breadcrumbs.navAriaLabel",
         message: "Breadcrumbs",
         description: "The ARIA label for the breadcrumbs",
-      })}>
+      })}
+    >
       <ul
-        className="breadcrumbs  items-center "
+        className="breadcrumbs flex flex-row items-center "
         itemScope
-        itemType="https://schema.org/BreadcrumbList">
-          {/* First one */}
+        itemType="https://schema.org/BreadcrumbList"
+      >
+        {/* First one */}
         {homePageRoute && <HomeBreadcrumbItem />}
         {/* middle ones */}
-        <ChevronRight size={20} className="text-[#7B7A82]" />
+        <ChevronRight className="mt-1 h-4 w-4 text-cst-secondary-text dark:text-cst-secondary-text-dark md:h-5 md:w-5" />
         {location.pathname
           .split("/")
           .slice(1, 4)
           .map((item, idx) => {
             return (
               <>
-              <BreadcrumbsItem
-                key={idx}
-                active={false}
-                index={idx}
-                addMicrodata={!!location.pathname}>
-                <BreadcrumbsItemLink
-                
-                  href={extractURL(location.pathname, item)}
-                  isLast={false}>
-                  {item} 
-                </BreadcrumbsItemLink>
-              </BreadcrumbsItem>
-            <ChevronRight size={20} className="text-[#7B7A82]" />
-            </>
+                <BreadcrumbsItem
+                  key={idx}
+                  active={false}
+                  index={idx}
+                  addMicrodata={!!location.pathname}
+                >
+                  <BreadcrumbsItemLink
+                    href={extractURL(location.pathname, item)}
+                    isLast={false}
+                  >
+                    {item}
+                  </BreadcrumbsItemLink>
+                </BreadcrumbsItem>
+                <ChevronRight className="mt-1 h-4 w-4 text-cst-secondary-text dark:text-cst-secondary-text-dark md:h-5 md:w-5" />
+              </>
             );
           })}
-          {/* Last one */}
+        {/* Last one */}
         {breadcrumbs.map((item, idx) => {
           const isLast = idx === breadcrumbs.length - 1;
           return (
@@ -143,7 +154,8 @@ export default function DocBreadcrumbs() {
               key={idx}
               active={isLast}
               index={idx}
-              addMicrodata={!!item.href}>
+              addMicrodata={!!item.href}
+            >
               <BreadcrumbsItemLink href={item.href} isLast={isLast}>
                 {item.label}
               </BreadcrumbsItemLink>

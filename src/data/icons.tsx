@@ -1,6 +1,7 @@
 import {
   AngularIcon,
   FlutterIcon,
+  GithubIcon,
   HTMLIcon,
   JSIcon,
   KotlinIcon,
@@ -16,4 +17,5 @@ export const icons = {
   kotlin: KotlinIcon,
   react: ReactIcon,
   swift: SwiftIcon,
+  github: GithubIcon,
 };

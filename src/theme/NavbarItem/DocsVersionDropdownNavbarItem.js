@@ -66,9 +66,9 @@ export default function DocsVersionDropdownNavbarItem({
     return (
       <div
         className="flex !min-w-[80px] flex-row items-center justify-center rounded-lg 
-       px-2 py-[11px] dark:text-[#FFFFFFBF]  text-sm text-[#14131d80]"
+       px-2 py-[11px] text-sm  text-[#14131d80] dark:text-[#FFFFFFBF]"
       >
-        {dropdownLabel}
+        {/* {dropdownLabel} */}
       </div>
     );
   }
@@ -79,22 +79,23 @@ export default function DocsVersionDropdownNavbarItem({
       <label
         tabIndex={0}
         className="btn flex !h-[44px] !max-h-[44px] !min-h-[44px]  !w-[80px] flex-row items-center rounded-none
-       border-x-0 border-t-0 border-b border-dashed  border-[#14131d80] dark:border-[#7B7A8280] bg-transparent px-2 text-sm dark:text-[#FFFFFFBF] text-[#14131d80]"
+       border-x-0 border-b border-t-0 border-dashed  border-[#14131d80] bg-transparent px-2 text-sm text-[#14131d80] dark:border-[#7B7A8280] dark:text-[#FFFFFFBF]"
       >
-          {dropdownLabel}
-
+        {dropdownLabel}
       </label>
       <ul
         tabIndex={0}
         className="menu dropdown-content rounded-box z-[9999] w-fit bg-base-100  p-2 shadow"
       >
         {items.map((childItemProps, index) => (
-          <Link 
-          style={{ 
-            textDecoration: "none",
-            color: "#14131d80",
-          }}
-           key={index} to={childItemProps.to}>
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "#14131d80",
+            }}
+            key={index}
+            to={childItemProps.to}
+          >
             <li>
               <a
                 className={clsx(

@@ -174,7 +174,7 @@ body {
   --docs-color-text: #000000;
   --docs-color-text-100: #646464;
 
-  --docs-color-background: #ffffff;
+  --docs-color-background: #0B0A15;
   --docs-color-background-100: #f8f8f8;
   --docs-color-background-200: #efefef;
   --docs-color-background-300: #dcdcdc;
@@ -1428,13 +1428,14 @@ a.navbar__item.navbar__link.navbar__link--active {
   @apply md:text-[44px] text-3xl;
 }
 .p--cust {
-  @apply  text-[18px] mt-1 text-opacity-[0.74] leading-6;
+  @apply  text-[18px] mt-1 leading-6;
 }
 main > .container {
-  @apply px-0 !pb-0;
+  @apply px-0 !pb-0 text-cst-sec-title dark:text-cst-sec-title-dark;
 }
 .cust--con {
   padding: 0 var(--ifm-spacing-horizontal);
+  overflow-x: hidden;
 }
 /* toc */
 .container > .cust--con > .row  > .col.col--3 {
@@ -1479,4 +1480,39 @@ ul.menu__list {
 /* CUSTOM */
 .cst-row{
   @apply flex flex-row items-center;
+}
+
+:root {
+  --cst-border-color: #14131D14;
+}
+[data-theme="dark"]:root {
+  --cst-border-color: #ffffff14;
+}
+
+/* root page */
+.docPage_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module {
+  @apply !bg-[#FAFAFF] dark:!bg-[#0B0A15];
+}
+#__docusaurus {
+  @apply !bg-[#FAFAFF] dark:!bg-[#0B0A15];
+}
+/* search input */
+.DocSearch-Button .DocSearch-Search-Icon {
+  @apply !text-[#FAFAFF] !stroke-white h-4 w-4 mr-2;
+}
+.DocSearch-Button-Keys > kbd.DocSearch-Button-Key {
+  @apply hidden;
+}
+.DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+  @apply !bg-none;
+  background-color: transparent !important;
+}
+
+
+
+/* docs card */
+.cst-docs-card-con > ul > li {
+  list-style-type: none; /* Remove default list marker */
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7.54437 0.957242C7.45772 0.731963 7.24129 0.583313 6.99992 0.583313C6.75855 0.583313 6.54211 0.731963 6.45547 0.957242L5.28183 4.00871C5.10659 4.46432 5.05153 4.59561 4.9762 4.70154C4.90063 4.80783 4.80776 4.90069 4.70148 4.97627C4.59555 5.05159 4.46426 5.10665 4.00865 5.28189L0.957181 6.45553C0.731902 6.54217 0.583252 6.75861 0.583252 6.99998C0.583252 7.24135 0.731902 7.45779 0.957181 7.54443L4.00865 8.71807C4.46426 8.89331 4.59555 8.94837 4.70148 9.02369C4.80777 9.09927 4.90063 9.19213 4.97621 9.29842C5.05153 9.40435 5.10659 9.53564 5.28183 9.99125L6.45547 13.0427C6.54211 13.268 6.75855 13.4166 6.99992 13.4166C7.24129 13.4166 7.45773 13.268 7.54437 13.0427L8.71801 9.99125C8.89325 9.53564 8.94831 9.40435 9.02363 9.29842C9.09921 9.19213 9.19207 9.09927 9.29836 9.02369C9.40429 8.94837 9.53558 8.89331 9.99119 8.71807L13.0427 7.54443C13.2679 7.45779 13.4166 7.24135 13.4166 6.99998C13.4166 6.75861 13.2679 6.54217 13.0427 6.45553L9.99119 5.28189C9.53558 5.10665 9.40429 5.05159 9.29836 4.97627C9.19207 4.90069 9.09921 4.80783 9.02363 4.70154C8.94831 4.59561 8.89325 4.46432 8.71801 4.00871L7.54437 0.957242Z" fill="%236852D6"/></svg>'); /* Use the SVG as the marker image */
+@apply text-cst-sec-subtitle dark:text-cst-sec-subtitle-dark;
 }

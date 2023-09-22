@@ -1,26 +1,10 @@
 ---
-sidebar_position: 1
-title: Overview
-slug: /
+sidebar_position: 3
 ---
 
 ## heading 2
 
 This is a random content random content random content random content random content random content random content random content random
-
-```mdx-code-block
-import WhatNew from '@site/src/components/docs/New';
-
-<WhatNew>
-
-## What's New in v3
-
-- list 2
-- list 3
-
-</WhatNew>
-
-```
 
 ### heading 3
 

@@ -21,11 +21,11 @@ function FeedbackBottomForm() {
         Was this page helpful?
       </h3>
       <div className="flex flex-row items-center space-x-3">
-        <div className="flex cursor-pointer flex-row items-center space-x-2 rounded-xl bg-cst-brand px-4 py-2 text-[12px] !font-bold text-[#FCFCFE]">
-          <LikeIcon className="h-5 w-5" />{" "}
+        <div className="flexx btn !h-fit !min-h-fit cursor-pointer flex-row items-center space-x-2 rounded-xl bg-cst-brand px-4 py-2 text-[12px] !font-bold text-[#FCFCFE]">
+          <LikeIcon className="h-5 w-5" />
           <span className="hidden md:flex">Yes</span>
         </div>
-        <div className="flex cursor-pointer flex-row items-center space-x-2 rounded-xl bg-cst-brand px-4 py-2 text-[12px] !font-bold text-[#FCFCFE]">
+        <div className="btn flex !h-fit !min-h-fit cursor-pointer flex-row items-center space-x-2 rounded-xl bg-cst-brand px-4 py-2 text-[12px] !font-bold text-[#FCFCFE]">
           <LikeIcon className="h-5 w-5 rotate-180" />{" "}
           <span className="hidden md:flex">No</span>
         </div>
